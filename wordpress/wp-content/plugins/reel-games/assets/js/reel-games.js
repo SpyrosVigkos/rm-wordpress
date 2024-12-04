@@ -30,7 +30,7 @@ jQuery(document).ready(function($) {
                 return {
                     date: new Date(item.reporting_month_yyyymm),
                     gptwRpm: item.gptw_rpm,
-                    floorAverage: 1, // Assuming floorAverage is a constant value of 1
+                    floorAverage: 1, 
                     theoWin: item.tw_rpm,
                     gamesPlayed: item.gp_rpm
                 };

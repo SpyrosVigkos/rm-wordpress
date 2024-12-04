@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Reel Games
-Plugin URI: https://rmplayground.link/
+Plugin URI: https://rmplayground.com
 Description: Fetches games from ReelMetrics API and displays them in a WordPress page.
 Version: 1.0
 Author: ReelMetrics
