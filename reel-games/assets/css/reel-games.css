@@ -1,0 +1,395 @@
+.reel-game-page-container {
+    background-color: #F6F7F8;
+    margin: 0;
+    border: 0;
+    padding: 30px;
+}
+
+body {
+    font-family: Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.largeMargin{
+    margin: 15% 0 2% 0 !important;
+}
+
+.main-flex-container {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0 10px 0;
+    padding-left: 1%;
+}
+
+.game-info {
+    flex: 6;
+    padding: 0;
+}
+
+.metrics-flex-container {
+    flex: 5;
+    display: flex;
+    gap: 15px;
+    text-align: left;
+}
+
+h1.reel-game-title {
+    color: #b91c1a;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0 0 24px 0;
+}
+
+h3 {
+    color: #4a4a4a;
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 0 !important;
+}
+
+strong {
+    font-weight: 600;
+    color: #222;
+}
+
+.popup-card-title  {
+    color: #b91c1a;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0  0 20px 0;
+}
+#terminalsBarChart, #marketShareBarChart, #venuesBarChart {
+    padding-top: 1%;
+}
+.locked-card-header {
+    display: flex;  
+    justify-content: space-between; 
+    align-items: center; 
+}
+.lock-icon {
+    color: #949595;
+}
+
+.locked-card-title-small-box {
+    flex: 0 0 80%;
+    color: #b91d1a83;    
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding: 0;
+    margin: 0  0 20px 0;
+}
+
+.locked-card-title {
+    flex: 0 0 80%;
+    color: #b91d1a83;    
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.locked-card-button a {
+    display: inline-block;
+    opacity: 1 !important; 
+    /* Add button styling here */
+    text-decoration: none; 
+    /* Add padding, background, color, etc., to style it as a button */
+}
+
+.metric-box {
+    flex: 1;
+    border-left: 1px solid #e5e5e5;
+    padding-left: 2%;
+}
+
+.metric-box h6 {
+    margin: 0 3px 0 0;
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 2em;
+    color: #323232;
+    margin: 2px 2px 12px 2px;
+    text-align: center;
+}
+
+.metric-table-cell {
+    border: 0;
+    padding: 0 2%;
+    background-color: #fff !important;
+}
+
+.metric-cell-value {
+    text-align: right;
+}
+
+.metrics-flex-container table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px auto !important;
+    /* border: 2px solid purple; */
+}
+
+.blue-btn {
+    background-color: #ffffff00;
+    color: #1976D2;
+    border: 1px solid #1976D2;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.blue-btn:hover {
+    background-color: #0056b3;
+    color:#ddd;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.orange-btn {
+    background-color: #ffffff00;
+    color: #F57C00;
+    border: 1px solid #F57C00;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.orange-btn:hover {
+    background-color: #FF8C00;
+    color:#ddd;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+
+.performance-profile-container,
+.vertical-chart-container,
+.reel-locked-container,
+.reel-game-container {
+    max-width: 85%;
+    margin: 2% auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.reel-game-container,
+.reel-locked-container {
+    padding: 10px 16px;
+}
+
+.reel-locked-container, 
+.chart-box-locked {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.popUpBox {
+    max-width: 85%;
+    margin: 10px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+}
+
+.flex-box {
+    flex: 1;  
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.flex-box h3 {
+    margin-top: 0; 
+}
+
+/* Lifecycle Analysis */
+.table-container {
+    overflow-x: auto;  
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+
+
+/* Container for the three charts */
+.chart-container {
+    display: flex;
+    justify-content: column; 
+    gap: 20px;
+    background-color: #F6F7F8;
+}
+
+.chart-box {
+    flex: 1; 
+    padding: 20px;
+    background-color: #fefefe;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    max-height: 320px;
+    overflow: hidden;
+}
+
+.popup-card-body .backdrop-image {
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center !important;
+    justify-content: center !important;
+    height:  /* max height of the card */ 220px;
+    margin-top: 20px;
+}
+
+.center-btn {
+    padding: 10px 20px;
+    background-color: rgba(255,255,255,0.7) !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.center-btn:hover {
+    background-color: #b91c1a !important;
+    border: 2px solid #b91c1a !important; 
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+}
+
+.backdrop-image button {
+    z-index: 10;
+}
+
+/* Container for the three charts */
+.vertical-chart-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    border: none;
+    box-shadow: none;
+}
+
+.vertical-chart-box {
+    padding: 20px;
+    margin: 30px 12px; 
+    background-color: #fff;
+}
+
+/* New color scheme for the charts */
+.dx-chart {
+    color: #b91c1a; 
+}
+
+.dx-chart-title {
+    fill: #555; 
+}
+
+.dx-legend-item-text {
+    fill: #555; 
+}
+
+.dx-legend {
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dx-tooltip {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+.card-header {
+    position: relative;
+}
+
+.chevron-button:hover {
+    background-color: #323232;
+    color: #fff;
+}
+
+.chevron .fas {
+    transition: transform 0.3s ease;
+}
+
+.chevron i {
+    transition: transform 0.3s ease;
+}
+
+/* Override Bootstrap primary color */
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: #b91c1a !important;
+    border-color: #b91c1a !important;
+}
+
+/* Override Bootstrap link color */
+a {
+    color: #b91c1a;
+}
+
+a:hover, a:focus {
+    color: #9a1715; /* slightly darker shade for hover and focus */
+}
+
+/* Override Bootstrap .btn-link color */
+.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
+    color: #b91c1a !important;
+}
+
+/* Override Bootstrap focus styles */
+.btn-link:focus, .btn-link:active {
+    box-shadow: none !important; 
+    color: #b91c1a !important; 
+    outline: none !important; 
+    border-color: transparent !important; 
+}
+
+.chevron-button:focus .chevron i {
+    color: #b91c1a !important;
+}
+
+/* If the button has a pink background on focus/active, this will override it */
+.btn-link:focus, .btn-link:active {
+    background-color: transparent !important;
+}
+
+.dx-chart .dxc-series {
+    fill-opacity: 1 !important;
+    stroke-opacity: 1 !important;
+  }
+  
+  .dx-chart .dxc-area {
+    fill: none; /* Removes gradient fills, if any */
+  }
