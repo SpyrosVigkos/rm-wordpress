@@ -150,9 +150,172 @@ function rm_add_elementor_widget_categories( $elements_manager ) {
 add_action( 'elementor/elements/categories_registered', 'rm_add_elementor_widget_categories' );
 
 /**
+ * ReelMetrics Button Widget
+ */
+class RM_Button_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-button';
+    }
+
+    public function get_title() {
+        return __( 'RM Button', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-button';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    protected function _register_controls() {
+        // Content Section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Button', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'text',
+            [
+                'label' => __( 'Text', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Click here', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Click here', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'link',
+            [
+                'label' => __( 'Link', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://your-link.com', 'rm-elementor-theme' ),
+                'default' => [
+                    'url' => '',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_style',
+            [
+                'label' => __( 'Button Style', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'rm-btn-primary',
+                'options' => [
+                    'rm-btn-primary' => __( 'Primary', 'rm-elementor-theme' ),
+                    'rm-btn-secondary' => __( 'Secondary', 'rm-elementor-theme' ),
+                    'rm-btn-outline' => __( 'Outline', 'rm-elementor-theme' ),
+                    'rm-cta' => __( 'CTA (Figma Spec)', 'rm-elementor-theme' ),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'button_size',
+            [
+                'label' => __( 'Size', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'rm-btn-large',
+                'options' => [
+                    'rm-btn-large' => __( 'Large (60px)', 'rm-elementor-theme' ),
+                    'rm-btn-medium' => __( 'Medium (52px)', 'rm-elementor-theme' ),
+                    'rm-btn-small' => __( 'Small (44px)', 'rm-elementor-theme' ),
+                ],
+                'condition' => [
+                    'button_style!' => 'rm-cta',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'selected_icon',
+            [
+                'label' => __( 'Icon', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::ICONS,
+                'default' => [
+                    'value' => '',
+                    'library' => 'solid',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'icon_position',
+            [
+                'label' => __( 'Icon Position', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'right',
+                'options' => [
+                    'left' => __( 'Before', 'rm-elementor-theme' ),
+                    'right' => __( 'After', 'rm-elementor-theme' ),
+                ],
+                'condition' => [
+                    'selected_icon[value]!' => '',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+
+        $this->add_render_attribute( 'wrapper', 'class', 'rm-button-wrapper' );
+
+        // Build button classes
+        $button_classes = ['rm-btn'];
+        $button_classes[] = $settings['button_style'];
+        
+        if ( $settings['button_style'] !== 'rm-cta' ) {
+            $button_classes[] = $settings['button_size'];
+        }
+
+        if ( ! empty( $settings['selected_icon']['value'] ) ) {
+            $button_classes[] = 'rm-btn-icon';
+            $button_classes[] = 'rm-btn-icon-' . $settings['icon_position'];
+        }
+
+        $this->add_render_attribute( 'button', 'class', $button_classes );
+
+        if ( ! empty( $settings['link']['url'] ) ) {
+            $this->add_link_attributes( 'button', $settings['link'] );
+        }
+
+        ?>
+        <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+            <a <?php echo $this->get_render_attribute_string( 'button' ); ?>>
+                <?php if ( ! empty( $settings['selected_icon']['value'] ) && $settings['icon_position'] === 'left' ) : ?>
+                    <span class="rm-btn-icon-element">
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                    </span>
+                <?php endif; ?>
+
+                <span class="rm-btn-text"><?php echo esc_html( $settings['text'] ); ?></span>
+
+                <?php if ( ! empty( $settings['selected_icon']['value'] ) && $settings['icon_position'] === 'right' ) : ?>
+                    <span class="rm-btn-icon-element">
+                        <?php \Elementor\Icons_Manager::render_icon( $settings['selected_icon'], [ 'aria-hidden' => 'true' ] ); ?>
+                    </span>
+                <?php endif; ?>
+            </a>
+        </div>
+        <?php
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets() {
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Typography_Widget() );
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Button_Widget() );
 }
 add_action( 'elementor/widgets/widgets_registered', 'rm_register_elementor_widgets' );

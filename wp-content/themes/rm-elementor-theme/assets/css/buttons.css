@@ -1,0 +1,324 @@
+/* ReelMetrics Button System
+   Based on Figma CTA Specifications
+   ================================= */
+
+:root {
+  /* Button Typography */
+  --rm-btn-font-family: var(--rm-font-primary);
+  --rm-btn-font-size: 36px;
+  --rm-btn-font-weight: 400;
+  --rm-btn-line-height: 44px;
+  
+  /* Button Colors */
+  --rm-btn-text-color: #191919;
+  --rm-btn-text-hover: var(--rm-white);
+  --rm-btn-bg-primary: var(--rm-blurple);
+  --rm-btn-bg-primary-hover: var(--rm-blurple-dark);
+  --rm-btn-bg-secondary: var(--rm-white);
+  --rm-btn-bg-secondary-hover: var(--rm-gray-medium);
+  
+  /* Button Sizes */
+  --rm-btn-height-large: 60px;
+  --rm-btn-height-medium: 52px;
+  --rm-btn-padding-x: 24px;
+  --rm-btn-gap: 10px;
+  
+  /* Button Borders */
+  --rm-btn-border-radius: 8px;
+  --rm-btn-border-width: 2px;
+  
+  /* Icon Sizes */
+  --rm-btn-icon-width: 27.71px;
+  --rm-btn-icon-height: 34px;
+}
+
+/* Base Button Styles */
+.rm-btn {
+  /* Layout */
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rm-btn-gap);
+  
+  /* Typography */
+  font-family: var(--rm-btn-font-family);
+  font-size: var(--rm-btn-font-size);
+  font-weight: var(--rm-btn-font-weight);
+  line-height: var(--rm-btn-line-height);
+  
+  /* Sizing */
+  height: var(--rm-btn-height-large);
+  padding: 0 var(--rm-btn-padding-x);
+  min-width: 200px;
+  
+  /* Styling */
+  border: var(--rm-btn-border-width) solid transparent;
+  border-radius: var(--rm-btn-border-radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  /* Colors */
+  color: var(--rm-btn-text-color);
+  background-color: var(--rm-btn-bg-secondary);
+}
+
+/* Button Variants */
+.rm-btn-primary {
+  background-color: var(--rm-btn-bg-primary);
+  color: var(--rm-white);
+  border-color: var(--rm-btn-bg-primary);
+}
+
+.rm-btn-primary:hover {
+  background-color: var(--rm-btn-bg-primary-hover);
+  border-color: var(--rm-btn-bg-primary-hover);
+  color: var(--rm-white);
+}
+
+.rm-btn-secondary {
+  background-color: var(--rm-btn-bg-secondary);
+  color: var(--rm-btn-text-color);
+  border-color: var(--rm-btn-text-color);
+}
+
+.rm-btn-secondary:hover {
+  background-color: var(--rm-btn-text-color);
+  color: var(--rm-white);
+  border-color: var(--rm-btn-text-color);
+}
+
+.rm-btn-outline {
+  background-color: transparent;
+  color: var(--rm-blurple);
+  border-color: var(--rm-blurple);
+}
+
+.rm-btn-outline:hover {
+  background-color: var(--rm-blurple);
+  color: var(--rm-white);
+  border-color: var(--rm-blurple);
+}
+
+/* Button Sizes */
+.rm-btn-large {
+  height: var(--rm-btn-height-large);
+  font-size: var(--rm-btn-font-size);
+  min-width: 554px;
+}
+
+.rm-btn-medium {
+  height: var(--rm-btn-height-medium);
+  font-size: 32px;
+  line-height: 40px;
+  min-width: 467px;
+}
+
+.rm-btn-small {
+  height: 44px;
+  font-size: 28px;
+  line-height: 36px;
+  min-width: 200px;
+  padding: 0 20px;
+}
+
+/* Button with Icons */
+.rm-btn-icon {
+  gap: var(--rm-btn-gap);
+}
+
+.rm-btn-icon .rm-btn-icon-element {
+  width: var(--rm-btn-icon-width);
+  height: var(--rm-btn-icon-height);
+  flex-shrink: 0;
+}
+
+.rm-btn-icon-left .rm-btn-icon-element {
+  order: -1;
+}
+
+.rm-btn-icon-right .rm-btn-icon-element {
+  order: 1;
+}
+
+/* Icon-only buttons */
+.rm-btn-icon-only {
+  width: var(--rm-btn-height-large);
+  min-width: var(--rm-btn-height-large);
+  padding: 0;
+  justify-content: center;
+}
+
+.rm-btn-icon-only.rm-btn-medium {
+  width: var(--rm-btn-height-medium);
+  min-width: var(--rm-btn-height-medium);
+}
+
+/* Button States */
+.rm-btn:disabled,
+.rm-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.rm-btn:focus {
+  outline: 2px solid var(--rm-blurple);
+  outline-offset: 2px;
+}
+
+.rm-btn:active {
+  transform: translateY(1px);
+}
+
+/* Loading State */
+.rm-btn.loading {
+  color: transparent;
+  position: relative;
+}
+
+.rm-btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: rm-btn-spin 1s linear infinite;
+  color: var(--rm-white);
+}
+
+@keyframes rm-btn-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .rm-btn {
+    height: var(--rm-btn-height-medium);
+    font-size: 28px;
+    line-height: 36px;
+    min-width: 280px;
+    padding: 0 20px;
+  }
+  
+  .rm-btn-large {
+    height: var(--rm-btn-height-medium);
+    font-size: 30px;
+    line-height: 38px;
+    min-width: 320px;
+  }
+  
+  .rm-btn-medium {
+    height: 48px;
+    font-size: 26px;
+    line-height: 32px;
+    min-width: 280px;
+  }
+  
+  .rm-btn-small {
+    height: 40px;
+    font-size: 24px;
+    line-height: 30px;
+    min-width: 160px;
+    padding: 0 16px;
+  }
+  
+  .rm-btn-icon-only {
+    width: var(--rm-btn-height-medium);
+    min-width: var(--rm-btn-height-medium);
+  }
+  
+  .rm-btn-icon-only.rm-btn-medium {
+    width: 48px;
+    min-width: 48px;
+  }
+}
+
+/* Button Group */
+.rm-btn-group {
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rm-btn-group.rm-btn-group-vertical {
+  flex-direction: column;
+}
+
+.rm-btn-group.rm-btn-group-full-width {
+  width: 100%;
+}
+
+.rm-btn-group.rm-btn-group-full-width .rm-btn {
+  flex: 1;
+}
+
+/* Utility Classes */
+.rm-btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+.rm-btn-left {
+  justify-content: flex-start;
+}
+
+.rm-btn-right {
+  justify-content: flex-end;
+}
+
+/* CTA Specific Styles (matching Figma specs exactly) */
+.rm-cta {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  
+  /* Desktop sizing from Figma */
+  width: 554px;
+  height: 60px;
+  
+  /* Typography matching Figma - Helvetica Neue */
+  font-family: var(--rm-font-primary);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  
+  /* Flexbox properties */
+  display: flex;
+  align-items: center;
+  
+  /* Color */
+  color: #191919;
+  
+  /* Styling */
+  background-color: var(--rm-blurple);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  justify-content: center;
+}
+
+.rm-cta:hover {
+  background-color: var(--rm-blurple-dark);
+  color: var(--rm-white);
+}
+
+/* Mobile CTA */
+@media (max-width: 768px) {
+  .rm-cta {
+    width: 100%;
+    max-width: 518px;
+    height: 52px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
