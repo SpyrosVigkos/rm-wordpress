@@ -43,6 +43,7 @@ function rm_theme_scripts() {
     wp_enqueue_style( 'rm-colors', RM_THEME_URI . '/assets/css/colors.css', array(), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-colors' ), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-buttons', RM_THEME_URI . '/assets/css/buttons.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
+    wp_enqueue_style( 'rm-navigation', RM_THEME_URI . '/assets/css/navigation.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
     
     // Theme scripts
     wp_enqueue_script( 'rm-theme-script', RM_THEME_URI . '/assets/js/main.js', array( 'jquery' ), RM_THEME_VERSION, true );

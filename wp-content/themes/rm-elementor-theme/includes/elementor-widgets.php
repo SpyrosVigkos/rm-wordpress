@@ -312,10 +312,316 @@ class RM_Button_Widget extends \Elementor\Widget_Base {
 }
 
 /**
+ * ReelMetrics Navigation Widget
+ */
+class RM_Navigation_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-navigation';
+    }
+
+    public function get_title() {
+        return __( 'RM Navigation', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-nav-menu';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    protected function _register_controls() {
+        // Content Section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Navigation', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'logo_image',
+            [
+                'label' => __( 'Logo', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'menu_location',
+            [
+                'label' => __( 'Menu Location', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'primary',
+                'options' => [
+                    'primary' => __( 'Primary Menu', 'rm-elementor-theme' ),
+                    'footer' => __( 'Footer Menu', 'rm-elementor-theme' ),
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'show_login',
+            [
+                'label' => __( 'Show Login Button', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'Show', 'rm-elementor-theme' ),
+                'label_off' => __( 'Hide', 'rm-elementor-theme' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'login_text',
+            [
+                'label' => __( 'Login Button Text', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Login', 'rm-elementor-theme' ),
+                'condition' => [
+                    'show_login' => 'yes',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'login_link',
+            [
+                'label' => __( 'Login Link', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://your-login-url.com', 'rm-elementor-theme' ),
+                'default' => [
+                    'url' => '#login',
+                ],
+                'condition' => [
+                    'show_login' => 'yes',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'mobile_cta_primary',
+            [
+                'label' => __( 'Mobile CTA Primary', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Get Started for Free', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'mobile_cta_primary_link',
+            [
+                'label' => __( 'Mobile CTA Primary Link', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://your-link.com', 'rm-elementor-theme' ),
+                'default' => [
+                    'url' => '#signup',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'mobile_cta_secondary',
+            [
+                'label' => __( 'Mobile CTA Secondary', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Book a Demo', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'mobile_cta_secondary_link',
+            [
+                'label' => __( 'Mobile CTA Secondary Link', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://your-link.com', 'rm-elementor-theme' ),
+                'default' => [
+                    'url' => '#demo',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        ?>
+        <nav class="rm-navigation">
+            <div class="rm-nav-bar">
+                <!-- Logo -->
+                <div class="rm-nav-logo">
+                    <?php if ( ! empty( $settings['logo_image']['url'] ) ) : ?>
+                        <img src="<?php echo esc_url( $settings['logo_image']['url'] ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                    <?php else : ?>
+                        <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.png' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                    <?php endif; ?>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <div class="rm-nav-menu">
+                    <div class="rm-nav-links">
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => $settings['menu_location'],
+                            'menu_class'     => 'rm-nav-wp-menu',
+                            'container'      => false,
+                            'fallback_cb'    => false,
+                            'walker'         => new RM_Nav_Walker(),
+                        ) );
+                        ?>
+                    </div>
+
+                    <?php if ( $settings['show_login'] === 'yes' ) : ?>
+                        <a href="<?php echo esc_url( $settings['login_link']['url'] ); ?>" 
+                           class="rm-nav-login"
+                           <?php if ( $settings['login_link']['is_external'] ) echo 'target="_blank"'; ?>
+                           <?php if ( $settings['login_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                            <?php echo esc_html( $settings['login_text'] ); ?>
+                        </a>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="rm-nav-mobile-toggle" onclick="rmToggleMobileMenu()">
+                    <span class="rm-nav-mobile-text">Menu</span>
+                    <div class="rm-nav-mobile-icon"></div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Overlay -->
+            <div class="rm-nav-mobile-overlay" id="rm-mobile-overlay">
+                <div class="rm-nav-mobile-close" onclick="rmToggleMobileMenu()">
+                    <span class="rm-nav-mobile-close-text">Close</span>
+                    <div class="rm-nav-mobile-close-icon"></div>
+                </div>
+
+                <div class="rm-nav-mobile-content">
+                    <!-- Mobile Navigation Links -->
+                    <div class="rm-nav-mobile-links">
+                        <?php
+                        wp_nav_menu( array(
+                            'theme_location' => $settings['menu_location'],
+                            'menu_class'     => 'rm-nav-mobile-menu',
+                            'container'      => false,
+                            'fallback_cb'    => false,
+                            'walker'         => new RM_Mobile_Nav_Walker(),
+                        ) );
+                        ?>
+                    </div>
+
+                    <?php if ( $settings['show_login'] === 'yes' ) : ?>
+                        <a href="<?php echo esc_url( $settings['login_link']['url'] ); ?>" 
+                           class="rm-nav-mobile-login"
+                           <?php if ( $settings['login_link']['is_external'] ) echo 'target="_blank"'; ?>
+                           <?php if ( $settings['login_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                            <?php echo esc_html( $settings['login_text'] ); ?>
+                        </a>
+                    <?php endif; ?>
+
+                    <!-- Mobile CTA Buttons -->
+                    <div class="rm-nav-mobile-buttons">
+                        <a href="<?php echo esc_url( $settings['mobile_cta_primary_link']['url'] ); ?>" 
+                           class="rm-nav-mobile-cta-primary"
+                           <?php if ( $settings['mobile_cta_primary_link']['is_external'] ) echo 'target="_blank"'; ?>
+                           <?php if ( $settings['mobile_cta_primary_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                            <?php echo esc_html( $settings['mobile_cta_primary'] ); ?>
+                        </a>
+                        
+                        <a href="<?php echo esc_url( $settings['mobile_cta_secondary_link']['url'] ); ?>" 
+                           class="rm-nav-mobile-cta-secondary"
+                           <?php if ( $settings['mobile_cta_secondary_link']['is_external'] ) echo 'target="_blank"'; ?>
+                           <?php if ( $settings['mobile_cta_secondary_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                            <?php echo esc_html( $settings['mobile_cta_secondary'] ); ?>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <?php
+    }
+}
+
+/**
+ * Custom Walker for Desktop Navigation
+ */
+class RM_Nav_Walker extends Walker_Nav_Menu {
+    
+    function start_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat( "\t", $depth );
+        $output .= "\n$indent<ul class=\"sub-menu\">\n";
+    }
+
+    function end_lvl( &$output, $depth = 0, $args = null ) {
+        $indent = str_repeat( "\t", $depth );
+        $output .= "$indent</ul>\n";
+    }
+
+    function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $classes[] = 'menu-item-' . $item->ID;
+        
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        
+        $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+        $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
+        
+        $attributes = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        
+        $item_output = isset( $args->before ) ? $args->before : '';
+        $item_output .= '<a class="rm-nav-link"' . $attributes . '>';
+        $item_output .= ( isset( $args->link_before ) ? $args->link_before : '' ) . apply_filters( 'the_title', $item->title, $item->ID ) . ( isset( $args->link_after ) ? $args->link_after : '' );
+        $item_output .= '</a>';
+        $item_output .= isset( $args->after ) ? $args->after : '';
+        
+        $output .= $indent . $item_output;
+    }
+
+    function end_el( &$output, $item, $depth = 0, $args = null ) {
+        $output .= "\n";
+    }
+}
+
+/**
+ * Custom Walker for Mobile Navigation
+ */
+class RM_Mobile_Nav_Walker extends Walker_Nav_Menu {
+    
+    function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+        $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+        $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+        $classes[] = 'menu-item-' . $item->ID;
+        
+        $attributes = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        
+        $item_output = '<a class="rm-nav-mobile-link"' . $attributes . ' onclick="rmToggleMobileMenu()">';
+        $item_output .= apply_filters( 'the_title', $item->title, $item->ID );
+        $item_output .= '</a>';
+        
+        $output .= $indent . $item_output . "\n";
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets() {
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Typography_Widget() );
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Button_Widget() );
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Navigation_Widget() );
 }
 add_action( 'elementor/widgets/widgets_registered', 'rm_register_elementor_widgets' );
