@@ -1,0 +1,356 @@
+/* ReelMetrics Typography System
+   Based on Figma Design System
+   Font: Helvetica Neue
+   ================================= */
+
+/* Import Helvetica Neue (fallback to system fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Font Families */
+  --rm-font-primary: 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Font Weights */
+  --rm-weight-light: 300;
+  --rm-weight-regular: 400;
+  --rm-weight-medium: 500;
+  --rm-weight-semibold: 600;
+  --rm-weight-bold: 700;
+  
+  /* Desktop Typography Scales - Headers */
+  --rm-text-hero-large: 95px;        /* Main headers like "Know your players Beat the odds" */
+  --rm-text-hero-medium: 88px;       /* "Maximize your player engagement" */
+  --rm-text-hero-small: 60px;        /* Module bigger titles like "Truist Securities" */
+  --rm-text-header-cta: 32px;        /* "Try ReelMetrics for free" */
+  
+  /* Desktop Typography Scales - Body Content */
+  --rm-text-intro-large: 56px;       /* Huge intro text */
+  --rm-text-subheading: 28px;        /* Subheadings */
+  --rm-text-list-item: 24px;         /* List items */
+  --rm-text-body-large: 20px;        /* Body text */
+  --rm-text-body: 18px;              /* Default body text */
+  
+  /* Mobile Typography Scales - Headers */
+  --rm-text-hero-large-mobile: 50px;    /* Mobile main headers */
+  --rm-text-hero-medium-mobile: 48px;   /* Mobile hero text */
+  --rm-text-hero-small-mobile: 36px;    /* Mobile module titles */
+  --rm-text-header-cta-mobile: 18px;    /* Mobile CTA text */
+  
+  /* Mobile Typography Scales - Body Content */
+  --rm-text-intro-large-mobile: 26px;   /* Mobile huge intro text */
+  --rm-text-subheading-mobile: 22px;    /* Mobile subheadings */
+  --rm-text-list-item-mobile: 20px;     /* Mobile list items */
+  --rm-text-body-large-mobile: 18px;    /* Mobile body text */
+  --rm-text-body-mobile: 18px;          /* Mobile default body text */
+  
+  /* Line Heights */
+  --rm-lh-tight: 100%;      /* For large headers */
+  --rm-lh-compact: 105%;    /* For hero text */
+  --rm-lh-medium: 120%;     /* For intro text and lists */
+  --rm-lh-comfortable: 130%; /* For subheadings and CTAs */
+  --rm-lh-relaxed: 150%;    /* For body text reading */
+  
+  /* Letter Spacing */
+  --rm-ls-tight: -0.02em;
+  --rm-ls-normal: 0;
+  --rm-ls-wide: 0.02em;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-body);
+  line-height: var(--rm-lh-comfortable);
+  color: var(--rm-text-primary);
+}
+
+/* Hero Typography - Large Headers */
+.rm-hero-large,
+.rm-text-hero-large {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-large);
+  line-height: var(--rm-lh-compact);
+  letter-spacing: var(--rm-ls-tight);
+}
+
+/* Hero Typography - Medium Headers */
+.rm-hero-medium,
+.rm-text-hero-medium {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-medium);
+  line-height: var(--rm-lh-tight);
+  letter-spacing: var(--rm-ls-tight);
+}
+
+/* Module Bigger Title */
+.rm-module-title,
+.rm-text-module-title {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-small);
+  line-height: var(--rm-lh-tight);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Header CTA Text */
+.rm-header-cta,
+.rm-text-header-cta {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-light);
+  font-size: var(--rm-text-header-cta);
+  line-height: var(--rm-lh-comfortable);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Body Text */
+.rm-body-text,
+.rm-text-body {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-light);
+  font-size: var(--rm-text-body);
+  line-height: var(--rm-lh-comfortable);
+  color: var(--rm-grey);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Introduction Large Text */
+.rm-intro-large,
+.rm-text-intro-large {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-intro-large);
+  line-height: var(--rm-lh-medium);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Subheading Text */
+.rm-subheading,
+.rm-text-subheading {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-medium);
+  font-size: var(--rm-text-subheading);
+  line-height: var(--rm-lh-comfortable);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* List Item Text */
+.rm-list-item,
+.rm-text-list-item {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-list-item);
+  line-height: var(--rm-lh-comfortable);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Body Large Text */
+.rm-body-large,
+.rm-text-body-large {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-light);
+  font-size: var(--rm-text-body-large);
+  line-height: var(--rm-lh-relaxed);
+  color: var(--rm-grey);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Button Typography */
+.rm-button-text {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-body);
+  line-height: var(--rm-lh-comfortable);
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* In-text Links */
+.rm-link,
+.rm-text-link {
+  color: var(--rm-blurple);
+  text-decoration: underline;
+}
+
+.rm-link:hover,
+.rm-text-link:hover {
+  color: var(--rm-blurple-dark);
+  text-decoration: underline;
+}
+
+/* Navigation Typography */
+.rm-nav-text {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: var(--rm-ls-normal);
+}
+
+/* Mobile Responsive Typography */
+@media (max-width: 768px) {
+  /* Header Typography - Mobile */
+  .rm-hero-large,
+  .rm-text-hero-large {
+    font-size: var(--rm-text-hero-large-mobile);
+    line-height: var(--rm-lh-compact);
+  }
+  
+  .rm-hero-medium,
+  .rm-text-hero-medium {
+    font-size: var(--rm-text-hero-medium-mobile);
+    line-height: var(--rm-lh-tight);
+  }
+  
+  .rm-module-title,
+  .rm-text-module-title {
+    font-size: var(--rm-text-hero-small-mobile);
+    line-height: var(--rm-lh-tight);
+  }
+  
+  .rm-header-cta,
+  .rm-text-header-cta {
+    font-size: var(--rm-text-header-cta-mobile);
+    line-height: var(--rm-lh-comfortable);
+  }
+  
+  /* Body Content Typography - Mobile */
+  .rm-intro-large,
+  .rm-text-intro-large {
+    font-size: var(--rm-text-intro-large-mobile);
+    line-height: var(--rm-lh-medium);
+  }
+  
+  .rm-subheading,
+  .rm-text-subheading {
+    font-size: var(--rm-text-subheading-mobile);
+    line-height: var(--rm-lh-medium);
+  }
+  
+  .rm-list-item,
+  .rm-text-list-item {
+    font-size: var(--rm-text-list-item-mobile);
+    line-height: var(--rm-lh-medium);
+  }
+  
+  .rm-body-large,
+  .rm-text-body-large {
+    font-size: var(--rm-text-body-large-mobile);
+    line-height: var(--rm-lh-comfortable);
+  }
+  
+  .rm-body-text,
+  .rm-text-body {
+    font-size: var(--rm-text-body-mobile);
+    line-height: var(--rm-lh-comfortable);
+  }
+  
+  .rm-button-text {
+    font-size: var(--rm-text-header-cta-mobile);
+  }
+}
+
+/* WordPress/Elementor Integration Classes */
+.elementor-widget .rm-hero-text h1 {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-large);
+  line-height: var(--rm-lh-compact);
+  margin: 0 0 1rem 0;
+}
+
+.elementor-widget .rm-hero-text h2 {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-medium);
+  line-height: var(--rm-lh-tight);
+  margin: 0 0 1rem 0;
+}
+
+.elementor-widget .rm-hero-text h3 {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-hero-small);
+  line-height: var(--rm-lh-tight);
+  margin: 0 0 1rem 0;
+}
+
+.elementor-widget .rm-hero-text p {
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-light);
+  font-size: var(--rm-text-body);
+  line-height: var(--rm-lh-comfortable);
+  color: var(--rm-grey);
+  margin: 0 0 1rem 0;
+}
+
+/* Utility Classes for Figma Specifications */
+.rm-helvetica-regular { font-weight: var(--rm-weight-regular); }
+.rm-helvetica-light { font-weight: var(--rm-weight-light); }
+.rm-helvetica-medium { font-weight: var(--rm-weight-medium); }
+.rm-helvetica-semibold { font-weight: var(--rm-weight-semibold); }
+.rm-helvetica-bold { font-weight: var(--rm-weight-bold); }
+
+/* Font Size Utilities - All Figma Sizes */
+.rm-fs-95 { font-size: 95px; }
+.rm-fs-88 { font-size: 88px; }
+.rm-fs-60 { font-size: 60px; }
+.rm-fs-56 { font-size: 56px; }
+.rm-fs-32 { font-size: 32px; }
+.rm-fs-28 { font-size: 28px; }
+.rm-fs-24 { font-size: 24px; }
+.rm-fs-20 { font-size: 20px; }
+.rm-fs-18 { font-size: 18px; }
+
+/* Line Height Utilities */
+.rm-lh-100 { line-height: 100%; }
+.rm-lh-105 { line-height: 105%; }
+.rm-lh-120 { line-height: 120%; }
+.rm-lh-130 { line-height: 130%; }
+.rm-lh-150 { line-height: 150%; }
+
+/* List Styling */
+.rm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rm-list-bulleted {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.rm-list-numbered {
+  list-style: decimal;
+  padding-left: 1.5rem;
+}
+
+.rm-list-bulleted li,
+.rm-list-numbered li {
+  margin-bottom: 0.5rem;
+  font-family: var(--rm-font-primary);
+  font-weight: var(--rm-weight-regular);
+  font-size: var(--rm-text-list-item);
+  line-height: var(--rm-lh-comfortable);
+}
+
+/* Mobile utilities */
+@media (max-width: 768px) {
+  .rm-fs-95 { font-size: 50px; }
+  .rm-fs-88 { font-size: 48px; }
+  .rm-fs-60 { font-size: 36px; }
+  .rm-fs-56 { font-size: 26px; }
+  .rm-fs-32 { font-size: 18px; }
+  .rm-fs-28 { font-size: 22px; }
+  .rm-fs-24 { font-size: 20px; }
+  .rm-fs-20 { font-size: 18px; }
+  .rm-fs-18 { font-size: 18px; }
+  
+  .rm-list-bulleted li,
+  .rm-list-numbered li {
+    font-size: var(--rm-text-list-item-mobile);
+    line-height: var(--rm-lh-medium);
+  }
+}

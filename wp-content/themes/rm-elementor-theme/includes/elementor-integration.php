@@ -112,6 +112,127 @@ function rm_elementor_editor_colors() {
 add_action( 'elementor/editor/after_enqueue_scripts', 'rm_elementor_editor_colors' );
 
 /**
+ * Register ReelMetrics typography with Elementor
+ */
+function rm_elementor_register_typography() {
+    // Register custom typography schemes
+    $typography_schemes = [
+        '1' => [
+            'title' => 'ReelMetrics Typography',
+            'items' => [
+                '1' => [
+                    'font_family' => 'Helvetica Neue',
+                    'font_weight' => '400',
+                ],
+                '2' => [
+                    'font_family' => 'Helvetica Neue',
+                    'font_weight' => '300',
+                ],
+                '3' => [
+                    'font_family' => 'Helvetica Neue',
+                    'font_weight' => '500',
+                ],
+                '4' => [
+                    'font_family' => 'Helvetica Neue',
+                    'font_weight' => '400',
+                ],
+            ],
+        ],
+    ];
+    
+    update_option( 'rm_elementor_typography_schemes', $typography_schemes );
+}
+add_action( 'init', 'rm_elementor_register_typography' );
+
+/**
+ * Add ReelMetrics typography classes to Elementor
+ */
+function rm_elementor_add_typography_classes( $controls_manager ) {
+    $controls_manager->add_control(
+        'rm_typography_class',
+        [
+            'label' => __( 'ReelMetrics Typography', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'options' => [
+                '' => __( 'Default', 'rm-elementor-theme' ),
+                'rm-hero-large' => __( 'Hero Large (95px)', 'rm-elementor-theme' ),
+                'rm-hero-medium' => __( 'Hero Medium (88px)', 'rm-elementor-theme' ),
+                'rm-module-title' => __( 'Module Title (60px)', 'rm-elementor-theme' ),
+                'rm-intro-large' => __( 'Intro Large (56px)', 'rm-elementor-theme' ),
+                'rm-header-cta' => __( 'Header CTA (32px)', 'rm-elementor-theme' ),
+                'rm-subheading' => __( 'Subheading (28px)', 'rm-elementor-theme' ),
+                'rm-list-item' => __( 'List Item (24px)', 'rm-elementor-theme' ),
+                'rm-body-large' => __( 'Body Large (20px)', 'rm-elementor-theme' ),
+                'rm-body-text' => __( 'Body Text (18px)', 'rm-elementor-theme' ),
+            ],
+            'prefix_class' => '',
+        ]
+    );
+}
+
+/**
+ * Register custom font controls with Elementor
+ */
+function rm_elementor_register_fonts() {
+    // Add Helvetica Neue to Elementor fonts
+    add_filter( 'elementor/fonts/groups', function( $font_groups ) {
+        $font_groups['rm_fonts'] = __( 'ReelMetrics Fonts', 'rm-elementor-theme' );
+        return $font_groups;
+    });
+    
+    add_filter( 'elementor/fonts/additional_fonts', function( $additional_fonts ) {
+        $additional_fonts['Helvetica Neue'] = 'rm_fonts';
+        return $additional_fonts;
+    });
+}
+add_action( 'elementor/init', 'rm_elementor_register_fonts' );
+
+/**
+ * Add ReelMetrics typography presets to Elementor widgets
+ */
+function rm_elementor_add_widget_typography_controls() {
+    // Add typography controls to text widgets
+    add_action( 'elementor/element/heading/section_title/before_section_end', function( $element ) {
+        $element->add_control(
+            'rm_typography_preset',
+            [
+                'label' => __( 'ReelMetrics Typography', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'options' => [
+                    '' => __( 'None', 'rm-elementor-theme' ),
+                    'rm-hero-large' => __( 'Hero Large', 'rm-elementor-theme' ),
+                    'rm-hero-medium' => __( 'Hero Medium', 'rm-elementor-theme' ),
+                    'rm-module-title' => __( 'Module Title', 'rm-elementor-theme' ),
+                    'rm-intro-large' => __( 'Intro Large', 'rm-elementor-theme' ),
+                    'rm-subheading' => __( 'Subheading', 'rm-elementor-theme' ),
+                ],
+                'prefix_class' => '',
+                'separator' => 'before',
+            ]
+        );
+    });
+    
+    add_action( 'elementor/element/text-editor/section_editor/before_section_end', function( $element ) {
+        $element->add_control(
+            'rm_typography_preset',
+            [
+                'label' => __( 'ReelMetrics Typography', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'options' => [
+                    '' => __( 'None', 'rm-elementor-theme' ),
+                    'rm-body-large' => __( 'Body Large', 'rm-elementor-theme' ),
+                    'rm-body-text' => __( 'Body Text', 'rm-elementor-theme' ),
+                    'rm-list-item' => __( 'List Item', 'rm-elementor-theme' ),
+                ],
+                'prefix_class' => '',
+                'separator' => 'before',
+            ]
+        );
+    });
+}
+add_action( 'elementor/init', 'rm_elementor_add_widget_typography_controls' );
+
+/**
  * Register custom Elementor color controls
  */
 function rm_register_elementor_color_schemes() {

@@ -1,0 +1,319 @@
+// ReelMetrics Typography System - SCSS Variables
+// Based on Figma Design System Specifications
+// Font: Helvetica Neue
+// ================================================
+
+// Font Family
+$rm-font-primary: 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+// Font Weights
+$rm-weight-light: 300;
+$rm-weight-regular: 400;
+$rm-weight-medium: 500;
+$rm-weight-semibold: 600;
+$rm-weight-bold: 700;
+
+// Desktop Font Sizes - Headers (as specified in Figma)
+$rm-text-hero-large: 95px;        // "Know your players Beat the odds"
+$rm-text-hero-medium: 88px;       // "Maximize your player engagement"
+$rm-text-hero-small: 60px;        // Module bigger titles
+$rm-text-header-cta: 32px;        // "Try ReelMetrics for free"
+
+// Desktop Font Sizes - Body Content
+$rm-text-intro-large: 56px;       // Huge intro text
+$rm-text-subheading: 28px;        // Subheadings (Medium weight)
+$rm-text-list-item: 24px;         // List items
+$rm-text-body-large: 20px;        // Body text (Light weight)
+$rm-text-body: 18px;              // Default body text
+
+// Mobile Font Sizes - Headers
+$rm-text-hero-large-mobile: 50px;
+$rm-text-hero-medium-mobile: 48px;
+$rm-text-hero-small-mobile: 36px;
+$rm-text-header-cta-mobile: 18px;
+
+// Mobile Font Sizes - Body Content
+$rm-text-intro-large-mobile: 26px;
+$rm-text-subheading-mobile: 22px;
+$rm-text-list-item-mobile: 20px;
+$rm-text-body-large-mobile: 18px;
+$rm-text-body-mobile: 18px;
+
+// Line Heights (as specified in Figma)
+$rm-lh-tight: 100%;      // For large headers
+$rm-lh-compact: 105%;    // For hero text
+$rm-lh-medium: 120%;     // For intro text and lists
+$rm-lh-comfortable: 130%; // For subheadings and CTAs
+$rm-lh-relaxed: 150%;    // For body text reading
+
+// Letter Spacing
+$rm-ls-tight: -0.02em;
+$rm-ls-normal: 0;
+$rm-ls-wide: 0.02em;
+
+// Breakpoints
+$rm-mobile-breakpoint: 768px;
+
+// Typography Scale Map
+$rm-typography-scale: (
+  // Header Typography
+  'hero-large': (
+    'desktop': $rm-text-hero-large,
+    'mobile': $rm-text-hero-large-mobile,
+    'weight': $rm-weight-regular,
+    'line-height': $rm-lh-compact,
+    'letter-spacing': $rm-ls-tight
+  ),
+  'hero-medium': (
+    'desktop': $rm-text-hero-medium,
+    'mobile': $rm-text-hero-medium-mobile,
+    'weight': $rm-weight-regular,
+    'line-height': $rm-lh-tight,
+    'letter-spacing': $rm-ls-tight
+  ),
+  'module-title': (
+    'desktop': $rm-text-hero-small,
+    'mobile': $rm-text-hero-small-mobile,
+    'weight': $rm-weight-regular,
+    'line-height': $rm-lh-tight,
+    'letter-spacing': $rm-ls-normal
+  ),
+  'header-cta': (
+    'desktop': $rm-text-header-cta,
+    'mobile': $rm-text-header-cta-mobile,
+    'weight': $rm-weight-light,
+    'line-height': $rm-lh-comfortable,
+    'letter-spacing': $rm-ls-normal
+  ),
+  // Body Content Typography
+  'intro-large': (
+    'desktop': $rm-text-intro-large,
+    'mobile': $rm-text-intro-large-mobile,
+    'weight': $rm-weight-regular,
+    'line-height': $rm-lh-medium,
+    'letter-spacing': $rm-ls-normal
+  ),
+  'subheading': (
+    'desktop': $rm-text-subheading,
+    'mobile': $rm-text-subheading-mobile,
+    'weight': $rm-weight-medium,
+    'line-height': $rm-lh-comfortable,
+    'letter-spacing': $rm-ls-normal
+  ),
+  'list-item': (
+    'desktop': $rm-text-list-item,
+    'mobile': $rm-text-list-item-mobile,
+    'weight': $rm-weight-regular,
+    'line-height': $rm-lh-comfortable,
+    'letter-spacing': $rm-ls-normal
+  ),
+  'body-large': (
+    'desktop': $rm-text-body-large,
+    'mobile': $rm-text-body-large-mobile,
+    'weight': $rm-weight-light,
+    'line-height': $rm-lh-relaxed,
+    'letter-spacing': $rm-ls-normal
+  ),
+  'body': (
+    'desktop': $rm-text-body,
+    'mobile': $rm-text-body-mobile,
+    'weight': $rm-weight-light,
+    'line-height': $rm-lh-comfortable,
+    'letter-spacing': $rm-ls-normal
+  )
+);
+
+// Typography Mixins
+@mixin rm-font-base {
+  font-family: $rm-font-primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin rm-typography($style: 'body') {
+  @include rm-font-base;
+  
+  $config: map-get($rm-typography-scale, $style);
+  
+  @if $config {
+    font-size: map-get($config, 'desktop');
+    font-weight: map-get($config, 'weight');
+    line-height: map-get($config, 'line-height');
+    letter-spacing: map-get($config, 'letter-spacing');
+    
+    @media (max-width: $rm-mobile-breakpoint) {
+      font-size: map-get($config, 'mobile');
+    }
+  }
+}
+
+// Responsive typography mixin
+@mixin rm-responsive-text($desktop-size, $mobile-size: null, $weight: $rm-weight-regular, $line-height: $rm-lh-comfortable) {
+  @include rm-font-base;
+  font-size: $desktop-size;
+  font-weight: $weight;
+  line-height: $line-height;
+  
+  @if $mobile-size {
+    @media (max-width: $rm-mobile-breakpoint) {
+      font-size: $mobile-size;
+    }
+  }
+}
+
+// Specific Figma-based mixins - Headers
+@mixin rm-hero-large {
+  @include rm-typography('hero-large');
+}
+
+@mixin rm-hero-medium {
+  @include rm-typography('hero-medium');
+}
+
+@mixin rm-module-title {
+  @include rm-typography('module-title');
+}
+
+@mixin rm-header-cta {
+  @include rm-typography('header-cta');
+}
+
+// Specific Figma-based mixins - Body Content
+@mixin rm-intro-large {
+  @include rm-typography('intro-large');
+}
+
+@mixin rm-subheading {
+  @include rm-typography('subheading');
+}
+
+@mixin rm-list-item {
+  @include rm-typography('list-item');
+}
+
+@mixin rm-body-large {
+  @include rm-typography('body-large');
+  color: var(--rm-grey);
+}
+
+@mixin rm-body-text {
+  @include rm-typography('body');
+  color: var(--rm-grey);
+}
+
+// Button typography mixin
+@mixin rm-button-text {
+  @include rm-font-base;
+  font-weight: $rm-weight-regular;
+  font-size: $rm-text-body;
+  line-height: $rm-lh-comfortable;
+  letter-spacing: $rm-ls-normal;
+  
+  @media (max-width: $rm-mobile-breakpoint) {
+    font-size: $rm-text-header-cta-mobile;
+  }
+}
+
+// Navigation typography mixin
+@mixin rm-nav-text {
+  @include rm-font-base;
+  font-weight: $rm-weight-regular;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: $rm-ls-normal;
+}
+
+// Utility function to get typography value
+@function rm-font-size($style, $breakpoint: 'desktop') {
+  $config: map-get($rm-typography-scale, $style);
+  @if $config {
+    @return map-get($config, $breakpoint);
+  }
+  @return $rm-text-body;
+}
+
+// Generate utility classes
+@each $style, $config in $rm-typography-scale {
+  .rm-text-#{$style} {
+    @include rm-typography($style);
+  }
+}
+
+// Weight utility classes
+.rm-weight-light { font-weight: $rm-weight-light; }
+.rm-weight-regular { font-weight: $rm-weight-regular; }
+.rm-weight-medium { font-weight: $rm-weight-medium; }
+.rm-weight-semibold { font-weight: $rm-weight-semibold; }
+.rm-weight-bold { font-weight: $rm-weight-bold; }
+
+// Specific Figma font size utilities - All sizes
+.rm-fs-95 { 
+  font-size: 95px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 50px; }
+}
+.rm-fs-88 { 
+  font-size: 88px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 48px; }
+}
+.rm-fs-60 { 
+  font-size: 60px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 36px; }
+}
+.rm-fs-56 { 
+  font-size: 56px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 26px; }
+}
+.rm-fs-32 { 
+  font-size: 32px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 18px; }
+}
+.rm-fs-28 { 
+  font-size: 28px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 22px; }
+}
+.rm-fs-24 { 
+  font-size: 24px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 20px; }
+}
+.rm-fs-20 { 
+  font-size: 20px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 18px; }
+}
+.rm-fs-18 { 
+  font-size: 18px;
+  @media (max-width: $rm-mobile-breakpoint) { font-size: 18px; }
+}
+
+// Line height utilities - All Figma line heights
+.rm-lh-100 { line-height: 100%; }
+.rm-lh-105 { line-height: 105%; }
+.rm-lh-120 { line-height: 120%; }
+.rm-lh-130 { line-height: 130%; }
+.rm-lh-150 { line-height: 150%; }
+
+// List styling mixins
+@mixin rm-list-base {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin rm-list-bulleted {
+  list-style: disc;
+  padding-left: 1.5rem;
+  
+  li {
+    margin-bottom: 0.5rem;
+    @include rm-list-item;
+  }
+}
+
+@mixin rm-list-numbered {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  
+  li {
+    margin-bottom: 0.5rem;
+    @include rm-list-item;
+  }
+}

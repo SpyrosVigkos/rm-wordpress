@@ -39,8 +39,9 @@ function rm_theme_scripts() {
     // Theme stylesheet
     wp_enqueue_style( 'rm-theme-style', get_stylesheet_uri(), array(), RM_THEME_VERSION );
     
-    // ReelMetrics Color System
+    // ReelMetrics Design System
     wp_enqueue_style( 'rm-colors', RM_THEME_URI . '/assets/css/colors.css', array(), RM_THEME_VERSION );
+    wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-colors' ), RM_THEME_VERSION );
     
     // Theme scripts
     wp_enqueue_script( 'rm-theme-script', RM_THEME_URI . '/assets/js/main.js', array( 'jquery' ), RM_THEME_VERSION, true );
@@ -66,4 +67,5 @@ add_action( 'widgets_init', 'rm_theme_widgets_init' );
 // Include custom Elementor functionality
 if ( defined( 'ELEMENTOR_VERSION' ) ) {
     require_once RM_THEME_DIR . '/includes/elementor-integration.php';
+    require_once RM_THEME_DIR . '/includes/elementor-widgets.php';
 }
