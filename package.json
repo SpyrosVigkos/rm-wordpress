@@ -1,0 +1,25 @@
+{
+  "name": "rm-wordpress",
+  "version": "1.0.0",
+  "description": "Reel Metrics WordPress theme with Elementor integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "sass wp-content/themes/rm-elementor-theme/assets/scss:wp-content/themes/rm-elementor-theme/assets/css",
+    "build:js": "webpack --mode production",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
+    "watch:css": "sass --watch wp-content/themes/rm-elementor-theme/assets/scss:wp-content/themes/rm-elementor-theme/assets/css",
+    "watch:js": "webpack --mode development --watch"
+  },
+  "keywords": [
+    "wordpress",
+    "elementor",
+    "theme",
+    "reel-metrics"
+  ],
+  "author": "Spyros",
+  "license": "MIT",
+  "dependencies": {
+    "figma-mcp": "^0.1.4"
+  }
+}

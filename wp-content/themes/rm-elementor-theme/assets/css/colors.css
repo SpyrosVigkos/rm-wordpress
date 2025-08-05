@@ -1,0 +1,112 @@
+/* ReelMetrics Color Palette
+   Extracted from Figma Design System
+   File: ReelMetrics (External) (Copy)
+   ================================= */
+
+:root {
+  /* Brand Colors - Blurple */
+  --rm-blurple: #5E55FC;
+  --rm-blurple-medium: #CFCDF2;
+  --rm-blurple-light: #F1F0F9;
+  
+  /* Core Colors */
+  --rm-black: #292929;
+  --rm-white: #FFFFFF;
+  --rm-red: #FF3E3E;
+  
+  /* Grey Scale */
+  --rm-grey: #6A6A6A;
+  --rm-grey-medium: #E9E9E9;
+  --rm-grey-light: #F8F8F8;
+  
+  /* Primary Palette */
+  --rm-primary: var(--rm-blurple);
+  --rm-primary-light: var(--rm-blurple-medium);
+  --rm-primary-dark: #4a44c9;
+  
+  /* Text Colors */
+  --rm-text-primary: var(--rm-black);
+  --rm-text-secondary: #666666;
+  --rm-text-light: #999999;
+  --rm-text-inverse: var(--rm-white);
+  --rm-text-error: var(--rm-red);
+  
+  /* Background Colors */
+  --rm-bg-primary: var(--rm-white);
+  --rm-bg-secondary: #f9f9f9;
+  --rm-bg-tertiary: var(--rm-gray-medium);
+  --rm-bg-dark: var(--rm-black);
+  
+  /* Border Colors */
+  --rm-border-light: var(--rm-gray-medium);
+  --rm-border-default: #d0d0d0;
+  --rm-border-dark: #999999;
+  
+  /* Component Specific */
+  --rm-button-primary: var(--rm-blurple);
+  --rm-button-primary-hover: var(--rm-primary-dark);
+  --rm-button-secondary: var(--rm-white);
+  --rm-button-secondary-hover: var(--rm-gray-medium);
+  
+  /* Status Colors */
+  --rm-success: #00c48c;
+  --rm-warning: #ffaa00;
+  --rm-error: var(--rm-red);
+  --rm-info: var(--rm-blurple);
+  
+  /* Shadow Colors */
+  --rm-shadow-light: rgba(40, 40, 40, 0.1);
+  --rm-shadow-medium: rgba(40, 40, 40, 0.15);
+  --rm-shadow-dark: rgba(40, 40, 40, 0.25);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --rm-text-primary: var(--rm-white);
+    --rm-text-secondary: var(--rm-gray-medium);
+    --rm-bg-primary: #1a1a1a;
+    --rm-bg-secondary: var(--rm-black);
+    --rm-bg-tertiary: #3a3a3a;
+    --rm-border-light: #3a3a3a;
+    --rm-border-default: #4a4a4a;
+    --rm-border-dark: #5a5a5a;
+  }
+}
+
+/* Utility Classes */
+.rm-color-primary { color: var(--rm-primary); }
+.rm-color-black { color: var(--rm-black); }
+.rm-color-white { color: var(--rm-white); }
+.rm-color-red { color: var(--rm-red); }
+.rm-color-blurple { color: var(--rm-blurple); }
+
+.rm-bg-primary { background-color: var(--rm-primary); }
+.rm-bg-black { background-color: var(--rm-black); }
+.rm-bg-white { background-color: var(--rm-white); }
+.rm-bg-gray { background-color: var(--rm-gray-medium); }
+.rm-bg-blurple { background-color: var(--rm-blurple); }
+.rm-bg-blurple-light { background-color: var(--rm-blurple-medium); }
+
+/* Elementor Integration */
+.elementor-widget .rm-primary-button {
+  background-color: var(--rm-button-primary);
+  color: var(--rm-white);
+  transition: background-color 0.3s ease;
+}
+
+.elementor-widget .rm-primary-button:hover {
+  background-color: var(--rm-button-primary-hover);
+}
+
+.elementor-widget .rm-secondary-button {
+  background-color: var(--rm-button-secondary);
+  color: var(--rm-primary);
+  border: 2px solid var(--rm-primary);
+  transition: all 0.3s ease;
+}
+
+.elementor-widget .rm-secondary-button:hover {
+  background-color: var(--rm-primary);
+  color: var(--rm-white);
+}
