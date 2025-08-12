@@ -1,6 +1,7 @@
 <?php
 /**
- * RM Elementor Theme Functions
+ * ReelMetrics Child Theme Functions
+ * Child theme of Hello Elementor
  *
  * @package RMElementorTheme
  */
@@ -12,62 +13,159 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Define theme constants
 define( 'RM_THEME_VERSION', '1.0.0' );
-define( 'RM_THEME_DIR', get_template_directory() );
-define( 'RM_THEME_URI', get_template_directory_uri() );
+define( 'RM_THEME_DIR', get_stylesheet_directory() );
+define( 'RM_THEME_URI', get_stylesheet_directory_uri() );
 
 /**
- * Theme setup
+ * Enqueue parent and child theme styles
  */
-function rm_theme_setup() {
-    // Add theme support
-    add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+function rm_child_enqueue_styles() {
+    // Parent theme style
+    wp_enqueue_style( 'hello-elementor', get_template_directory_uri() . '/style.css' );
     
-    // Register navigation menus
-    register_nav_menus( array(
-        'primary' => __( 'Primary Menu', 'rm-elementor-theme' ),
-        'footer'  => __( 'Footer Menu', 'rm-elementor-theme' ),
-    ) );
-}
-add_action( 'after_setup_theme', 'rm_theme_setup' );
+    // Child theme style
+    wp_enqueue_style( 'rm-child-style', get_stylesheet_uri(), array( 'hello-elementor' ), RM_THEME_VERSION );
+    
+    // Fonts (loaded before typography to ensure availability)
+    wp_enqueue_style( 'rm-fonts', RM_THEME_URI . '/assets/css/fonts.css', array(), RM_THEME_VERSION );
 
-/**
- * Enqueue scripts and styles
- */
-function rm_theme_scripts() {
-    // Theme stylesheet
-    wp_enqueue_style( 'rm-theme-style', get_stylesheet_uri(), array(), RM_THEME_VERSION );
-    
     // ReelMetrics Design System
     wp_enqueue_style( 'rm-colors', RM_THEME_URI . '/assets/css/colors.css', array(), RM_THEME_VERSION );
-    wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-colors' ), RM_THEME_VERSION );
+    wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-fonts', 'rm-colors' ), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-buttons', RM_THEME_URI . '/assets/css/buttons.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-navigation', RM_THEME_URI . '/assets/css/navigation.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
     
     // Theme scripts
     wp_enqueue_script( 'rm-theme-script', RM_THEME_URI . '/assets/js/main.js', array( 'jquery' ), RM_THEME_VERSION, true );
 }
-add_action( 'wp_enqueue_scripts', 'rm_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
 
 /**
- * Register widget areas
+ * Theme setup - extends Hello Elementor
  */
-function rm_theme_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Sidebar', 'rm-elementor-theme' ),
-        'id'            => 'sidebar-1',
-        'description'   => __( 'Add widgets here.', 'rm-elementor-theme' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+function rm_child_theme_setup() {
+    // Load text domain for translations
+    load_child_theme_textdomain( 'rm-elementor-theme', RM_THEME_DIR . '/languages' );
+    
+    // Add additional theme support
+    add_theme_support( 'custom-logo', array(
+        'height'      => 100,
+        'width'       => 350,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ) );
+    
+    // Register additional menus if needed
+    register_nav_menus( array(
+        'footer' => __( 'Footer Menu', 'rm-elementor-theme' ),
     ) );
 }
-add_action( 'widgets_init', 'rm_theme_widgets_init' );
+add_action( 'after_setup_theme', 'rm_child_theme_setup' );
 
-// Include custom Elementor functionality
-if ( defined( 'ELEMENTOR_VERSION' ) ) {
+/**
+ * Load Elementor functionality
+ */
+function rm_init_elementor_support() {
+    // Check if Elementor is loaded
+    if ( ! did_action( 'elementor/loaded' ) ) {
+        add_action( 'admin_notices', 'rm_elementor_missing_notice' );
+        return;
+    }
+    
+    // Wait for Elementor to initialize
+    add_action( 'elementor/init', 'rm_elementor_init' );
+}
+add_action( 'after_setup_theme', 'rm_init_elementor_support', 20 );
+
+/**
+ * Initialize Elementor integration
+ */
+function rm_elementor_init() {
+    // Load Elementor extensions
+    require_once RM_THEME_DIR . '/includes/elementor-global-settings.php';
     require_once RM_THEME_DIR . '/includes/elementor-integration.php';
     require_once RM_THEME_DIR . '/includes/elementor-widgets.php';
 }
+
+/**
+ * Admin notice for missing Elementor
+ */
+function rm_elementor_missing_notice() {
+    if ( ! current_user_can( 'activate_plugins' ) ) {
+        return;
+    }
+    
+    $message = sprintf(
+        /* translators: 1: Theme name 2: Elementor plugin name */
+        esc_html__( '%1$s requires %2$s plugin to be installed and activated for full functionality.', 'rm-elementor-theme' ),
+        '<strong>' . wp_get_theme()->get( 'Name' ) . '</strong>',
+        '<strong>' . esc_html__( 'Elementor Page Builder', 'rm-elementor-theme' ) . '</strong>'
+    );
+    
+    printf( '<div class="notice notice-warning"><p>%s</p></div>', $message );
+}
+
+/**
+ * Check parent theme
+ */
+function rm_check_parent_theme() {
+    $theme = wp_get_theme();
+    $parent = $theme->parent();
+    
+    if ( ! $parent || 'Hello Elementor' !== $parent->get( 'Name' ) ) {
+        add_action( 'admin_notices', 'rm_parent_theme_notice' );
+    }
+}
+add_action( 'after_setup_theme', 'rm_check_parent_theme' );
+
+/**
+ * Admin notice for missing parent theme
+ */
+function rm_parent_theme_notice() {
+    if ( ! current_user_can( 'install_themes' ) ) {
+        return;
+    }
+    
+    $message = sprintf(
+        /* translators: 1: Child theme name 2: Parent theme name */
+        esc_html__( '%1$s requires %2$s parent theme to be installed.', 'rm-elementor-theme' ),
+        '<strong>' . wp_get_theme()->get( 'Name' ) . '</strong>',
+        '<strong>Hello Elementor</strong>'
+    );
+    
+    printf( '<div class="notice notice-error"><p>%s</p></div>', $message );
+}
+
+/**
+ * Custom body classes
+ */
+function rm_body_classes( $classes ) {
+    $classes[] = 'rm-theme';
+    $classes[] = 'rm-hello-child';
+    
+    return $classes;
+}
+add_filter( 'body_class', 'rm_body_classes' );
+
+/**
+ * Override Hello Elementor's typography if needed
+ */
+function rm_customize_hello_settings() {
+    // Add custom CSS to override Hello's defaults with ReelMetrics design system
+    add_action( 'wp_head', function() {
+        ?>
+        <style>
+            /* Override Hello Elementor defaults with ReelMetrics design system */
+            body {
+                font-family: var(--rm-font-primary, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+            }
+            
+            /* Apply ReelMetrics colors globally */
+            .elementor-section.elementor-section-boxed > .elementor-container {
+                max-width: 1225px;
+            }
+        </style>
+        <?php
+    }, 100 );
+}
+add_action( 'init', 'rm_customize_hello_settings' );

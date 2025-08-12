@@ -1,11 +1,23 @@
 /*
-Theme Name: RM Elementor Theme
+Theme Name: ReelMetrics for Elementor
 Theme URI: https://www.reelmetrics.com/
 Author: Spyros
 Author URI: https://www.reelmetrics.com/
-Description: Custom WordPress theme with Elementor widgets for Reel Metrics
+Description: Child theme of Hello Elementor with ReelMetrics design system, custom widgets, and brand components
+Template: hello-elementor
 Version: 1.0.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 Text Domain: rm-elementor-theme
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
 */
+
+/* 
+ * This child theme extends Hello Elementor with:
+ * - ReelMetrics color system (Blurple, Black, Red)
+ * - Custom typography (Helvetica Neue)
+ * - Custom Elementor widgets (RM Typography, RM Button, RM Navigation)
+ * - Complete design system CSS
+ */

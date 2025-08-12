@@ -28,3 +28,6 @@ build/
 # Environment files
 .env
 .env.local
+
+# zip files
+*.zip

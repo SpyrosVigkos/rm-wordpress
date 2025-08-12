@@ -1,0 +1,17 @@
+/* ReelMetrics Theme Fonts
+   Load Helvetica Neue 55 via CDN. This provides the Helvetica Neue 55 family
+   with multiple weights and styles.
+*/
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+/* If you later self-host, replace the import with @font-face blocks like:
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helvetica-neue/helveticaneue-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+

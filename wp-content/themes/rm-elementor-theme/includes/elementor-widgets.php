@@ -8,6 +8,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+// Exit if Elementor is not active
+if ( ! did_action( 'elementor/loaded' ) ) {
+    return;
+}
+
 /**
  * ReelMetrics Typography Widget
  */
@@ -29,7 +34,7 @@ class RM_Typography_Widget extends \Elementor\Widget_Base {
         return [ 'reelmetrics' ];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
         // Content Section
         $this->start_controls_section(
             'content_section',
@@ -170,7 +175,7 @@ class RM_Button_Widget extends \Elementor\Widget_Base {
         return [ 'reelmetrics' ];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
         // Content Section
         $this->start_controls_section(
             'content_section',
@@ -332,7 +337,7 @@ class RM_Navigation_Widget extends \Elementor\Widget_Base {
         return [ 'reelmetrics' ];
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
         // Content Section
         $this->start_controls_section(
             'content_section',
@@ -468,13 +473,27 @@ class RM_Navigation_Widget extends \Elementor\Widget_Base {
                 <div class="rm-nav-menu">
                     <div class="rm-nav-links">
                         <?php
-                        wp_nav_menu( array(
-                            'theme_location' => $settings['menu_location'],
-                            'menu_class'     => 'rm-nav-wp-menu',
-                            'container'      => false,
-                            'fallback_cb'    => false,
-                            'walker'         => new RM_Nav_Walker(),
-                        ) );
+                        // Check if menu exists
+                        if ( has_nav_menu( $settings['menu_location'] ) ) {
+                            wp_nav_menu( array(
+                                'theme_location' => $settings['menu_location'],
+                                'menu_class'     => 'rm-nav-wp-menu',
+                                'container'      => false,
+                                'fallback_cb'    => false,
+                                'walker'         => new RM_Nav_Walker(),
+                            ) );
+                        } else {
+                            // Display default menu items
+                            ?>
+                            <ul class="rm-nav-wp-menu rm-nav-default">
+                                <li><a href="#products" class="rm-nav-link">Products</a></li>
+                                <li><a href="#pricing" class="rm-nav-link">Pricing</a></li>
+                                <li><a href="#resources" class="rm-nav-link">Resources</a></li>
+                                <li><a href="#about" class="rm-nav-link">About</a></li>
+                                <li><a href="#contact" class="rm-nav-link">Contact</a></li>
+                            </ul>
+                            <?php
+                        }
                         ?>
                     </div>
 
@@ -506,13 +525,27 @@ class RM_Navigation_Widget extends \Elementor\Widget_Base {
                     <!-- Mobile Navigation Links -->
                     <div class="rm-nav-mobile-links">
                         <?php
-                        wp_nav_menu( array(
-                            'theme_location' => $settings['menu_location'],
-                            'menu_class'     => 'rm-nav-mobile-menu',
-                            'container'      => false,
-                            'fallback_cb'    => false,
-                            'walker'         => new RM_Mobile_Nav_Walker(),
-                        ) );
+                        // Check if menu exists
+                        if ( has_nav_menu( $settings['menu_location'] ) ) {
+                            wp_nav_menu( array(
+                                'theme_location' => $settings['menu_location'],
+                                'menu_class'     => 'rm-nav-mobile-menu',
+                                'container'      => false,
+                                'fallback_cb'    => false,
+                                'walker'         => new RM_Mobile_Nav_Walker(),
+                            ) );
+                        } else {
+                            // Display default mobile menu items
+                            ?>
+                            <div class="rm-nav-mobile-menu rm-nav-mobile-default">
+                                <a href="#products" class="rm-nav-mobile-link" onclick="rmToggleMobileMenu()">Products</a>
+                                <a href="#pricing" class="rm-nav-mobile-link" onclick="rmToggleMobileMenu()">Pricing</a>
+                                <a href="#resources" class="rm-nav-mobile-link" onclick="rmToggleMobileMenu()">Resources</a>
+                                <a href="#about" class="rm-nav-mobile-link" onclick="rmToggleMobileMenu()">About</a>
+                                <a href="#contact" class="rm-nav-mobile-link" onclick="rmToggleMobileMenu()">Contact</a>
+                            </div>
+                            <?php
+                        }
                         ?>
                     </div>
 
@@ -619,9 +652,9 @@ class RM_Mobile_Nav_Walker extends Walker_Nav_Menu {
 /**
  * Register Custom Widgets
  */
-function rm_register_elementor_widgets() {
-    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Typography_Widget() );
-    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Button_Widget() );
-    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new RM_Navigation_Widget() );
+function rm_register_elementor_widgets( $widgets_manager ) {
+    $widgets_manager->register( new RM_Typography_Widget() );
+    $widgets_manager->register( new RM_Button_Widget() );
+    $widgets_manager->register( new RM_Navigation_Widget() );
 }
-add_action( 'elementor/widgets/widgets_registered', 'rm_register_elementor_widgets' );
+add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
