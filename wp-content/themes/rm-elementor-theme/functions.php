@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define theme constants
-define( 'RM_THEME_VERSION', '1.0.0' );
+define( 'RM_THEME_VERSION', '1.0.1' );
 define( 'RM_THEME_DIR', get_stylesheet_directory() );
 define( 'RM_THEME_URI', get_stylesheet_directory_uri() );
 
@@ -37,6 +37,12 @@ function rm_child_enqueue_styles() {
     
     // Theme scripts
     wp_enqueue_script( 'rm-theme-script', RM_THEME_URI . '/assets/js/main.js', array( 'jquery' ), RM_THEME_VERSION, true );
+    
+    // Accordion widget styles and scripts (conditional loading)
+    if ( is_page() || is_single() || is_front_page() ) {
+        wp_enqueue_style( 'rm-accordion-style', RM_THEME_URI . '/assets/css/accordion.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/accordion.css' ) );
+        wp_enqueue_script( 'rm-accordion-script', RM_THEME_URI . '/assets/js/accordion.js', array( 'jquery' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/accordion.js' ), true );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
 
@@ -169,3 +175,14 @@ function rm_customize_hello_settings() {
     }, 100 );
 }
 add_action( 'init', 'rm_customize_hello_settings' );
+
+/**
+ * Force Elementor to regenerate CSS (temporary - remove after cache is cleared)
+ */
+function rm_force_elementor_css_regeneration() {
+    if ( class_exists( '\Elementor\Plugin' ) ) {
+        \Elementor\Plugin::$instance->files_manager->clear_cache();
+    }
+}
+// Uncomment the line below temporarily to force CSS regeneration, then comment it back
+// add_action( 'init', 'rm_force_elementor_css_regeneration' );

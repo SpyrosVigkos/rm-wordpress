@@ -1,0 +1,390 @@
+/**
+ * ReelMetrics Accordion Widget Styles
+ * Based on Figma designs with smooth animations
+ */
+
+.rm-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 585px;
+    margin: 0 auto;
+}
+
+/* Ensure proper spacing when items expand */
+.rm-accordion-item {
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+/* When an item is open, it needs higher z-index but no extra margin */
+.rm-accordion-item.is-open {
+    z-index: 10;
+    /* margin-bottom: 240px; - REMOVED: Let natural flow handle spacing */
+}
+
+
+
+/* Accordion Header - Closed State */
+.rm-accordion-header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Always space-between for title and icon */
+    align-items: center;
+    padding: 9px 9px 9px 20px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 80px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 2;
+}
+
+/* Title styling */
+.rm-accordion-title {
+    /* width: 165px; - removed fixed width */
+    height: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: left;
+    color: #292929;
+    margin: 0;
+    flex: 1; /* Allow title to grow and take available space */
+    order: 0;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* Toggle button */
+.rm-accordion-toggle {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0; /* Prevent shrinking */
+    order: 1;
+    position: relative;
+}
+
+.rm-accordion-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 3px;
+    gap: 10px;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: #292929;
+    border-radius: 70px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rm-accordion-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Content container - hidden by default */
+.rm-accordion-content {
+    /* position: absolute; - REMOVED: This was causing the height calculation issues */
+    /* top: 0; left: 0; - REMOVED */
+    /* width: 287px; - now set dynamically via inline styles */
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.rm-accordion-content-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8.5px 9px 30px 30px; /* Match Figma: 8.5px top, 9px right, 30px bottom, 30px left */
+    gap: 0px;
+    width: 585px;
+    min-height: 281.5px; /* Minimum height from Figma */
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    border-radius: 40px;
+    position: relative; /* For absolute positioned header */
+}
+
+/* Remove the old rule since we restructured */
+
+/* Separator line */
+.rm-accordion-separator {
+    width: 500px;
+    height: 0px;
+    border: 1px solid #E9E9E9;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/* Content text */
+.rm-accordion-text {
+    width: 500px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 140%;
+    color: #6A6A6A;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Open State - Hide the original header */
+.rm-accordion-item.is-open .rm-accordion-header {
+    display: none; /* Hide the closed state header */
+}
+
+/* Content header (visible only in open state) */
+.rm-accordion-content-header {
+    display: none; /* Hidden by default */
+    width: 100%;
+}
+
+.rm-accordion-item.is-open .rm-accordion-content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rm-accordion-content-header-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 20px;
+    width: 547px;
+    height: 55px;
+}
+
+.rm-accordion-content-title {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #292929;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.rm-accordion-content-toggle {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.rm-accordion-content-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 3px;
+    gap: 10px;
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    left: 0;
+    top: 0;
+    background: #292929;
+    border-radius: 70px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.rm-accordion-content-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF;
+    transform: rotate(45deg); /* X state for open */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rm-accordion-item.is-open .rm-accordion-content {
+    max-height: 500px; /* Allow content to expand */
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    width: 585px !important; /* Override inline styles */
+}
+
+/* Hover effects */
+.rm-accordion-header:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.rm-accordion-item.is-open .rm-accordion-header:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.rm-accordion-icon:hover {
+    transform: scale(1.05);
+}
+
+.rm-accordion-item.is-open .rm-accordion-icon:hover {
+    transform: scale(1.05);
+}
+
+/* Remove focus outline from icon */
+.rm-accordion-icon:focus,
+.rm-accordion-toggle:focus {
+    outline: none;
+}
+
+/* Ensure no unwanted text decoration or borders */
+.rm-accordion-header,
+.rm-accordion-header *,
+.rm-accordion-title,
+.rm-accordion-toggle {
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.rm-accordion-header:focus {
+    box-shadow: none;
+}
+
+/* Focus states for accessibility - removed black border (handled above) */
+
+/* Animation variants for different durations */
+.rm-accordion[data-animation-duration="200"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="200"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="200"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="200"] .rm-accordion-icon svg {
+    transition-duration: 0.2s;
+}
+
+.rm-accordion[data-animation-duration="300"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="300"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="300"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="300"] .rm-accordion-icon svg {
+    transition-duration: 0.3s;
+}
+
+.rm-accordion[data-animation-duration="500"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="500"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="500"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="500"] .rm-accordion-icon svg {
+    transition-duration: 0.5s;
+}
+
+.rm-accordion[data-animation-duration="600"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="600"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="600"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="600"] .rm-accordion-icon svg {
+    transition-duration: 0.6s;
+}
+
+.rm-accordion[data-animation-duration="800"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="800"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="800"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="800"] .rm-accordion-icon svg {
+    transition-duration: 0.8s;
+}
+
+.rm-accordion[data-animation-duration="1000"] .rm-accordion-item,
+.rm-accordion[data-animation-duration="1000"] .rm-accordion-header,
+.rm-accordion[data-animation-duration="1000"] .rm-accordion-content,
+.rm-accordion[data-animation-duration="1000"] .rm-accordion-icon svg {
+    transition-duration: 1s;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .rm-accordion {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .rm-accordion-header {
+        width: 100%;
+        max-width: 287px;
+    }
+    
+    .rm-accordion-item.is-open .rm-accordion-header {
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+    }
+    
+    .rm-accordion-item.is-open .rm-accordion-content {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .rm-accordion-content-inner {
+        width: 100%;
+        padding: 63px 20px 30px 20px;
+    }
+    
+    .rm-accordion-separator,
+    .rm-accordion-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .rm-accordion-item.is-open .rm-accordion-title {
+        width: calc(100% - 75px);
+    }
+}
+
+@media (max-width: 480px) {
+    .rm-accordion-header {
+        padding: 20px 9px 20px 20px;
+        gap: 15px;
+    }
+    
+    .rm-accordion-title {
+        font-size: 18px;
+        width: auto;
+        flex: 1;
+    }
+    
+    .rm-accordion-toggle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .rm-accordion-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .rm-accordion-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .rm-accordion-text {
+        font-size: 16px;
+        line-height: 150%;
+    }
+}

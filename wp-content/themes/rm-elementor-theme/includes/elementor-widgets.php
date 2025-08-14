@@ -650,11 +650,231 @@ class RM_Mobile_Nav_Walker extends Walker_Nav_Menu {
 }
 
 /**
+ * ReelMetrics Accordion Widget
+ */
+class RM_Accordion_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-accordion';
+    }
+
+    public function get_title() {
+        return __( 'RM Accordion', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-accordion';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    public function get_script_depends() {
+        return [ 'rm-accordion-script' ];
+    }
+
+    public function get_style_depends() {
+        return [ 'rm-accordion-style' ];
+    }
+
+    protected function register_controls() {
+        // Content Section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Accordion Items', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $repeater = new \Elementor\Repeater();
+
+        $repeater->add_control(
+            'title',
+            [
+                'label' => __( 'Title', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Pick the best titles', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Type your title here', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'content',
+            [
+                'label' => __( 'Content', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::WYSIWYG,
+                'default' => __( 'At $25k a pop, you want to make sure that you purchase only the most reliable cabinets with the deepest, strongest libraries. With ReelMetrics Cabinets, we keep you abreast of everything hardware, including detailed specs, performance & installed base comparisons, & comprehensive listings of all compatible titles (including performance scores) by hardware platform.', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Type your content here', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'closed_width',
+            [
+                'label' => __( 'Closed Width', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 200,
+                        'max' => 600,
+                        'step' => 10,
+                    ],
+                    '%' => [
+                        'min' => 20,
+                        'max' => 100,
+                        'step' => 5,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 287,
+                ],
+                'description' => __( 'Set custom width for this item when closed', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'accordion_items',
+            [
+                'label' => __( 'Accordion Items', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'title' => __( 'Pick the best cabinets', 'rm-elementor-theme' ),
+                        'content' => __( 'At $25k a pop, you want to make sure that you purchase only the most reliable cabinets with the deepest, strongest libraries. With ReelMetrics Cabinets, we keep you abreast of everything hardware, including detailed specs, performance & installed base comparisons, & comprehensive listings of all compatible titles (including performance scores) by hardware platform.', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'title' => __( 'Pick the best titles', 'rm-elementor-theme' ),
+                        'content' => __( 'Content for the second accordion item goes here.', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'title' => __( 'Optimize configurations', 'rm-elementor-theme' ),
+                        'content' => __( 'Content for the third accordion item goes here.', 'rm-elementor-theme' ),
+                    ],
+                ],
+                'title_field' => '{{{ title }}}',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Style Section
+        $this->start_controls_section(
+            'style_section',
+            [
+                'label' => __( 'Style', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'animation_duration',
+            [
+                'label' => __( 'Animation Duration (ms)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'ms' ],
+                'range' => [
+                    'ms' => [
+                        'min' => 200,
+                        'max' => 1000,
+                        'step' => 50,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'ms',
+                    'size' => 400,
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'gap_between_items',
+            [
+                'label' => __( 'Gap Between Items', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 50,
+                        'step' => 5,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 30,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-accordion-item:not(:last-child)' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        $animation_duration = $settings['animation_duration']['size'];
+        
+        if ( empty( $settings['accordion_items'] ) ) {
+            return;
+        }
+        ?>
+        <div class="rm-accordion" data-animation-duration="<?php echo esc_attr( $animation_duration ); ?>">
+            <?php foreach ( $settings['accordion_items'] as $index => $item ) : 
+                $closed_width = $item['closed_width']['size'] . $item['closed_width']['unit'];
+            ?>
+                <div class="rm-accordion-item" data-index="<?php echo esc_attr( $index ); ?>" data-closed-width="<?php echo esc_attr( $closed_width ); ?>">
+                    <div class="rm-accordion-header" style="width: <?php echo esc_attr( $closed_width ); ?>;">
+                        <h3 class="rm-accordion-title"><?php echo esc_html( $item['title'] ); ?></h3>
+                        <div class="rm-accordion-toggle">
+                            <div class="rm-accordion-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rm-accordion-content" style="width: <?php echo esc_attr( $closed_width ); ?>;">
+                        <div class="rm-accordion-content-inner">
+                            <!-- Header inside content for open state -->
+                            <div class="rm-accordion-content-header">
+                                <div class="rm-accordion-content-header-inner">
+                                    <h3 class="rm-accordion-content-title"><?php echo esc_html( $item['title'] ); ?></h3>
+                                    <div class="rm-accordion-content-toggle">
+                                        <div class="rm-accordion-content-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rm-accordion-separator"></div>
+                            </div>
+                            <div class="rm-accordion-text">
+                                <?php echo wp_kses_post( $item['content'] ); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <?php
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Typography_Widget() );
     $widgets_manager->register( new RM_Button_Widget() );
     $widgets_manager->register( new RM_Navigation_Widget() );
+    $widgets_manager->register( new RM_Accordion_Widget() );
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
