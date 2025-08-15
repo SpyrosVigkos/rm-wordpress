@@ -107,7 +107,9 @@
     visibility: hidden;
     pointer-events: none;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: max-height 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+                opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.2s,
+                visibility 0s linear 0.8s;
     z-index: 1;
 }
 
@@ -150,23 +152,45 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1) 0.5s,
+                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
 }
 
-/* Open State - Hide the original header */
+.rm-accordion-item.is-open .rm-accordion-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Open State - Hide the original header with smooth animation */
 .rm-accordion-item.is-open .rm-accordion-header {
-    display: none; /* Hide the closed state header */
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+    pointer-events: none;
+    position: absolute; /* Remove from layout flow but keep animatable */
+    z-index: -1; /* Put behind content */
+    transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+                transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Content header (visible only in open state) */
 .rm-accordion-content-header {
-    display: none; /* Hidden by default */
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
     width: 100%;
-}
-
-.rm-accordion-item.is-open .rm-accordion-content-header {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s,
+                transform 0.7s cubic-bezier(0.23, 1, 0.32, 1) 0.3s;
+}
+
+.rm-accordion-item.is-open .rm-accordion-content-header {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .rm-accordion-content-header-inner {
@@ -222,15 +246,18 @@
     height: 24px;
     color: #FFFFFF;
     transform: rotate(45deg); /* X state for open */
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .rm-accordion-item.is-open .rm-accordion-content {
-    max-height: 500px; /* Allow content to expand */
+    max-height: 600px; /* Increased for better animation */
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     width: 585px !important; /* Override inline styles */
+    transition: max-height 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+                opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                visibility 0s linear 0s;
 }
 
 /* Hover effects */
@@ -317,74 +344,124 @@
     transition-duration: 1s;
 }
 
-/* Responsive design */
+/* Mobile/Responsive design - Based on Figma mobile specs */
 @media (max-width: 768px) {
     .rm-accordion {
         max-width: 100%;
         padding: 0 20px;
     }
     
+    /* Mobile Closed State - Full width */
     .rm-accordion-header {
-        width: 100%;
-        max-width: 287px;
+        width: 100% !important; /* Full width on mobile */
+        height: 52px; /* Figma mobile closed height */
+        padding: 25px 9px 25px 24px; /* Figma mobile padding */
+        gap: 28px;
+        border-radius: 80px; /* Keep rounded for mobile */
+        max-width: none; /* Remove any max-width constraints */
     }
     
-    .rm-accordion-item.is-open .rm-accordion-header {
-        width: 100%;
-        max-width: 100%;
-        gap: 20px;
+    .rm-accordion-title {
+        font-size: 16px; /* Figma mobile font size */
+        line-height: 100%;
+        width: auto; /* Let title take available space */
+        height: 16px;
+        flex: 1; /* Take available space between padding and icon */
     }
     
+    .rm-accordion-toggle {
+        width: 35px; /* Figma mobile icon size */
+        height: 35px;
+    }
+    
+    .rm-accordion-icon {
+        width: 35px;
+        height: 35px;
+        border-radius: 70px; /* Keep circular */
+    }
+    
+    .rm-accordion-icon svg {
+        width: 24px; /* Keep icon size same */
+        height: 24px;
+    }
+    
+    /* Mobile Open State - Figma specs */
     .rm-accordion-item.is-open .rm-accordion-content {
-        width: 100%;
-        max-width: 100%;
+        width: 343px !important; /* Figma mobile open width */
     }
     
     .rm-accordion-content-inner {
-        width: 100%;
-        padding: 63px 20px 30px 20px;
+        width: 343px;
+        height: 323.5px; /* Figma mobile open height */
+        padding: 8.5px 9px 30px 24px; /* Figma mobile padding */
+        gap: 24px; /* Figma mobile gap */
+        border-radius: 28px; /* Figma mobile border radius */
     }
     
-    .rm-accordion-separator,
+    .rm-accordion-content-header-inner {
+        width: 310px; /* Figma mobile header inner width */
+        height: 35px; /* Figma mobile header height */
+        gap: 12px; /* Figma mobile gap */
+    }
+    
+    .rm-accordion-content-title {
+        font-size: 16px; /* Figma mobile title font size */
+        width: 159px;
+        height: 16px;
+    }
+    
+    .rm-accordion-content-toggle {
+        width: 35px; /* Figma mobile toggle size */
+        height: 35px;
+    }
+    
+    .rm-accordion-content-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .rm-accordion-separator {
+        width: 275px; /* Figma mobile separator width */
+    }
+    
     .rm-accordion-text {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    .rm-accordion-item.is-open .rm-accordion-title {
-        width: calc(100% - 75px);
+        width: 295px; /* Figma mobile text width */
+        height: 220px; /* Figma mobile text height */
+        font-size: 16px; /* Figma mobile text font size */
+        line-height: 140%; /* Figma mobile line height */
     }
 }
 
 @media (max-width: 480px) {
+    /* Extra small devices - further adjustments */
     .rm-accordion-header {
-        padding: 20px 9px 20px 20px;
-        gap: 15px;
+        width: 100% !important;
+        max-width: none; /* Remove max-width constraint */
     }
     
-    .rm-accordion-title {
-        font-size: 18px;
-        width: auto;
-        flex: 1;
+    .rm-accordion-item.is-open .rm-accordion-content {
+        width: 100% !important;
+        max-width: 343px;
     }
     
-    .rm-accordion-toggle {
-        width: 45px;
-        height: 45px;
+    .rm-accordion-content-inner {
+        width: 100%;
+        max-width: 343px;
     }
     
-    .rm-accordion-icon {
-        width: 45px;
-        height: 45px;
+    .rm-accordion-content-header-inner {
+        width: 100%;
+        max-width: 310px;
     }
     
-    .rm-accordion-icon svg {
-        width: 20px;
-        height: 20px;
+    .rm-accordion-separator {
+        width: 100%;
+        max-width: 275px;
     }
     
     .rm-accordion-text {
-        font-size: 16px;
-        line-height: 150%;
+        width: 100%;
+        max-width: 295px;
+        height: auto; /* Allow natural height on very small screens */
     }
 }
