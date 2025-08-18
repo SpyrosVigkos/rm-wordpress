@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define theme constants
-define( 'RM_THEME_VERSION', '1.0.1' );
+define( 'RM_THEME_VERSION', '1.1.5' );
 define( 'RM_THEME_DIR', get_stylesheet_directory() );
 define( 'RM_THEME_URI', get_stylesheet_directory_uri() );
 
@@ -38,10 +38,15 @@ function rm_child_enqueue_styles() {
     // Theme scripts
     wp_enqueue_script( 'rm-theme-script', RM_THEME_URI . '/assets/js/main.js', array( 'jquery' ), RM_THEME_VERSION, true );
     
-    // Accordion widget styles and scripts (conditional loading)
+    // Widget styles and scripts (conditional loading)
     if ( is_page() || is_single() || is_front_page() ) {
+        // Accordion widget
         wp_enqueue_style( 'rm-accordion-style', RM_THEME_URI . '/assets/css/accordion.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/accordion.css' ) );
         wp_enqueue_script( 'rm-accordion-script', RM_THEME_URI . '/assets/js/accordion.js', array( 'jquery' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/accordion.js' ), true );
+        
+        // Timeline widget
+        wp_enqueue_style( 'rm-timeline-style', RM_THEME_URI . '/assets/css/timeline.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/timeline.css' ) );
+        wp_enqueue_script( 'rm-timeline-script', RM_THEME_URI . '/assets/js/timeline.js', array( 'jquery' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/timeline.js' ), true );
     }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );

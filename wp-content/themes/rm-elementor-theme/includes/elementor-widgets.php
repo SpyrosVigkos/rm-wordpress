@@ -869,6 +869,232 @@ class RM_Accordion_Widget extends \Elementor\Widget_Base {
 }
 
 /**
+ * ReelMetrics Timeline/Stepper Widget
+ */
+class RM_Timeline_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-timeline';
+    }
+
+    public function get_title() {
+        return __( 'RM Timeline/Stepper', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-time-line';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    public function get_script_depends() {
+        return [ 'rm-timeline-script' ];
+    }
+
+    public function get_style_depends() {
+        return [ 'rm-timeline-style' ];
+    }
+
+    protected function register_controls() {
+        // Content Section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Timeline Steps', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $repeater = new \Elementor\Repeater();
+
+        $repeater->add_control(
+            'step_image',
+            [
+                'label' => __( 'Step Image', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $repeater->add_control(
+            'step_title',
+            [
+                'label' => __( 'Step Title', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Data loading and cleansing', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Enter step title', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'step_description',
+            [
+                'label' => __( 'Step Description', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'default' => __( 'We start by getting your data squeaky clean, so you can trust every insight.', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Enter step description', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'step_button_text',
+            [
+                'label' => __( 'Button Text', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Learn more', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Enter button text', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'step_button_link',
+            [
+                'label' => __( 'Button Link', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://your-link.com', 'rm-elementor-theme' ),
+                'default' => [
+                    'url' => '',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'timeline_steps',
+            [
+                'label' => __( 'Timeline Steps', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'step_title' => __( 'Data loading and cleansing', 'rm-elementor-theme' ),
+                        'step_description' => __( 'We start by getting your data squeaky clean, so you can trust every insight.', 'rm-elementor-theme' ),
+                        'step_button_text' => __( 'Learn more', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'step_title' => __( 'Benchmarking', 'rm-elementor-theme' ),
+                        'step_description' => __( 'We review inventory and activities to set a baseline.', 'rm-elementor-theme' ),
+                        'step_button_text' => __( 'Learn more', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'step_title' => __( 'Floor and demand mapping', 'rm-elementor-theme' ),
+                        'step_description' => __( 'We review inventory and activities to set a baseline.', 'rm-elementor-theme' ),
+                        'step_button_text' => __( 'Learn more', 'rm-elementor-theme' ),
+                    ],
+                ],
+                'title_field' => '{{{ step_title }}}',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Layout Settings
+        $this->start_controls_section(
+            'layout_section',
+            [
+                'label' => __( 'Layout Settings', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'sticky_offset',
+            [
+                'label' => __( 'Sticky Offset (px)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 200,
+                        'step' => 10,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 100,
+                ],
+                'description' => __( 'Offset from top when image becomes sticky', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'animation_speed',
+            [
+                'label' => __( 'Animation Speed (ms)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'ms' ],
+                'range' => [
+                    'ms' => [
+                        'min' => 200,
+                        'max' => 1000,
+                        'step' => 50,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'ms',
+                    'size' => 500,
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        $sticky_offset = $settings['sticky_offset']['size'];
+        $animation_speed = $settings['animation_speed']['size'];
+        
+        if ( empty( $settings['timeline_steps'] ) ) {
+            return;
+        }
+        ?>
+        <div class="rm-timeline" data-sticky-offset="<?php echo esc_attr( $sticky_offset ); ?>" data-animation-speed="<?php echo esc_attr( $animation_speed ); ?>">
+            <!-- Sticky Image Container -->
+            <div class="rm-timeline-image-container">
+                <div class="rm-timeline-image-sticky">
+                    <?php foreach ( $settings['timeline_steps'] as $index => $step ) : ?>
+                        <div class="rm-timeline-image <?php echo $index === 0 ? 'active' : ''; ?>" data-step="<?php echo esc_attr( $index ); ?>">
+                            <?php if ( ! empty( $step['step_image']['url'] ) ) : ?>
+                                <img src="<?php echo esc_url( $step['step_image']['url'] ); ?>" alt="<?php echo esc_attr( $step['step_title'] ); ?>">
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <!-- Timeline Steps -->
+            <div class="rm-timeline-steps">
+                <?php foreach ( $settings['timeline_steps'] as $index => $step ) : ?>
+                    <div class="rm-timeline-step <?php echo $index === 0 ? 'step-one' : ''; ?>" data-step="<?php echo esc_attr( $index ); ?>">
+                        <div class="rm-timeline-step-number">
+                            <span class="rm-step-number"><?php echo esc_html( $index + 1 ); ?></span>
+                        </div>
+                        <div class="rm-timeline-step-content">
+                            <h3 class="rm-timeline-step-title"><?php echo esc_html( $step['step_title'] ); ?></h3>
+                            <p class="rm-timeline-step-description"><?php echo esc_html( $step['step_description'] ); ?></p>
+                            <?php if ( ! empty( $step['step_button_text'] ) ) : ?>
+                                <a href="<?php echo esc_url( $step['step_button_link']['url'] ); ?>" 
+                                   class="rm-timeline-step-button"
+                                   <?php if ( $step['step_button_link']['is_external'] ) echo 'target="_blank"'; ?>
+                                   <?php if ( $step['step_button_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                                    <?php echo esc_html( $step['step_button_text'] ); ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets( $widgets_manager ) {
@@ -876,5 +1102,6 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Button_Widget() );
     $widgets_manager->register( new RM_Navigation_Widget() );
     $widgets_manager->register( new RM_Accordion_Widget() );
+    $widgets_manager->register( new RM_Timeline_Widget() );
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
