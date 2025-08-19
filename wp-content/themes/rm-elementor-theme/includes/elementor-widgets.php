@@ -1055,12 +1055,17 @@ class RM_Timeline_Widget extends \Elementor\Widget_Base {
         ?>
         <div class="rm-timeline" data-sticky-offset="<?php echo esc_attr( $sticky_offset ); ?>" data-animation-speed="<?php echo esc_attr( $animation_speed ); ?>">
             <!-- Sticky Image Container -->
-            <div class="rm-timeline-image-container">
-                <div class="rm-timeline-image-sticky">
+            <div class="rm-timeline-image-container" aria-hidden="true">
+                <div class="rm-timeline-image-sticky" role="img" aria-label="<?php echo esc_attr( $settings['timeline_steps'][0]['step_title'] ?? 'Timeline image' ); ?>">
                     <?php foreach ( $settings['timeline_steps'] as $index => $step ) : ?>
-                        <div class="rm-timeline-image <?php echo $index === 0 ? 'active' : ''; ?>" data-step="<?php echo esc_attr( $index ); ?>">
+                        <div class="rm-timeline-image <?php echo $index === 0 ? 'is-active' : ''; ?>" data-step="<?php echo esc_attr( $index ); ?>">
                             <?php if ( ! empty( $step['step_image']['url'] ) ) : ?>
-                                <img src="<?php echo esc_url( $step['step_image']['url'] ); ?>" alt="<?php echo esc_attr( $step['step_title'] ); ?>">
+                                <img 
+                                    src="<?php echo esc_url( $step['step_image']['url'] ); ?>" 
+                                    alt="<?php echo esc_attr( $step['step_title'] ); ?>"
+                                    loading="<?php echo $index === 0 ? 'eager' : 'lazy'; ?>"
+                                    decoding="async"
+                                >
                             <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
@@ -1068,10 +1073,17 @@ class RM_Timeline_Widget extends \Elementor\Widget_Base {
             </div>
 
             <!-- Timeline Steps -->
-            <div class="rm-timeline-steps">
-                <?php foreach ( $settings['timeline_steps'] as $index => $step ) : ?>
-                    <div class="rm-timeline-step <?php echo $index === 0 ? 'step-one' : ''; ?>" data-step="<?php echo esc_attr( $index ); ?>">
-                        <div class="rm-timeline-step-number">
+            <ol class="rm-timeline-steps rm-timeline__list" role="list">
+                <?php foreach ( $settings['timeline_steps'] as $index => $step ) : 
+                    $is_active = $index === 0;
+                ?>
+                    <li 
+                        class="rm-timeline-step <?php echo $is_active ? 'is-active step-one' : ''; ?>" 
+                        data-step="<?php echo esc_attr( $index ); ?>"
+                        <?php echo $is_active ? 'aria-current="step"' : ''; ?>
+                        tabindex="0"
+                    >
+                        <div class="rm-timeline-step-number" aria-hidden="true">
                             <span class="rm-step-number"><?php echo esc_html( $index + 1 ); ?></span>
                         </div>
                         <div class="rm-timeline-step-content">
@@ -1086,9 +1098,9 @@ class RM_Timeline_Widget extends \Elementor\Widget_Base {
                                 </a>
                             <?php endif; ?>
                         </div>
-                    </div>
+                    </li>
                 <?php endforeach; ?>
-            </div>
+            </ol>
         </div>
         <?php
     }

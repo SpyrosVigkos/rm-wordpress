@@ -1,146 +1,327 @@
 /**
- * ReelMetrics Timeline/Stepper Widget JavaScript
- * Simple, stable scroll-triggered functionality
+ * ReelMetrics Timeline/Stepper - Vanilla Controller
+ * - Semantic, class-based state (.is-active)
+ * - Desktop: choose step closest to viewport center
+ * - Mobile: horizontal scroll-snap, choose centered card
+ * - Keyboard accessible
+ * - Reduced motion aware
  */
-
-(function ($) {
+(function () {
   "use strict";
 
-  class RMTimeline {
-    constructor(element) {
-      this.timeline = $(element);
-      this.steps = this.timeline.find(".rm-timeline-step");
-      this.images = this.timeline.find(".rm-timeline-image");
-      this.imageContainer = this.timeline.find(".rm-timeline-image-sticky");
-      this.stickyOffset = parseInt(this.timeline.data("sticky-offset")) || 100;
-      this.currentStep = 0;
-      this.isScrolling = false;
+  const SELECTORS = {
+    root: ".rm-timeline",
+    list: ".rm-timeline__list",
+    step: ".rm-timeline-step",
+    image: ".rm-timeline-image",
+  };
 
-      this.init();
+  class TimelineController {
+    constructor(root) {
+      this.root = root;
+      this.list = root.querySelector(SELECTORS.list);
+      this.steps = Array.from(root.querySelectorAll(SELECTORS.step));
+      this.images = Array.from(root.querySelectorAll(SELECTORS.image));
+      this.currentIndex = this.getInitialIndex();
+      this.isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+      this.prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      this.scrollHandler = null;
+      this.resizeHandler = null;
+      this.io = null;
+      this.wheelHandler = null;
+      this.wheelStepLock = false;
+      this.wheelUnlockTimer = null;
+    }
+
+    // Engage interactions only when the section is near viewport center
+    isInActivationBand() {
+      const rect = this.root.getBoundingClientRect();
+      const viewportCenter = window.innerHeight / 2;
+      const sectionCenter = rect.top + rect.height / 2;
+      const band = Math.max(80, window.innerHeight * 0.2); // 20% vh or 80px
+      return Math.abs(sectionCenter - viewportCenter) <= band;
+    }
+
+    getInitialIndex() {
+      const explicit = this.steps.findIndex((s) =>
+        s.classList.contains("is-active")
+      );
+      return explicit >= 0 ? explicit : 0;
     }
 
     init() {
-      // Step 1 is active by default via CSS step-one class
-      // Just set up scroll handler and activate step 1 in JS state
-      this.currentStep = 0;
-      this.setupScrollHandler();
-      this.updateStickyOffset();
-      console.log("✅ Timeline initialized - Step 1 active via step-one class");
-    }
+      // Ensure only one active on init
+      this.steps.forEach((step, i) =>
+        step.classList.toggle("is-active", i === this.currentIndex)
+      );
+      this.images.forEach((img, i) =>
+        img.classList.toggle("is-active", i === this.currentIndex)
+      );
+      this.syncAria();
+      this.bindKeyboard();
 
-    setupScrollHandler() {
-      const self = this;
-      let scrollTimeout = null;
-
-      // Simple scroll-based detection with throttling
-      $(window).on("scroll", function () {
-        if (scrollTimeout) {
-          clearTimeout(scrollTimeout);
-        }
-
-        scrollTimeout = setTimeout(() => {
-          self.handleScroll();
-        }, 100); // Throttle scroll handling
-      });
-    }
-
-    handleScroll() {
-      const windowTop = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      const viewportCenter = windowTop + windowHeight / 2;
-
-      let activeStep = 0;
-      let closestDistance = Infinity;
-
-      // Find the step closest to viewport center
-      this.steps.each((index, element) => {
-        const stepTop = $(element).offset().top;
-        const stepCenter = stepTop + $(element).height() / 2;
-        const distance = Math.abs(viewportCenter - stepCenter);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          activeStep = index;
-        }
-      });
-
-      // Only activate if different from current
-      if (activeStep !== this.currentStep) {
-        this.activateStep(activeStep);
-      }
-    }
-
-    activateStep(stepIndex) {
-      if (
-        stepIndex === this.currentStep ||
-        stepIndex < 0 ||
-        stepIndex >= this.steps.length
-      ) {
-        return;
-      }
-
-      console.log(`✅ Activating step: ${stepIndex + 1}`);
-
-      this.currentStep = stepIndex;
-
-      // Clean state management using step-one class
-      console.log("🧹 Managing step states with classes");
-
-      // Handle step-one class specifically
-      const $stepOne = this.steps.filter(".step-one");
-      if (stepIndex === 0) {
-        // Activating step 1 - remove deactivated class
-        $stepOne.removeClass("deactivated");
-        console.log("✅ Step 1 activated via step-one class");
+      if (this.isMobile()) {
+        this.bindMobileScroll();
       } else {
-        // Activating other step - deactivate step 1
-        $stepOne.addClass("deactivated");
-        console.log("🔴 Step 1 deactivated via deactivated class");
+        this.bindDesktopScroll();
       }
 
-      // Remove active from all steps
-      this.steps.removeClass("active");
-      this.images.removeClass("active");
-
-      // Add active to current step (unless it's step 1, which uses step-one class)
-      if (stepIndex !== 0) {
-        this.steps.eq(stepIndex).addClass("active");
-        console.log(`✅ Step ${stepIndex + 1} activated via active class`);
-      }
-
-      this.images.eq(stepIndex).addClass("active");
-    }
-
-    updateStickyOffset() {
-      this.imageContainer.css("top", this.stickyOffset + "px");
+      this.resizeHandler = () => {
+        this.unbindScroll();
+        if (this.isMobile()) this.bindMobileScroll();
+        else this.bindDesktopScroll();
+      };
+      window.addEventListener("resize", this.resizeHandler, { passive: true });
     }
 
     destroy() {
-      $(window).off("scroll");
+      this.unbindScroll();
+      window.removeEventListener("resize", this.resizeHandler);
+      this.unbindKeyboard();
+    }
+
+    // Desktop: pick step closest to viewport center
+    bindDesktopScroll() {
+      const onScroll = () => {
+        if (!this.isInActivationBand()) return;
+        const winMid = window.scrollY + window.innerHeight / 2;
+        let best = 0,
+          bestDist = Infinity;
+        this.steps.forEach((el, i) => {
+          const rect = el.getBoundingClientRect();
+          const mid = rect.top + window.scrollY + rect.height / 2;
+          const dist = Math.abs(winMid - mid);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = i;
+          }
+        });
+        this.activate(best);
+      };
+      this.scrollHandler = throttle(onScroll, 100);
+      window.addEventListener("scroll", this.scrollHandler, { passive: true });
+    }
+
+    // Mobile: use horizontal scroll container and choose centered card
+    bindMobileScroll() {
+      if (!this.list) return;
+      const onScroll = () => {
+        const box = this.list.getBoundingClientRect();
+        const center = box.left + box.width / 2;
+        let best = 0,
+          bestDist = Infinity;
+        this.steps.forEach((el, i) => {
+          const r = el.getBoundingClientRect();
+          const mid = r.left + r.width / 2;
+          const dist = Math.abs(center - mid);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = i;
+          }
+        });
+        this.activate(best);
+      };
+      this.scrollHandler = throttle(onScroll, 120);
+      this.list.addEventListener("scroll", this.scrollHandler, {
+        passive: true,
+      });
+
+      // Route vertical wheel to horizontal while inside the timeline section.
+      this.wheelHandler = (e) => this.routeWheelToHorizontal(e);
+      this.root.addEventListener("wheel", this.wheelHandler, {
+        passive: false,
+      });
+    }
+
+    unbindScroll() {
+      if (this.scrollHandler) {
+        if (this.isMobile() && this.list)
+          this.list.removeEventListener("scroll", this.scrollHandler);
+        else window.removeEventListener("scroll", this.scrollHandler);
+      }
+      this.scrollHandler = null;
+      if (this.wheelHandler) {
+        this.root.removeEventListener("wheel", this.wheelHandler);
+      }
+      this.wheelHandler = null;
+    }
+
+    activate(index) {
+      if (
+        index === this.currentIndex ||
+        index < 0 ||
+        index >= this.steps.length
+      )
+        return;
+      const prevIndex = this.currentIndex;
+      this.currentIndex = index;
+
+      // Animation classes for smooth transitions
+      if (this.steps[prevIndex]) {
+        this.steps[prevIndex].classList.remove("is-active", "is-animating-in");
+        this.steps[prevIndex].classList.add("is-animating-out");
+        setTimeout(() => {
+          this.steps[prevIndex].classList.remove("is-animating-out");
+        }, 220);
+      }
+
+      this.steps.forEach((s, i) => {
+        const makeActive = i === index;
+        s.classList.toggle("is-active", makeActive);
+        if (makeActive) {
+          s.classList.remove("is-animating-out");
+          // Trigger reflow to restart animation reliably
+          // eslint-disable-next-line no-unused-expressions
+          s.offsetHeight;
+          s.classList.add("is-animating-in");
+          setTimeout(() => s.classList.remove("is-animating-in"), 420);
+        }
+      });
+      this.images.forEach((img, i) => {
+        img.classList.toggle("is-active", i === index);
+      });
+      // step-one deactivation logic
+      const stepOne = this.steps.find((s) => s.classList.contains("step-one"));
+      if (stepOne) stepOne.classList.toggle("deactivated", index !== 0);
+      this.syncAria();
+    }
+
+    syncAria() {
+      this.steps.forEach((li, i) => {
+        if (i === this.currentIndex) li.setAttribute("aria-current", "step");
+        else li.removeAttribute("aria-current");
+        // Make active step tabbable
+        li.tabIndex = i === this.currentIndex ? 0 : -1;
+      });
+    }
+
+    bindKeyboard() {
+      this.keyHandler = (e) => {
+        const key = e.key;
+        if (
+          ![
+            "ArrowRight",
+            "ArrowDown",
+            "ArrowLeft",
+            "ArrowUp",
+            "Enter",
+            " ",
+          ].includes(key)
+        )
+          return;
+        e.preventDefault();
+        let next = this.currentIndex;
+        if (key === "ArrowRight" || key === "ArrowDown")
+          next = Math.min(this.steps.length - 1, this.currentIndex + 1);
+        if (key === "ArrowLeft" || key === "ArrowUp")
+          next = Math.max(0, this.currentIndex - 1);
+        if (key === "Enter" || key === " ") next = this.currentIndex; // ensure focus stays on active
+        this.activate(next);
+        // Scroll into view for mobile horizontal
+        if (this.isMobile() && this.list)
+          this.steps[next].scrollIntoView({
+            behavior: this.prefersReduced ? "auto" : "smooth",
+            inline: "center",
+            block: "nearest",
+          });
+      };
+      this.root.addEventListener("keydown", this.keyHandler);
+    }
+
+    unbindKeyboard() {
+      if (this.keyHandler)
+        this.root.removeEventListener("keydown", this.keyHandler);
+      this.keyHandler = null;
+      if (this.wheelUnlockTimer) {
+        clearTimeout(this.wheelUnlockTimer);
+        this.wheelUnlockTimer = null;
+      }
+    }
+
+    // Convert vertical wheel into step-by-step horizontal navigation on mobile.
+    routeWheelToHorizontal(e) {
+      if (!this.isMobile() || !this.list) return;
+      if (!this.isInActivationBand()) return; // only engage when centered
+
+      // Ignore pure horizontal wheels; only act on vertical intent
+      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+
+      const goingDown = e.deltaY > 0;
+      const goingUp = e.deltaY < 0;
+      const atFirst = this.currentIndex === 0;
+      const atLast = this.currentIndex === this.steps.length - 1;
+
+      // Release control at edges so page can scroll
+      if ((goingUp && atFirst) || (goingDown && atLast)) return;
+
+      // Step-by-step navigation
+      e.preventDefault();
+      if (this.wheelStepLock) return;
+      this.wheelStepLock = true;
+      const target = Math.max(
+        0,
+        Math.min(
+          this.steps.length - 1,
+          this.currentIndex + (goingDown ? 1 : -1)
+        )
+      );
+      this.activate(target);
+      this.scrollToIndex(target);
+      if (this.wheelUnlockTimer) clearTimeout(this.wheelUnlockTimer);
+      this.wheelUnlockTimer = setTimeout(
+        () => {
+          this.wheelStepLock = false;
+        },
+        this.prefersReduced ? 60 : 260
+      );
+    }
+
+    scrollToIndex(index) {
+      if (!this.list || index < 0 || index >= this.steps.length) return;
+      this.steps[index].scrollIntoView({
+        behavior: this.prefersReduced ? "auto" : "smooth",
+        inline: "center",
+        block: "nearest",
+      });
     }
   }
 
-  // Initialize timelines
-  $(document).ready(function () {
-    $(".rm-timeline").each(function () {
-      if (!$(this).data("rm-timeline-initialized")) {
-        new RMTimeline(this);
-        $(this).data("rm-timeline-initialized", true);
+  // Small utilities
+  function throttle(fn, wait) {
+    let t = 0;
+    return (...args) => {
+      const now = Date.now();
+      if (now - t >= wait) {
+        t = now;
+        fn.apply(null, args);
       }
-    });
-  });
+    };
+  }
 
-  // Elementor frontend compatibility
-  $(window).on("elementor/frontend/init", function () {
-    elementorFrontend.hooks.addAction(
+  // Bootstrap for WP and Elementor
+  function initAllTimelines(context = document) {
+    context.querySelectorAll(SELECTORS.root).forEach((root) => {
+      if (root.__rmTimeline) return;
+      const ctl = new TimelineController(root);
+      ctl.init();
+      root.__rmTimeline = ctl;
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => initAllTimelines());
+  } else {
+    initAllTimelines();
+  }
+
+  if (window.elementorFrontend && window.elementorFrontend.hooks) {
+    window.elementorFrontend.hooks.addAction(
       "frontend/element_ready/rm-timeline.default",
-      function ($scope) {
-        const timeline = $scope.find(".rm-timeline");
-        if (timeline.length && !timeline.data("rm-timeline-initialized")) {
-          new RMTimeline(timeline[0]);
-          timeline.data("rm-timeline-initialized", true);
-        }
+      ($scope) => {
+        initAllTimelines($scope[0] || $scope);
       }
     );
-  });
-})(jQuery);
+  }
+})();
