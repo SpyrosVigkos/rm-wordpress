@@ -16,6 +16,8 @@ define( 'RM_THEME_VERSION', '1.1.6' );
 define( 'RM_THEME_DIR', get_stylesheet_directory() );
 define( 'RM_THEME_URI', get_stylesheet_directory_uri() );
 
+// (Importer removed) — ButterCMS endpoint no longer needed
+
 /**
  * Enqueue parent and child theme styles
  */
@@ -47,6 +49,11 @@ function rm_child_enqueue_styles() {
         // Timeline widget
         wp_enqueue_style( 'rm-timeline-style', RM_THEME_URI . '/assets/css/timeline.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/timeline.css' ) );
         wp_enqueue_script( 'rm-timeline-script', RM_THEME_URI . '/assets/js/timeline.js', array( 'jquery' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/timeline.js' ), true );
+
+        // Team widget
+        if ( file_exists( RM_THEME_DIR . '/assets/css/team.css' ) ) {
+            wp_enqueue_style( 'rm-team-style', RM_THEME_URI . '/assets/css/team.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/team.css' ) );
+        }
     }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
@@ -191,3 +198,87 @@ function rm_force_elementor_css_regeneration() {
 }
 // Uncomment the line below temporarily to force CSS regeneration, then comment it back
 // add_action( 'init', 'rm_force_elementor_css_regeneration' );
+
+/**
+ * Register CPT: Team Member (CPT UI is installed, but we ensure it's registered programmatically too)
+ */
+function rm_register_team_member_cpt() {
+    $labels = array(
+        'name'               => 'Team Members',
+        'singular_name'      => 'Team Member',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Team Member',
+        'edit_item'          => 'Edit Team Member',
+        'new_item'           => 'New Team Member',
+        'view_item'          => 'View Team Member',
+        'search_items'       => 'Search Team Members',
+        'not_found'          => 'No team members found',
+        'not_found_in_trash' => 'No team members found in Trash',
+        'menu_name'          => 'Team Members',
+    );
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
+        'menu_icon'          => 'dashicons-groups',
+        'has_archive'        => false,
+        'rewrite'            => array( 'slug' => 'team' ),
+    );
+    register_post_type( 'rm_team_member', $args );
+}
+add_action( 'init', 'rm_register_team_member_cpt' );
+
+/**
+ * Ensure ACF fields exist (name, role, dob, photo). If ACF JSON/GUI exists, this no-ops.
+ */
+function rm_register_team_member_acf() {
+    if ( function_exists( 'acf_add_local_field_group' ) ) {
+        acf_add_local_field_group(array(
+            'key' => 'group_rm_team_member',
+            'title' => 'Team Member',
+            'fields' => array(
+                array(
+                    'key' => 'field_rm_tm_role',
+                    'label' => 'Role',
+                    'name' => 'role',
+                    'type' => 'text',
+                ),
+                array(
+                    'key' => 'field_rm_tm_dob',
+                    'label' => 'Date of Birth',
+                    'name' => 'dob',
+                    'type' => 'text',
+                ),
+                array(
+                    'key' => 'field_rm_tm_photo',
+                    'label' => 'Photo',
+                    'name' => 'photo',
+                    'type' => 'image',
+                    'return_format' => 'id',
+                    'preview_size' => 'medium',
+                ),
+                array(
+                    'key' => 'field_rm_tm_butter_id',
+                    'label' => 'ButterCMS ID',
+                    'name' => 'butter_id',
+                    'type' => 'number',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'rm_team_member',
+                    ),
+                ),
+            )
+        ));
+    }
+}
+add_action( 'acf/init', 'rm_register_team_member_acf' );
+
+// Importer removed per request (CPT and ACF fields kept)

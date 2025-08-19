@@ -1115,5 +1115,178 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Navigation_Widget() );
     $widgets_manager->register( new RM_Accordion_Widget() );
     $widgets_manager->register( new RM_Timeline_Widget() );
+    $widgets_manager->register( new RM_Team_Widget() );
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
+
+/**
+ * ReelMetrics Team Grid Widget
+ */
+class RM_Team_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-team';
+    }
+
+    public function get_title() {
+        return __( 'RM Team Grid', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-person';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    public function get_style_depends() {
+        return [ 'rm-team-style' ];
+    }
+
+    protected function register_controls() {
+        // Query section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Content', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'posts_per_page',
+            [
+                'label' => __( 'Number of items', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'default' => 12,
+                'min' => -1,
+            ]
+        );
+
+        $this->add_control(
+            'order',
+            [
+                'label' => __( 'Order', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+                'default' => 'ASC',
+                'options' => [ 'ASC' => 'ASC', 'DESC' => 'DESC' ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Style section
+        $this->start_controls_section(
+            'style_section',
+            [
+                'label' => __( 'Styles', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->add_control(
+            'card_radius',
+            [
+                'label' => __( 'Card Radius', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [ 'px' => [ 'min' => 0, 'max' => 80, 'step' => 1 ] ],
+                'default' => [ 'size' => 40, 'unit' => 'px' ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'name_typo',
+                'label' => __( 'Name Typography', 'rm-elementor-theme' ),
+                'selector' => '{{WRAPPER}} .rm-team-card__name',
+            ]
+        );
+
+        $this->add_control(
+            'name_color',
+            [
+                'label' => __( 'Name Color', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#FFFFFF',
+                'selectors' => [ '{{WRAPPER}} .rm-team-card__name' => 'color: {{VALUE}};' ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'role_typo',
+                'label' => __( 'Role Typography', 'rm-elementor-theme' ),
+                'selector' => '{{WRAPPER}} .rm-team-card__role',
+            ]
+        );
+
+        $this->add_control(
+            'role_color',
+            [
+                'label' => __( 'Role Color', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#FFFFFF',
+                'selectors' => [ '{{WRAPPER}} .rm-team-card__role' => 'color: {{VALUE}};' ],
+            ]
+        );
+
+        $this->add_control(
+            'grid_gap',
+            [
+                'label' => __( 'Grid Gap', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px' ],
+                'range' => [ 'px' => [ 'min' => 0, 'max' => 60, 'step' => 1 ] ],
+                'default' => [ 'size' => 36, 'unit' => 'px' ],
+                'selectors' => [ '{{WRAPPER}} .rm-team-grid' => 'gap: {{SIZE}}{{UNIT}};' ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        $ppp = ! empty( $settings['posts_per_page'] ) ? intval( $settings['posts_per_page'] ) : -1;
+        $order = $settings['order'] === 'DESC' ? 'DESC' : 'ASC';
+
+        $q = new \WP_Query([
+            'post_type' => 'rm_team_member',
+            'posts_per_page' => $ppp,
+            'orderby' => 'menu_order title',
+            'order' => $order,
+            'post_status' => 'publish',
+            'no_found_rows' => true,
+        ]);
+
+        echo '<div class="rm-team">';
+        echo '<div class="rm-team-grid">';
+        if ( $q->have_posts() ) {
+            while ( $q->have_posts() ) { $q->the_post();
+                $post_id = get_the_ID();
+                $name = get_the_title();
+                $role = function_exists('get_field') ? ( get_field('role', $post_id) ?: '' ) : get_post_meta($post_id, 'role', true);
+                $img_id = get_post_thumbnail_id( $post_id );
+                $img = $img_id ? wp_get_attachment_image( $img_id, 'large', false, array('class' => 'rm-team-card__img-el', 'loading' => 'lazy') ) : '';
+                echo '<article class="rm-team-card">';
+                echo '<div class="rm-team-card__image">' . $img . '</div>';
+                echo '<div class="rm-team-card__footer">';
+                echo '<div class="rm-team-card__text">';
+                echo '<h3 class="rm-team-card__name">' . esc_html( $name ) . '</h3>';
+                if ( $role ) {
+                    echo '<p class="rm-team-card__role">' . esc_html( $role ) . '</p>';
+                }
+                echo '</div>';
+                echo '</div>';
+                echo '</article>';
+            }
+            wp_reset_postdata();
+        }
+        echo '</div></div>';
+    }
+}
