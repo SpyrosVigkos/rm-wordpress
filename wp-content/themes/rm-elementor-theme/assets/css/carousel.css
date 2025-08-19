@@ -1,0 +1,146 @@
+/* RM Carousel */
+:root { 
+  --rm-carousel-radius: 40px; 
+  --rm-carousel-accent: #292929; 
+  --rm-carousel-slide: 65%; 
+}
+
+.rm-carousel { 
+  position: relative; 
+  width: 100%; 
+}
+
+.rm-carousel__viewport { 
+  overflow: hidden; 
+}
+
+.rm-carousel__track { 
+  display: flex; 
+  scroll-snap-type: x mandatory; 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+  gap: 24px; 
+  padding-bottom: 8px; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+  touch-action: pan-x; 
+  cursor: grab; 
+}
+
+.rm-carousel__track.is-dragging { 
+  scroll-snap-type: none; 
+  cursor: grabbing; 
+  user-select: none; 
+}
+
+.rm-carousel__track::-webkit-scrollbar { 
+  display: none; 
+}
+
+.rm-carousel__slide { 
+  flex: 0 0 var(--rm-carousel-slide); 
+  scroll-snap-align: start; 
+  scroll-snap-stop: always; 
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: stretch; 
+}
+
+.rm-carousel__image { 
+  width: 100%; 
+  height: 480px; 
+  object-fit: cover; 
+  border-radius: var(--rm-carousel-radius); 
+  display: block; 
+  flex: 0 0 480px; 
+}
+
+.rm-carousel__caption { 
+  margin-top: 12px; 
+  color: var(--rm-color-black, #292929); 
+  font-size: 16px; 
+  line-height: 1.4; 
+}
+
+/* Footer contains caption display and controls */
+.rm-carousel__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.rm-carousel__caption-display {
+  color: var(--rm-color-black, #292929);
+  font-size: 16px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* Controls */
+.rm-carousel__controls { 
+  display: flex; 
+  gap: 12px; 
+  flex-shrink: 0;
+}
+
+.rm-carousel__btn { 
+  width: 44px; 
+  height: 44px; 
+  border-radius: 50%; 
+  border: none; 
+  background: var(--rm-carousel-accent); 
+  color: #fff; 
+  display: grid; 
+  place-items: center; 
+  cursor: pointer; 
+  box-shadow: 0 6px 20px rgba(0,0,0,.18); 
+}
+
+.rm-carousel__btn:disabled { 
+  opacity: .5; 
+  cursor: default; 
+}
+
+/* Desktop: Position controls absolutely over the image */
+@media (min-width: 769px) {
+  .rm-carousel__footer {
+    position: absolute;
+    right: 24px;
+    bottom: -8px;
+    margin-top: 0;
+    background: none;
+    z-index: 5;
+  }
+  
+  .rm-carousel__caption-display {
+    display: none; /* Hide caption display on desktop, captions are in slides */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .rm-carousel__slide { 
+    flex: 0 0 100%; 
+  }
+  
+  .rm-carousel__image { 
+    height: 220px; 
+  }
+  
+  /* Hide captions inside slides on mobile */
+  .rm-carousel__caption {
+    display: none;
+  }
+  
+  /* Footer layout on mobile */
+  .rm-carousel__footer {
+    justify-content: space-between;
+  }
+  
+  /* When no caption, align controls to the right */
+  .rm-carousel__footer:has(.rm-carousel__caption-display:empty) {
+    justify-content: flex-end;
+  }
+}

@@ -1116,6 +1116,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Accordion_Widget() );
     $widgets_manager->register( new RM_Timeline_Widget() );
     $widgets_manager->register( new RM_Team_Widget() );
+    $widgets_manager->register( new RM_Carousel_Widget() );
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
 
@@ -1288,5 +1289,60 @@ class RM_Team_Widget extends \Elementor\Widget_Base {
             wp_reset_postdata();
         }
         echo '</div></div>';
+    }
+}
+
+/**
+ * RM Carousel Widget
+ */
+class RM_Carousel_Widget extends \Elementor\Widget_Base {
+    public function get_name() { return 'rm-carousel'; }
+    public function get_title() { return __( 'RM Carousel', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-slider-3d'; }
+    public function get_categories() { return ['reelmetrics']; }
+    public function get_style_depends() { return ['rm-carousel-style']; }
+    public function get_script_depends() { return ['rm-carousel-script']; }
+
+    protected function register_controls() {
+        $this->start_controls_section('content', [ 'label' => __( 'Slides', 'rm-elementor-theme' ) ]);
+        $rep = new \Elementor\Repeater();
+        $rep->add_control('image', [ 'label' => __( 'Image', 'rm-elementor-theme' ), 'type' => \Elementor\Controls_Manager::MEDIA, 'default' => ['url' => \Elementor\Utils::get_placeholder_image_src()] ]);
+        $rep->add_control('caption', [ 'label' => __( 'Caption (optional)', 'rm-elementor-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => '' ]);
+        $this->add_control('slides', [ 'type' => \Elementor\Controls_Manager::REPEATER, 'fields' => $rep->get_controls(), 'default' => [ ['caption' => 'Subscription of the image'] ] ]);
+        $this->end_controls_section();
+
+        $this->start_controls_section('style', [ 'label' => __( 'Style', 'rm-elementor-theme' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ]);
+        $this->add_control('radius', [ 'label' => __( 'Image Radius', 'rm-elementor-theme' ), 'type' => \Elementor\Controls_Manager::SLIDER, 'size_units' => ['px'], 'range' => ['px'=>['min'=>0,'max'=>80]], 'default' => ['size'=>40,'unit'=>'px'], 'selectors' => [ '{{WRAPPER}} .rm-carousel__image' => 'border-radius: {{SIZE}}{{UNIT}};' ] ]);
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $s = $this->get_settings_for_display();
+        if ( empty( $s['slides'] ) ) return;
+        $uid = 'rmc_' . wp_generate_password( 6, false, false );
+        echo '<div class="rm-carousel" role="region" aria-label="Image carousel">';
+        echo '<div class="rm-carousel__viewport" id="' . esc_attr( $uid ) . '" tabindex="0" aria-roledescription="carousel" aria-live="polite">';
+        echo '<div class="rm-carousel__track" role="listbox">';
+        foreach ( $s['slides'] as $slide ) {
+            echo '<figure class="rm-carousel__slide" role="option" aria-selected="false">';
+            if ( ! empty( $slide['image']['url'] ) ) {
+                echo '<img class="rm-carousel__image" src="' . esc_url( $slide['image']['url'] ) . '" alt="' . esc_attr( $slide['caption'] ) . '" loading="lazy" decoding="async" />';
+            }
+            if ( ! empty( $slide['caption'] ) ) {
+                echo '<figcaption class="rm-carousel__caption">' . esc_html( $slide['caption'] ) . '</figcaption>';
+            }
+            echo '</figure>';
+        }
+        echo '</div></div>'; // track, viewport
+        
+        // Caption and controls container for mobile layout
+        echo '<div class="rm-carousel__footer">';
+        echo '<div class="rm-carousel__caption-display"></div>'; // Will be populated by JS
+        echo '<div class="rm-carousel__controls">';
+        echo '<button class="rm-carousel__btn" type="button" aria-label="Previous" aria-controls="' . esc_attr( $uid ) . '" data-dir="prev">&#8592;</button>';
+        echo '<button class="rm-carousel__btn" type="button" aria-label="Next" aria-controls="' . esc_attr( $uid ) . '" data-dir="next">&#8594;</button>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
     }
 }

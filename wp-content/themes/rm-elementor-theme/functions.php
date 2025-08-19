@@ -54,6 +54,14 @@ function rm_child_enqueue_styles() {
         if ( file_exists( RM_THEME_DIR . '/assets/css/team.css' ) ) {
             wp_enqueue_style( 'rm-team-style', RM_THEME_URI . '/assets/css/team.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/team.css' ) );
         }
+
+        // Carousel widget
+        if ( file_exists( RM_THEME_DIR . '/assets/css/carousel.css' ) ) {
+            wp_enqueue_style( 'rm-carousel-style', RM_THEME_URI . '/assets/css/carousel.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/carousel.css' ) );
+        }
+        if ( file_exists( RM_THEME_DIR . '/assets/js/carousel.js' ) ) {
+            wp_enqueue_script( 'rm-carousel-script', RM_THEME_URI . '/assets/js/carousel.js', array(), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/carousel.js' ), true );
+        }
     }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
