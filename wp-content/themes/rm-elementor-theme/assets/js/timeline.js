@@ -85,14 +85,30 @@
     // Desktop: pick step closest to viewport center
     bindDesktopScroll() {
       const onScroll = () => {
-        if (!this.isInActivationBand()) return;
-        const winMid = window.scrollY + window.innerHeight / 2;
-        let best = 0,
-          bestDist = Infinity;
+        const sectionRect = this.root.getBoundingClientRect();
+        const sectionTop = window.scrollY + sectionRect.top;
+        const sectionBottom = sectionTop + sectionRect.height;
+        const centerY = window.scrollY + window.innerHeight / 2;
+        const edgeThreshold = Math.max(120, window.innerHeight * 0.15);
+
+        // Before section center enters view → lock to first
+        if (centerY <= sectionTop + edgeThreshold) {
+          this.activate(0);
+          return;
+        }
+        // After section center leaves view → lock to last
+        if (centerY >= sectionBottom - edgeThreshold) {
+          this.activate(this.steps.length - 1);
+          return;
+        }
+
+        // Inside section → choose closest step to viewport center
+        let best = 0;
+        let bestDist = Infinity;
         this.steps.forEach((el, i) => {
-          const rect = el.getBoundingClientRect();
-          const mid = rect.top + window.scrollY + rect.height / 2;
-          const dist = Math.abs(winMid - mid);
+          const r = el.getBoundingClientRect();
+          const mid = r.top + window.scrollY + r.height / 2;
+          const dist = Math.abs(centerY - mid);
           if (dist < bestDist) {
             bestDist = dist;
             best = i;
@@ -100,8 +116,10 @@
         });
         this.activate(best);
       };
-      this.scrollHandler = throttle(onScroll, 100);
+      this.scrollHandler = throttle(onScroll, 80);
       window.addEventListener("scroll", this.scrollHandler, { passive: true });
+      // Run once to set correct state on load/resize
+      onScroll();
     }
 
     // Mobile: use horizontal scroll container and choose centered card

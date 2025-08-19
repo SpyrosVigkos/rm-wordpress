@@ -34,7 +34,7 @@
 /* Sticky Image Container */
 .rm-timeline-image-container {
     flex: 0 0 50%;
-    height: 100vh;
+    min-height: 100vh; /* allow column to grow with steps so sticky persists */
     position: relative;
 }
 
