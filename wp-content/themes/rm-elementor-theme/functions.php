@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define theme constants
-define( 'RM_THEME_VERSION', '1.1.5' );
+define( 'RM_THEME_VERSION', '1.1.6' );
 define( 'RM_THEME_DIR', get_stylesheet_directory() );
 define( 'RM_THEME_URI', get_stylesheet_directory_uri() );
 

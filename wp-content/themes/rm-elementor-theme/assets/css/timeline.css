@@ -246,54 +246,59 @@
 }
 
 .rm-timeline-step-button {
-    /* Figma Frame 9 button specs */
+    /* Figma Frame 10 - Normal State */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 25px 30px;
-    gap: 10px;
-    width: 162px;
-    height: 60px;
+    padding: 25px 24px;
+    gap: 8px;
+    
+    /* NO fixed width - let content determine size */
+    min-width: 166px; /* Figma reference width */
+    height: 52px;
+    
+    /* Black background */
     background: #292929;
     border-radius: 80px;
+    
+    /* Inside auto layout */
     flex: none;
-    order: 2;
+    order: 1;
     flex-grow: 0;
+    
+    /* Reset default styles */
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     border: none;
     cursor: pointer;
-    opacity: 0.8;
-    transform: translateY(5px);
+    transition: all 0.2s ease;
 }
 
-.rm-timeline-step-button span,
 .rm-timeline-step-button {
-    /* Figma button text specs */
-    width: 102px;
-    height: 20px;
+    /* Figma button text specs - Normal State */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
+    font-size: 16px;
+    line-height: 130%; /* 21px */
     text-align: center;
     color: #FFFFFF;
+    text-decoration: none !important;
+    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
 .rm-timeline-step.active .rm-timeline-step-button {
-    opacity: 1;
-    transform: translateY(0);
+    /* No special active state - keep normal appearance */
 }
 
 .rm-timeline-step-button:hover {
-    background: #1a1a1a;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    /* Gradient overlay on black */
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), #292929;
+   
 }
 
 /* Mobile Layout (Horizontal) */
