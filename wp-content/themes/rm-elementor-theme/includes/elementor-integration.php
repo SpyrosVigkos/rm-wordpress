@@ -119,7 +119,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
             '_id' => 'rm_hero_large',
             'title' => 'RM Hero Large',
             'typography_typography' => 'custom',
-            'typography_font_family' => 'Helvetica Neue',
+            'typography_font_family' => 'Work Sans',
             'typography_font_size' => [
                 'unit' => 'px',
                 'size' => 95,
@@ -141,7 +141,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
             '_id' => 'rm_intro_large',
             'title' => 'RM Intro Large',
             'typography_typography' => 'custom',
-            'typography_font_family' => 'Helvetica Neue',
+            'typography_font_family' => 'Work Sans',
             'typography_font_size' => [
                 'unit' => 'px',
                 'size' => 56,
@@ -163,7 +163,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
             '_id' => 'rm_subheading',
             'title' => 'RM Subheading',
             'typography_typography' => 'custom',
-            'typography_font_family' => 'Helvetica Neue',
+            'typography_font_family' => 'Work Sans',
             'typography_font_size' => [
                 'unit' => 'px',
                 'size' => 28,
@@ -185,7 +185,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
             '_id' => 'rm_body_large',
             'title' => 'RM Body Large',
             'typography_typography' => 'custom',
-            'typography_font_family' => 'Helvetica Neue',
+            'typography_font_family' => 'Work Sans',
             'typography_font_size' => [
                 'unit' => 'px',
                 'size' => 20,
@@ -207,7 +207,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
             '_id' => 'rm_body_text',
             'title' => 'RM Body Text',
             'typography_typography' => 'custom',
-            'typography_font_family' => 'Helvetica Neue',
+            'typography_font_family' => 'Work Sans',
             'typography_font_size' => [
                 'unit' => 'px',
                 'size' => 16,
@@ -233,7 +233,7 @@ add_filter( 'elementor/kits/raw_kit_settings', function( $kit_settings, $kit_id 
     // Set default font
     $kit_settings['default_generic_fonts'] = 'Sans-serif';
     $kit_settings['body_typography_typography'] = 'custom';
-    $kit_settings['body_typography_font_family'] = 'Helvetica Neue';
+    $kit_settings['body_typography_font_family'] = 'Work Sans';
     
     return $kit_settings;
 }, 10, 2 );
@@ -292,7 +292,7 @@ add_action( 'elementor/documents/register_controls', function( $document ) {
                 • Subheading (28px / 32px mobile)<br/>
                 • Body Large (20px / 24px mobile)<br/>
                 • Body Text (16px / 18px mobile)<br/><br/>
-                Font: Helvetica Neue
+                Font: Work Sans
             </div>',
         ]
     );
@@ -368,7 +368,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
     wp_add_inline_style( 'elementor-frontend', '
         /* ReelMetrics Typography Classes for Headings */
         .elementor-heading-rm-hero-large .elementor-heading-title { 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 95px !important;
             font-weight: 400 !important;
             line-height: 105% !important;
@@ -381,7 +381,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
         }
         
         .elementor-heading-rm-hero-subtitle .elementor-heading-title {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 32px !important;
             font-weight: 300 !important;
             line-height: 130% !important;
@@ -394,7 +394,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
         }
         
         .elementor-heading-rm-intro-large .elementor-heading-title { 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 56px !important;
             font-weight: 700 !important;
             line-height: 110% !important;
@@ -406,14 +406,14 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
         }
         
         .elementor-heading-rm-module-title .elementor-heading-title {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 32px !important;
             font-weight: 700 !important;
             line-height: 110% !important;
         }
         
         .elementor-heading-rm-subheading .elementor-heading-title { 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 32px !important;
             font-weight: 300 !important;
             line-height: 130% !important;
@@ -426,7 +426,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
         
         /* ReelMetrics Typography Classes for Text Editor */
         .rm-body-large .elementor-text-editor { 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -438,7 +438,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
         }
         
         .rm-body-text .elementor-text-editor { 
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 16px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -459,7 +459,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
             background-color: var(--rm-blurple, #5E55FC) !important;
             color: white !important;
             border-radius: 80px !important;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -491,7 +491,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
             background-color: var(--rm-black, #292929) !important;
             color: white !important;
             border-radius: 80px !important;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -523,7 +523,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
             background-color: var(--rm-blurple, #5E55FC) !important;
             color: white !important;
             border-radius: 80px !important;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -550,7 +550,7 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
             background-color: var(--rm-white, #FFFFFF) !important;
             color: var(--rm-black, #292929) !important;
             border-radius: 80px !important;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+            font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
             font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 130% !important;
@@ -575,8 +575,8 @@ add_action( 'elementor/frontend/after_enqueue_styles', function() {
 } );
 
 /**
- * Register CDN-served Helvetica Neue in Elementor's font dropdown
- * Maps likely family names from the CDN to a custom "ReelMetrics" group
+ * Register Work Sans in Elementor's ReelMetrics font group
+ * Note: Work Sans is also available via Elementor's Google Fonts integration
  */
 add_filter( 'elementor/fonts/groups', function( $groups ) {
     $groups['rm'] = 'ReelMetrics';
@@ -584,7 +584,7 @@ add_filter( 'elementor/fonts/groups', function( $groups ) {
 }, 10, 1 );
 
 add_filter( 'elementor/fonts/additional_fonts', function( $fonts ) {
-    // Register the main generic family name only
-    $fonts['Helvetica Neue'] = 'rm';
+    // Add Work Sans to ReelMetrics group for easy identification
+    $fonts['Work Sans'] = 'rm';
     return $fonts;
 }, 10, 1 );

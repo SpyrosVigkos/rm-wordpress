@@ -28,12 +28,10 @@ function rm_child_enqueue_styles() {
     // Child theme style
     wp_enqueue_style( 'rm-child-style', get_stylesheet_uri(), array( 'hello-elementor' ), RM_THEME_VERSION );
     
-    // Fonts (loaded before typography to ensure availability)
-    wp_enqueue_style( 'rm-fonts', RM_THEME_URI . '/assets/css/fonts.css', array(), RM_THEME_VERSION );
-
     // ReelMetrics Design System
     wp_enqueue_style( 'rm-colors', RM_THEME_URI . '/assets/css/colors.css', array(), RM_THEME_VERSION );
-    wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-fonts', 'rm-colors' ), RM_THEME_VERSION );
+    wp_enqueue_style( 'rm-fonts', RM_THEME_URI . '/assets/css/fonts.css', array(), RM_THEME_VERSION );
+    wp_enqueue_style( 'rm-typography', RM_THEME_URI . '/assets/css/typography.css', array( 'rm-colors' ), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-buttons', RM_THEME_URI . '/assets/css/buttons.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
     wp_enqueue_style( 'rm-navigation', RM_THEME_URI . '/assets/css/navigation.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION );
     
@@ -183,7 +181,7 @@ function rm_customize_hello_settings() {
         <style>
             /* Override Hello Elementor defaults with ReelMetrics design system */
             body {
-                font-family: var(--rm-font-primary, 'Helvetica Neue', Helvetica, Arial, sans-serif);
+                font-family: var(--rm-font-primary, 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
             }
             
             /* Apply ReelMetrics colors globally */
@@ -290,3 +288,4 @@ function rm_register_team_member_acf() {
 add_action( 'acf/init', 'rm_register_team_member_acf' );
 
 // Importer removed per request (CPT and ACF fields kept)
+

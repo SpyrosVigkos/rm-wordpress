@@ -1,14 +1,11 @@
 /* ReelMetrics Typography System
    Based on Figma Design System
-   Font: Helvetica Neue
+   Font: Work Sans
    ================================= */
-
-/* Import Helvetica Neue (fallback to system fonts) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   /* Font Families */
-  --rm-font-primary: 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --rm-font-primary: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
   /* Font Weights */
   --rm-weight-light: 300;

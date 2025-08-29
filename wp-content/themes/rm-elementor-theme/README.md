@@ -4,9 +4,9 @@ A professional WordPress child theme extending Hello Elementor with the complete
 
 ## 🎨 Features
 
-- **Complete Design System**: Blurple color palette, Helvetica Neue typography
+- **Complete Design System**: Blurple color palette, Work Sans typography
 - **Elementor Integration**: Custom widgets, global colors, and typography
-- **CDN Fonts**: Helvetica Neue loaded from CDN with fallbacks
+- **Work Sans Font**: Loaded via Elementor's Google Fonts integration
 - **Responsive Design**: Mobile-first approach with proper breakpoints
 - **Custom Components**: Buttons, navigation, typography widgets
 
@@ -31,7 +31,7 @@ A professional WordPress child theme extending Hello Elementor with the complete
 ### Typography
 
 - Use ReelMetrics typography classes: `.rm-hero-large`, `.rm-body-text`, etc.
-- In Elementor: Select "ReelMetrics → Helvetica Neue" from font dropdown
+- In Elementor: Select "ReelMetrics → Work Sans" from font dropdown
 - Global typography presets available in Elementor Site Settings
 
 ### Colors
@@ -115,7 +115,7 @@ rm-elementor-theme/
 
 ## 📊 Performance
 
-- **CDN Fonts**: Fast loading from external CDN
+- **Elementor Integration**: Work Sans loaded via Elementor's optimized Google Fonts system
 - **Optimized CSS**: Modular stylesheets with proper dependencies
 - **Minimal JS**: Only essential JavaScript included
 - **Caching Friendly**: Proper versioning for cache busting
@@ -124,7 +124,7 @@ rm-elementor-theme/
 
 ### Fonts Not Loading
 
-1. Check CDN accessibility: `https://fonts.cdnfonts.com/css/helvetica-neue-55`
+1. Ensure Work Sans is available in Elementor → Fonts (Google Fonts section)
 2. Clear Elementor cache: Tools → Regenerate Files & Data
 3. Verify font appears in Elementor typography dropdown
 
@@ -148,7 +148,7 @@ rm-elementor-theme/
 - Complete ReelMetrics design system
 - Elementor integration
 - Custom widgets and components
-- CDN font loading
+- Work Sans as default theme font
 
 ## 📄 License
 
