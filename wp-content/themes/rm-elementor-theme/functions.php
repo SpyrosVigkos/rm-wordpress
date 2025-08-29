@@ -287,5 +287,353 @@ function rm_register_team_member_acf() {
 }
 add_action( 'acf/init', 'rm_register_team_member_acf' );
 
+/**
+ * Register CPT: ReelCast Episodes
+ * Custom Post Type for podcast episodes
+ */
+function rm_register_reelcast_cpt() {
+    $labels = array(
+        'name'               => 'ReelCast Episodes',
+        'singular_name'      => 'ReelCast Episode',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New ReelCast Episode',
+        'edit_item'          => 'Edit ReelCast Episode',
+        'new_item'           => 'New ReelCast Episode',
+        'view_item'          => 'View ReelCast Episode',
+        'search_items'       => 'Search ReelCast Episodes',
+        'not_found'          => 'No episodes found',
+        'not_found_in_trash' => 'No episodes found in Trash',
+        'menu_name'          => 'ReelCast',
+    );
+    
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'show_in_rest'       => true,
+        'supports'           => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author', 'revisions' ),
+        'menu_icon'          => 'dashicons-microphone',
+        'has_archive'        => true,
+        'rewrite'            => array( 'slug' => 'reelcast' ),
+        'hierarchical'       => false,
+        'query_var'          => true,
+        'can_export'         => true,
+        'delete_with_user'   => false,
+        'capability_type'    => 'post',
+    );
+    
+    register_post_type( 'reelcast', $args );
+}
+add_action( 'init', 'rm_register_reelcast_cpt' );
+
+/**
+ * Register ACF fields for ReelCast Episodes
+ * Mirrors the React component props structure from rm-public-pages
+ */
+function rm_register_reelcast_acf() {
+    if ( function_exists( 'acf_add_local_field_group' ) ) {
+        acf_add_local_field_group(array(
+            'key' => 'group_reelcast_episode',
+            'title' => 'ReelCast Episode Fields',
+            'fields' => array(
+                // Basic episode information
+                array(
+                    'key' => 'field_reelcast_subtitle',
+                    'label' => 'Subtitle',
+                    'name' => 'subtitle',
+                    'type' => 'text',
+                    'required' => 1,
+                    'placeholder' => 'Season X, Episode Y',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_description',
+                    'label' => 'Description',
+                    'name' => 'description',
+                    'type' => 'textarea',
+                    'required' => 1,
+                    'rows' => 5,
+                    'new_lines' => 'br',
+                    'instructions' => 'Episode description for display and SEO',
+                ),
+                array(
+                    'key' => 'field_reelcast_date_published',
+                    'label' => 'Date Published',
+                    'name' => 'date_published',
+                    'type' => 'date_picker',
+                    'required' => 1,
+                    'display_format' => 'Y-m-d',
+                    'return_format' => 'Y-m-d',
+                    'first_day' => 1,
+                    'wrapper' => array( 'width' => '33' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_season_number',
+                    'label' => 'Season Number',
+                    'name' => 'season_number',
+                    'type' => 'number',
+                    'required' => 1,
+                    'min' => 1,
+                    'wrapper' => array( 'width' => '33' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_episode_number',
+                    'label' => 'Episode Number',
+                    'name' => 'episode_number',
+                    'type' => 'number',
+                    'required' => 1,
+                    'min' => 1,
+                    'wrapper' => array( 'width' => '34' ),
+                ),
+                
+                // Buzzsprout integration
+                array(
+                    'key' => 'field_reelcast_buzzsprout_id',
+                    'label' => 'Buzzsprout Episode ID',
+                    'name' => 'buzzsprout_id',
+                    'type' => 'text',
+                    'required' => 1,
+                    'placeholder' => '14577542-s03e02-delaware-north-with-michael-carruthers',
+                    'instructions' => 'Format: digits-episode-slug (used for player embed)',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_buzzsprout_url',
+                    'label' => 'Buzzsprout URL',
+                    'name' => 'buzzsprout_url',
+                    'type' => 'url',
+                    'placeholder' => 'https://www.buzzsprout.com/2057836/14577542-...',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                
+                // Platform URLs
+                array(
+                    'key' => 'field_reelcast_spotify_url',
+                    'label' => 'Spotify URL',
+                    'name' => 'spotify_url',
+                    'type' => 'url',
+                    'placeholder' => 'https://open.spotify.com/show/314iBnXRGGAuttAsIcZeC5',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_apple_podcasts_url',
+                    'label' => 'Apple Podcasts URL',
+                    'name' => 'apple_podcasts_url',
+                    'type' => 'url',
+                    'placeholder' => 'https://podcasts.apple.com/us/podcast/reelcast-by-reelmetrics/id1652485625',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_iheart_url',
+                    'label' => 'iHeartRadio URL',
+                    'name' => 'iheart_url',
+                    'type' => 'url',
+                    'placeholder' => 'https://iheart.com/podcast/104029260/',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                array(
+                    'key' => 'field_reelcast_cdc_url',
+                    'label' => 'CDC Gaming URL',
+                    'name' => 'cdc_url',
+                    'type' => 'url',
+                    'placeholder' => 'https://cdcgaming.com/reelmetrics/s03e02-...',
+                    'wrapper' => array( 'width' => '50' ),
+                ),
+                
+                // Topics (repeater)
+                array(
+                    'key' => 'field_reelcast_topics',
+                    'label' => 'Topics',
+                    'name' => 'topics',
+                    'type' => 'repeater',
+                    'button_label' => 'Add Topic',
+                    'layout' => 'table',
+                    'instructions' => 'Key discussion topics covered in this episode',
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_reelcast_topic',
+                            'label' => 'Topic',
+                            'name' => 'topic',
+                            'type' => 'text',
+                            'required' => 1,
+                        ),
+                    ),
+                ),
+                
+                // Keywords (repeater)
+                array(
+                    'key' => 'field_reelcast_keywords',
+                    'label' => 'Keywords',
+                    'name' => 'keywords',
+                    'type' => 'repeater',
+                    'button_label' => 'Add Keyword',
+                    'layout' => 'table',
+                    'instructions' => 'SEO keywords and tags for this episode',
+                    'sub_fields' => array(
+                        array(
+                            'key' => 'field_reelcast_keyword',
+                            'label' => 'Keyword',
+                            'name' => 'keyword',
+                            'type' => 'text',
+                            'required' => 1,
+                        ),
+                    ),
+                ),
+                
+                // Transcript
+                array(
+                    'key' => 'field_reelcast_transcript',
+                    'label' => 'Transcript',
+                    'name' => 'transcript',
+                    'type' => 'textarea',
+                    'rows' => 20,
+                    'new_lines' => 'wpautop',
+                    'instructions' => 'Full episode transcript. Speaker names followed by colons will be automatically formatted.',
+                ),
+                
+                // Optional social image override
+                array(
+                    'key' => 'field_reelcast_social_image',
+                    'label' => 'Social Image (Optional)',
+                    'name' => 'social_image',
+                    'type' => 'image',
+                    'return_format' => 'url',
+                    'preview_size' => 'medium',
+                    'instructions' => 'Override default ReelCast social image for this episode',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'post_type',
+                        'operator' => '==',
+                        'value' => 'reelcast',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'acf_after_title',
+            'style' => 'seamless',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'active' => true,
+            'show_in_rest' => 1,
+        ));
+    }
+}
+add_action( 'acf/init', 'rm_register_reelcast_acf' );
+
+/**
+ * Shortcode for Buzzsprout player embed
+ * Usage: [reelcast_player episode_id="14577542-s03e02-delaware-north-with-michael-carruthers"]
+ */
+function rm_reelcast_player_shortcode( $atts ) {
+    $atts = shortcode_atts( array(
+        'episode_id' => '',
+        'player_size' => 'large', // 'small' or 'large'
+    ), $atts );
+    
+    if ( empty( $atts['episode_id'] ) ) {
+        return '<p>Error: episode_id is required for ReelCast player</p>';
+    }
+    
+    $episode_id = sanitize_text_field( $atts['episode_id'] );
+    $player_size = sanitize_text_field( $atts['player_size'] );
+    $container_id = "buzzsprout-player-{$episode_id}";
+    
+    // Generate the player HTML and script
+    $output = '<div id="' . esc_attr( $container_id ) . '" style="padding: 10px 0;"></div>';
+    $output .= '<script type="text/javascript" charset="utf-8" src="https://www.buzzsprout.com/2057836/' . esc_attr( $episode_id ) . '.js?container_id=' . esc_attr( $container_id ) . '&player=' . esc_attr( $player_size ) . '"></script>';
+    
+    return $output;
+}
+add_shortcode( 'reelcast_player', 'rm_reelcast_player_shortcode' );
+
+/**
+ * Auto-generate reelcast player shortcode for single episode pages
+ */
+function rm_reelcast_auto_player() {
+    if ( is_singular( 'reelcast' ) ) {
+        $buzzsprout_id = get_field( 'buzzsprout_id' );
+        if ( $buzzsprout_id ) {
+            echo do_shortcode( '[reelcast_player episode_id="' . esc_attr( $buzzsprout_id ) . '"]' );
+        }
+    }
+}
+// Uncomment to auto-insert player (or use shortcode in Elementor templates)
+// add_action( 'elementor/theme/after_do_header', 'rm_reelcast_auto_player' );
+
+/**
+ * Helper function to get episode data in React component format
+ * Useful for REST API or Elementor dynamic content
+ */
+function rm_get_reelcast_episode_data( $post_id = null ) {
+    if ( ! $post_id ) {
+        $post_id = get_the_ID();
+    }
+    
+    if ( get_post_type( $post_id ) !== 'reelcast' ) {
+        return false;
+    }
+    
+    $post = get_post( $post_id );
+    
+    // Get topics array
+    $topics_raw = get_field( 'topics', $post_id );
+    $topics = array();
+    if ( $topics_raw ) {
+        foreach ( $topics_raw as $topic ) {
+            $topics[] = $topic['topic'];
+        }
+    }
+    
+    // Get keywords array
+    $keywords_raw = get_field( 'keywords', $post_id );
+    $keywords = array();
+    if ( $keywords_raw ) {
+        foreach ( $keywords_raw as $keyword ) {
+            $keywords[] = $keyword['keyword'];
+        }
+    }
+    
+    return array(
+        'id' => get_field( 'buzzsprout_id', $post_id ),
+        'link' => $post->post_name,
+        'title' => $post->post_title,
+        'subTitle' => get_field( 'subtitle', $post_id ),
+        'description' => get_field( 'description', $post_id ),
+        'episodeNumber' => (int) get_field( 'episode_number', $post_id ),
+        'seasonNumber' => (int) get_field( 'season_number', $post_id ),
+        'datePublished' => get_field( 'date_published', $post_id ),
+        'topics' => $topics,
+        'keywords' => $keywords,
+        'buzzSproutLink' => get_field( 'buzzsprout_url', $post_id ),
+        'spotifyLink' => get_field( 'spotify_url', $post_id ),
+        'applePodcastsLink' => get_field( 'apple_podcasts_url', $post_id ),
+        'iHeartRadioLink' => get_field( 'iheart_url', $post_id ),
+        'cdcLink' => get_field( 'cdc_url', $post_id ),
+        'transcript' => get_field( 'transcript', $post_id ),
+        'socialImage' => get_field( 'social_image', $post_id ),
+    );
+}
+
+/**
+ * REST API endpoint for ReelCast episodes (optional)
+ * Provides data in React component format
+ */
+function rm_register_reelcast_rest_fields() {
+    register_rest_field( 'reelcast', 'episode_data', array(
+        'get_callback' => function( $post_array ) {
+            return rm_get_reelcast_episode_data( $post_array['id'] );
+        },
+        'schema' => array(
+            'description' => 'Complete episode data in React component format',
+            'type' => 'object',
+        ),
+    ));
+}
+add_action( 'rest_api_init', 'rm_register_reelcast_rest_fields' );
+
 // Importer removed per request (CPT and ACF fields kept)
 
