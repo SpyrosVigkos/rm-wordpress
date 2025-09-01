@@ -1262,6 +1262,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Accordion_Widget() );
     $widgets_manager->register( new RM_Timeline_Widget() );
     $widgets_manager->register( new RM_Reelcast_Transcript_Widget() );
+    $widgets_manager->register( new RM_Topics_List_Widget() );
     $widgets_manager->register( new RM_Team_Widget() );
     $widgets_manager->register( new RM_Carousel_Widget() );
 }
@@ -1491,5 +1492,168 @@ class RM_Carousel_Widget extends \Elementor\Widget_Base {
         echo '</div>';
         echo '</div>';
         echo '</div>';
+    }
+}
+
+/**
+ * RM Topics List (Two-Column) Widget
+ */
+class RM_Topics_List_Widget extends \Elementor\Widget_Base {
+    public function get_name() { return 'rm-topics-list'; }
+    public function get_title() { return __( 'RM Topics List', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-bullet-list'; }
+    public function get_categories() { return [ 'reelmetrics' ]; }
+
+    protected function register_controls() {
+        // Source controls
+        $this->start_controls_section('content', [ 'label' => __( 'Content', 'rm-elementor-theme' ) ]);
+
+        $this->add_control('use_acf', [
+            'label' => __( 'Load from ACF (reelcast → topics)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => __( 'Yes', 'rm-elementor-theme' ),
+            'label_off' => __( 'No', 'rm-elementor-theme' ),
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]);
+
+        $rep = new \Elementor\Repeater();
+        $rep->add_control('text', [ 'label' => __( 'Topic', 'rm-elementor-theme' ), 'type' => \Elementor\Controls_Manager::TEXT, 'default' => __( 'Topic text', 'rm-elementor-theme' ) ]);
+        $this->add_control('items', [
+            'label' => __( 'Manual Topics', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::REPEATER,
+            'fields' => $rep->get_controls(),
+            'default' => [],
+            'title_field' => '{{{ text }}}',
+            'condition' => [ 'use_acf!' => 'yes' ]
+        ]);
+
+        $this->end_controls_section();
+
+        // Icon controls
+        $this->start_controls_section('icon', [ 'label' => __( 'Icon', 'rm-elementor-theme' ) ]);
+        $this->add_control('use_custom_icon', [
+            'label' => __( 'Use custom image icon', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'return_value' => 'yes',
+            'default' => '',
+        ]);
+        $this->add_control('icon_media', [
+            'label' => __( 'Icon Image', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::MEDIA,
+            'condition' => [ 'use_custom_icon' => 'yes' ],
+        ]);
+        $this->add_control('icon_color', [
+            'label' => __( 'Icon Color', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'default' => '#5E55FC',
+            'condition' => [ 'use_custom_icon!' => 'yes' ],
+        ]);
+        $this->add_control('icon_size', [
+            'label' => __( 'Icon Size (px)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [ 'px' => [ 'min' => 4, 'max' => 24, 'step' => 1 ] ],
+            'default' => [ 'size' => 8, 'unit' => 'px' ],
+            'condition' => [ 'use_custom_icon!' => 'yes' ],
+        ]);
+        $this->end_controls_section();
+
+        // Style controls
+        $this->start_controls_section('style', [ 'label' => __( 'Style', 'rm-elementor-theme' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ]);
+        $this->add_group_control( \Elementor\Group_Control_Typography::get_type(), [
+            'name' => 'text_typo',
+            'selector' => '{{WRAPPER}} .rm-topics__text',
+        ]);
+        $this->add_control('text_color', [
+            'label' => __( 'Text Color', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [ '{{WRAPPER}} .rm-topics__text' => 'color: {{VALUE}};' ],
+        ]);
+        $this->add_control('row_gap', [
+            'label' => __( 'Row Gap (px)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [ 'px' => [ 'min' => 0, 'max' => 40, 'step' => 1 ] ],
+            'default' => [ 'size' => 8, 'unit' => 'px' ],
+        ]);
+        $this->add_control('column_gap', [
+            'label' => __( 'Column Gap (px)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SLIDER,
+            'size_units' => [ 'px' ],
+            'range' => [ 'px' => [ 'min' => 0, 'max' => 80, 'step' => 1 ] ],
+            'default' => [ 'size' => 36, 'unit' => 'px' ],
+        ]);
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $s = $this->get_settings_for_display();
+
+        // Resolve topics
+        $topics = [];
+        if ( $s['use_acf'] === 'yes' && function_exists('get_field') && is_singular('reelcast') ) {
+            $raw = get_field('topics');
+            if ( is_array($raw) ) {
+                foreach ($raw as $row) {
+                    if ( isset($row['topic']) && $row['topic'] !== '' ) {
+                        $topics[] = $row['topic'];
+                    }
+                }
+            }
+        }
+        if ( empty($topics) && ! empty($s['items']) && is_array($s['items']) ) {
+            foreach ($s['items'] as $it) {
+                if ( ! empty($it['text']) ) { $topics[] = $it['text']; }
+            }
+        }
+        if ( empty($topics) ) { return; }
+
+        $count = count($topics);
+        $left_count = (int)ceil($count / 2);
+        $left = array_slice($topics, 0, $left_count);
+        $right = array_slice($topics, $left_count);
+
+        $row_gap = isset($s['row_gap']['size']) ? (int)$s['row_gap']['size'] : 8;
+        $col_gap = isset($s['column_gap']['size']) ? (int)$s['column_gap']['size'] : 36;
+        $icon_size = isset($s['icon_size']['size']) ? (int)$s['icon_size']['size'] : 8;
+        $icon_color = isset($s['icon_color']) && $s['icon_color'] ? $s['icon_color'] : '#5E55FC';
+        $use_img = ($s['use_custom_icon'] === 'yes' && ! empty($s['icon_media']['url']));
+        $icon_url = $use_img ? $s['icon_media']['url'] : '';
+
+        // Inline styles for layout and icon
+        $uid = 'rmt_' . wp_generate_password(6, false, false);
+        echo '<style>
+            #' . esc_attr($uid) . ' .rm-topics__cols{display:grid;grid-template-columns:1fr 1fr;gap:' . esc_attr($col_gap) . 'px;}
+            #' . esc_attr($uid) . ' .rm-topics__item{display:flex;align-items:center;gap:10px;margin:0 0 ' . esc_attr($row_gap) . 'px 0;}
+            #' . esc_attr($uid) . ' .rm-topics__icon{width:' . ($use_img ? $icon_size : $icon_size) . 'px;height:' . ($use_img ? $icon_size : $icon_size) . 'px;display:inline-flex;align-items:center;justify-content:center}
+            #' . esc_attr($uid) . ' .rm-topics__diamond{width:' . esc_attr($icon_size) . 'px;height:' . esc_attr($icon_size) . 'px;background:' . esc_attr($icon_color) . ';transform:rotate(-45deg)}
+            @media (max-width: 768px){#' . esc_attr($uid) . ' .rm-topics__cols{grid-template-columns:1fr}}
+        </style>';
+
+        echo '<div id="' . esc_attr($uid) . '" class="rm-topics rm-body-text-small" role="list">';
+        echo '<div class="rm-topics__cols">';
+
+        $render_col = function($arr) use ($use_img, $icon_url) {
+            echo '<ul class="rm-topics__col">';
+            foreach ($arr as $t) {
+                echo '<li class="rm-topics__item">';
+                echo '<span class="rm-topics__icon">';
+                if ($use_img) {
+                    echo '<img src="' . esc_url($icon_url) . '" alt="" loading="lazy" decoding="async" />';
+                } else {
+                    echo '<span class="rm-topics__diamond" aria-hidden="true"></span>';
+                }
+                echo '</span>';
+                echo '<span class="rm-topics__text">' . esc_html($t) . '</span>';
+                echo '</li>';
+            }
+            echo '</ul>';
+        };
+
+        $render_col($left);
+        $render_col($right);
+
+        echo '</div></div>';
     }
 }
