@@ -1107,6 +1107,152 @@ class RM_Timeline_Widget extends \Elementor\Widget_Base {
 }
 
 /**
+ * ReelCast Transcript Formatter Widget
+ * - Accepts a raw transcript (textarea, supports Dynamic Tags e.g., ACF field)
+ * - Detects speaker lines by pattern (e.g., "Nick Hogan:") and renders them bold
+ * - Splits non-speaker text into paragraphs of ~N words (default 20)
+ * - Wraps output with a configurable CSS class (e.g., body text small)
+ */
+class RM_Reelcast_Transcript_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() { return 'rm-reelcast-transcript'; }
+    public function get_title() { return __( 'RM ReelCast Transcript', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-editor-list'; }
+    public function get_categories() { return [ 'reelmetrics' ]; }
+
+    protected function register_controls() {
+        // Content
+        $this->start_controls_section('content', [ 'label' => __( 'Transcript', 'rm-elementor-theme' ), 'tab' => \Elementor\Controls_Manager::TAB_CONTENT ]);
+
+        $this->add_control('transcript_text', [
+            'label' => __( 'Transcript (supports Dynamic Tags)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'dynamic' => [ 'active' => true ],
+            'rows' => 20,
+            'placeholder' => __( 'Paste the episode transcript or bind an ACF field', 'rm-elementor-theme' ),
+        ]);
+
+        $this->add_control('words_per_paragraph', [
+            'label' => __( 'Words per Paragraph', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::NUMBER,
+            'min' => 5,
+            'max' => 80,
+            'step' => 1,
+            'default' => 20,
+        ]);
+
+        $this->add_control('speaker_regex', [
+            'label' => __( 'Speaker Pattern (regex)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '^[\\w\\s\\.\\\']+:',
+            'description' => __( 'Lines matching this pattern will be treated as speaker labels and rendered bold', 'rm-elementor-theme' ),
+        ]);
+
+        $this->add_control('wrapper_class', [
+            'label' => __( 'Wrapper CSS Class', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => 'rm-transcript rm-body-text-small',
+        ]);
+
+        $this->end_controls_section();
+
+        // Style
+        $this->start_controls_section('style', [ 'label' => __( 'Style', 'rm-elementor-theme' ), 'tab' => \Elementor\Controls_Manager::TAB_STYLE ]);
+        $this->add_group_control( \Elementor\Group_Control_Typography::get_type(), [
+            'name' => 'typography',
+            'selector' => '{{WRAPPER}} .rm-transcript',
+        ]);
+        $this->add_control('text_color', [
+            'label' => __( 'Text Color', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'selectors' => [ '{{WRAPPER}} .rm-transcript' => 'color: {{VALUE}};' ],
+        ]);
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $s = $this->get_settings_for_display();
+        $text = isset($s['transcript_text']) && is_string($s['transcript_text']) ? $s['transcript_text'] : '';
+
+        // Fallback to ACF field when used on a ReelCast single page and no bound text provided
+        if ( empty($text) && function_exists('get_field') && is_singular('reelcast') ) {
+            $acf_text = get_field('transcript');
+            if ( is_string($acf_text) ) { $text = $acf_text; }
+        }
+
+        if ( trim($text) === '' ) { return; }
+
+        // Normalize HTML-ish transcripts coming from external systems
+        $normalized = $text;
+        // Convert common break tags to newlines
+        $normalized = str_ireplace(["<br>", "<br/>", "<br />"], "\n", $normalized);
+        // Convert common closing tags to paragraph breaks
+        $normalized = str_ireplace(["</p>", "</div>", "</li>"], "\n\n", $normalized);
+        // Strip opening paragraph and other tags while leaving text
+        $normalized = preg_replace('/<p[^>]*>/i', '', $normalized);
+        // Remove any remaining HTML tags
+        $normalized = wp_strip_all_tags( $normalized );
+        // Decode HTML entities to plain text
+        $normalized = html_entity_decode( $normalized, ENT_QUOTES | ENT_HTML5, get_bloginfo('charset') ?: 'UTF-8' );
+        // Normalize CRLF/CR to LF and collapse excessive blank lines
+        $normalized = preg_replace("/\r\n?|\n/", "\n", $normalized);
+        $normalized = preg_replace("/\n{3,}/", "\n\n", $normalized);
+
+        $words_per = max(5, intval($s['words_per_paragraph']));
+        $pattern_body = ( isset($s['speaker_regex']) && is_string($s['speaker_regex']) && $s['speaker_regex'] !== '' )
+            ? $s['speaker_regex']
+            : '^[\\w\\s\\.\\\']+:';
+        $pattern = '/' . $pattern_body . '/u';
+        $wrapper_class = $s['wrapper_class'] ?: 'rm-transcript';
+
+        // Split lines
+        $lines = preg_split("/(\r?\n)/", $normalized);
+        if ( ! is_array($lines) ) { $lines = [$text]; }
+
+        echo '<div class="' . esc_attr($wrapper_class) . '" role="article" aria-label="Episode transcript">';
+        echo '<div class="rm-transcript__inner">';
+
+        $buffer_words = [];
+
+        $flush_paragraphs = function() use (&$buffer_words, $words_per) {
+            if (empty($buffer_words)) return '';
+            $html = '';
+            while (count($buffer_words) > 0) {
+                $chunk = array_splice($buffer_words, 0, $words_per);
+                $html .= '<p class="rm-transcript__paragraph">' . esc_html(implode(' ', $chunk)) . '</p>';
+            }
+            return $html;
+        };
+
+        foreach ($lines as $raw_line) {
+            $line = trim($raw_line);
+            if ($line === '') { // paragraph break
+                echo $flush_paragraphs();
+                continue;
+            }
+
+            if ( preg_match($pattern, $line) ) {
+                // Flush previous paragraph chunks before a new speaker
+                echo $flush_paragraphs();
+                echo '<p class="rm-transcript__speaker"><strong>' . esc_html($line) . '</strong></p>';
+                continue;
+            }
+
+            // Accumulate words into buffer
+            $words = preg_split('/\s+/', $line);
+            if (is_array($words)) {
+                foreach ($words as $w) { if ($w !== '') { $buffer_words[] = $w; } }
+            }
+        }
+
+        // Flush any remaining buffered words
+        echo $flush_paragraphs();
+
+        echo '</div></div>';
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets( $widgets_manager ) {
@@ -1115,6 +1261,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Navigation_Widget() );
     $widgets_manager->register( new RM_Accordion_Widget() );
     $widgets_manager->register( new RM_Timeline_Widget() );
+    $widgets_manager->register( new RM_Reelcast_Transcript_Widget() );
     $widgets_manager->register( new RM_Team_Widget() );
     $widgets_manager->register( new RM_Carousel_Widget() );
 }
