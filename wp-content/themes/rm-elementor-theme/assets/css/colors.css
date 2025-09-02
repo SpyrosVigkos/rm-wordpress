@@ -60,8 +60,8 @@
   --rm-shadow-dark: rgba(40, 40, 40, 0.25);
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/* Dark Mode Support TODO: ADD BACK IN LATER IF WE NEED IT */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --rm-text-primary: var(--rm-white);
     --rm-text-secondary: var(--rm-gray-medium);
@@ -72,7 +72,7 @@
     --rm-border-default: #4a4a4a;
     --rm-border-dark: #5a5a5a;
   }
-}
+} */
 
 /* Utility Classes */
 .rm-color-primary { color: var(--rm-primary); }
