@@ -328,6 +328,70 @@ function rm_register_reelcast_cpt() {
 add_action( 'init', 'rm_register_reelcast_cpt' );
 
 /**
+ * Register dedicated taxonomies for ReelCast
+ * - reelcast_category (hierarchical)
+ * - reelcast_tag (non-hierarchical)
+ */
+function rm_register_reelcast_taxonomies() {
+    // Categories
+    $cat_labels = array(
+        'name'              => _x( 'ReelCast Categories', 'taxonomy general name', 'rm-elementor-theme' ),
+        'singular_name'     => _x( 'ReelCast Category', 'taxonomy singular name', 'rm-elementor-theme' ),
+        'search_items'      => __( 'Search Categories', 'rm-elementor-theme' ),
+        'all_items'         => __( 'All Categories', 'rm-elementor-theme' ),
+        'parent_item'       => __( 'Parent Category', 'rm-elementor-theme' ),
+        'parent_item_colon' => __( 'Parent Category:', 'rm-elementor-theme' ),
+        'edit_item'         => __( 'Edit Category', 'rm-elementor-theme' ),
+        'update_item'       => __( 'Update Category', 'rm-elementor-theme' ),
+        'add_new_item'      => __( 'Add New Category', 'rm-elementor-theme' ),
+        'new_item_name'     => __( 'New Category Name', 'rm-elementor-theme' ),
+        'menu_name'         => __( 'Categories', 'rm-elementor-theme' ),
+    );
+
+    register_taxonomy( 'reelcast_category', array( 'reelcast' ), array(
+        'hierarchical'      => true,
+        'labels'            => $cat_labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'reelcast/category' ),
+        'show_in_rest'      => true,
+    ) );
+
+    // Tags
+    $tag_labels = array(
+        'name'                       => _x( 'ReelCast Tags', 'taxonomy general name', 'rm-elementor-theme' ),
+        'singular_name'              => _x( 'ReelCast Tag', 'taxonomy singular name', 'rm-elementor-theme' ),
+        'search_items'               => __( 'Search Tags', 'rm-elementor-theme' ),
+        'popular_items'              => __( 'Popular Tags', 'rm-elementor-theme' ),
+        'all_items'                  => __( 'All Tags', 'rm-elementor-theme' ),
+        'edit_item'                  => __( 'Edit Tag', 'rm-elementor-theme' ),
+        'update_item'                => __( 'Update Tag', 'rm-elementor-theme' ),
+        'add_new_item'               => __( 'Add New Tag', 'rm-elementor-theme' ),
+        'new_item_name'              => __( 'New Tag Name', 'rm-elementor-theme' ),
+        'separate_items_with_commas' => __( 'Separate tags with commas', 'rm-elementor-theme' ),
+        'add_or_remove_items'        => __( 'Add or remove tags', 'rm-elementor-theme' ),
+        'choose_from_most_used'      => __( 'Choose from the most used tags', 'rm-elementor-theme' ),
+        'menu_name'                  => __( 'Tags', 'rm-elementor-theme' ),
+    );
+
+    register_taxonomy( 'reelcast_tag', array( 'reelcast' ), array(
+        'hierarchical'      => false,
+        'labels'            => $tag_labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'reelcast/tag' ),
+        'show_in_rest'      => true,
+    ) );
+
+    // Ensure taxonomies are attached to post type (in case of registration order differences)
+    register_taxonomy_for_object_type( 'reelcast_category', 'reelcast' );
+    register_taxonomy_for_object_type( 'reelcast_tag', 'reelcast' );
+}
+add_action( 'init', 'rm_register_reelcast_taxonomies', 11 );
+/**
  * Register ACF fields for ReelCast Episodes
  * Mirrors the React component props structure from rm-public-pages
  */
@@ -636,4 +700,135 @@ function rm_register_reelcast_rest_fields() {
 add_action( 'rest_api_init', 'rm_register_reelcast_rest_fields' );
 
 // Importer removed per request (CPT and ACF fields kept)
+
+/**
+ * ReelCast: Default Featured Image (fallback) via ACF Options
+ * - Adds a subpage under ReelCast to set a default image
+ * - Provides fallback for featured images on ReelCast posts when none set
+ */
+function rm_reelcast_register_options_page() {
+    if ( function_exists( 'acf_add_options_sub_page' ) ) {
+        acf_add_options_sub_page( array(
+            'page_title'  => 'ReelCast Settings',
+            'menu_title'  => 'Settings',
+            'parent_slug' => 'edit.php?post_type=reelcast',
+            'menu_slug'   => 'reelcast-settings',
+            'capability'  => 'edit_posts',
+            'position'    => false,
+            'autoload'    => true,
+        ) );
+    }
+}
+add_action( 'init', 'rm_reelcast_register_options_page' );
+
+function rm_reelcast_register_options_fields() {
+    if ( function_exists( 'acf_add_local_field_group' ) ) {
+        acf_add_local_field_group( array(
+            'key' => 'group_reelcast_settings',
+            'title' => 'ReelCast Settings',
+            'fields' => array(
+                array(
+                    'key' => 'field_reelcast_default_image',
+                    'label' => 'Default ReelCast Image',
+                    'name' => 'reelcast_default_image',
+                    'type' => 'image',
+                    'return_format' => 'id',
+                    'preview_size' => 'medium',
+                    'instructions' => 'Used as a fallback image for ReelCast posts without a featured image.',
+                ),
+            ),
+            'location' => array(
+                array(
+                    array(
+                        'param' => 'options_page',
+                        'operator' => '==',
+                        'value' => 'reelcast-settings',
+                    ),
+                ),
+            ),
+            'position' => 'normal',
+            'style' => 'default',
+            'active' => true,
+            'show_in_rest' => 0,
+        ) );
+    }
+}
+add_action( 'acf/init', 'rm_reelcast_register_options_fields' );
+
+/**
+ * Helper: Get ReelCast image URL with fallbacks (featured → ACF social_image → options default → theme asset)
+ */
+function rm_get_reelcast_image_url( $post_id = null, $size = 'large' ) {
+    $post_id = $post_id ? $post_id : get_the_ID();
+    if ( ! $post_id ) return '';
+
+    // 1) Featured image
+    $thumb_id = get_post_thumbnail_id( $post_id );
+    if ( $thumb_id ) {
+        $src = wp_get_attachment_image_url( $thumb_id, $size );
+        if ( $src ) return $src;
+    }
+
+    // 2) Per-post ACF social_image (URL)
+    if ( function_exists( 'get_field' ) ) {
+        $social = get_field( 'social_image', $post_id );
+        if ( $social ) return $social;
+    }
+
+    // 3) Options default (ID)
+    if ( function_exists( 'get_field' ) ) {
+        $default_id = get_field( 'reelcast_default_image', 'option' );
+        if ( $default_id ) {
+            $src = wp_get_attachment_image_url( $default_id, $size );
+            if ( $src ) return $src;
+        }
+    }
+
+    // 4) Theme asset fallback (optional)
+    $asset = RM_THEME_URI . '/assets/images/reelcast-default.jpg';
+    return $asset;
+}
+
+/**
+ * Filter: provide a thumbnail ID fallback for ReelCast posts using the Options default image
+ * This helps Elementor and core functions that rely on _thumbnail_id.
+ */
+function rm_reelcast_thumbnail_fallback( $value, $object_id, $meta_key, $single ) {
+    if ( $meta_key !== '_thumbnail_id' || ! $single ) {
+        return $value;
+    }
+    if ( get_post_type( $object_id ) !== 'reelcast' ) {
+        return $value;
+    }
+    // If a thumbnail is already set, respect it
+    if ( ! empty( $value ) ) {
+        return $value;
+    }
+    if ( function_exists( 'get_field' ) ) {
+        $default_id = get_field( 'reelcast_default_image', 'option' );
+        if ( $default_id ) {
+            return (int) $default_id;
+        }
+    }
+    return $value;
+}
+add_filter( 'get_post_metadata', 'rm_reelcast_thumbnail_fallback', 10, 4 );
+
+/**
+ * Filter: when HTML is requested directly for the thumbnail and none exists, render fallback IMG
+ */
+function rm_reelcast_thumbnail_html_fallback( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+    if ( get_post_type( $post_id ) !== 'reelcast' ) {
+        return $html;
+    }
+    if ( $html ) {
+        return $html;
+    }
+    $src = rm_get_reelcast_image_url( $post_id, $size );
+    if ( ! $src ) return $html;
+    $alt = esc_attr( get_the_title( $post_id ) );
+    $class = isset( $attr['class'] ) ? esc_attr( $attr['class'] ) : 'attachment-' . esc_attr( is_string( $size ) ? $size : 'large' );
+    return '<img src="' . esc_url( $src ) . '" class="' . $class . ' rm-reelcast-fallback" alt="' . $alt . '" loading="lazy" decoding="async" />';
+}
+add_filter( 'post_thumbnail_html', 'rm_reelcast_thumbnail_html_fallback', 10, 5 );
 
