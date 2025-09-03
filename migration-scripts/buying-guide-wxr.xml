@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+ xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+  <title><![CDATA[Buying Guide Import]]></title>
+  <link>https://example.com</link>
+  <description><![CDATA[Buying Guide export from ButterCMS]]></description>
+  <language>en</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://example.com</wp:base_site_url>
+  <wp:base_blog_url>https://example.com</wp:base_blog_url>
+
+  <wp:term>
+    <wp:term_id>0</wp:term_id>
+    <wp:term_taxonomy>buying_guide_category</wp:term_taxonomy>
+    <wp:term_slug>video-slots-leading-suppliers</wp:term_slug>
+    <wp:term_parent></wp:term_parent>
+    <wp:term_name><![CDATA[Video Slots - Leading Suppliers]]></wp:term_name>
+    <wp:term_description><![CDATA[]]></wp:term_description>
+    <wp:termmeta>
+      <wp:meta_key>description</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_description</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_description]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[0]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_order]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>active</wp:meta_key>
+      <wp:meta_value><![CDATA[1]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_active</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_active]]></wp:meta_value>
+    </wp:termmeta>
+  </wp:term>
+
+  <wp:term>
+    <wp:term_id>0</wp:term_id>
+    <wp:term_taxonomy>buying_guide_category</wp:term_taxonomy>
+    <wp:term_slug>video-slots-small-suppliers</wp:term_slug>
+    <wp:term_parent></wp:term_parent>
+    <wp:term_name><![CDATA[Video Slots - Small suppliers]]></wp:term_name>
+    <wp:term_description><![CDATA[]]></wp:term_description>
+    <wp:termmeta>
+      <wp:meta_key>description</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_description</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_description]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[1]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_order]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>active</wp:meta_key>
+      <wp:meta_value><![CDATA[1]]></wp:meta_value>
+    </wp:termmeta>
+    <wp:termmeta>
+      <wp:meta_key>_active</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_cat_active]]></wp:meta_value>
+    </wp:termmeta>
+  </wp:term>
+
+  <item>
+    <title><![CDATA[Aristocrat - Baron Portrait]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>aristocrat-baron-portrait</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Aristocrat", "platform_name": "Baron Portrait"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[0]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[1032671]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Aristocrat - Neptune Single]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>aristocrat-neptune-single</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Aristocrat", "platform_name": "Neptune Single"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[457334]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Aristocrat - Neptune Double]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>aristocrat-neptune-double</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Aristocrat", "platform_name": "Neptune Double"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129774]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Aristocrat - MarsX Upright]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>aristocrat-marsx-upright</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Aristocrat", "platform_name": "MarsX Upright"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129764]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Aristocrat - MarsX Portrait]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>aristocrat-marsx-portrait</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Aristocrat", "platform_name": "MarsX Portrait"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[4]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129769]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[IGT - PeakSlant 32]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>igt-peakslant-32</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "IGT", "platform_name": "PeakSlant 32"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[5]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129765]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[IGT - PeakSlant 49]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>igt-peakslant-49</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "IGT", "platform_name": "PeakSlant 49"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[6]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129766]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[IGT - PeakCurve 49]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>igt-peakcurve-49</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "IGT", "platform_name": "PeakCurve 49"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[7]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129773]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[L&W - Cosmic]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>l-w-cosmic</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Light %26 Wonder", "platform_name": "Cosmic"}
+]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[8]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[712523]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Ainsworth - A-STAR Curve]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>ainsworth-a-star-curve</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Ainsworth", "platform_name": "A-STAR Curve"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[9]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129780]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[AGS - Spectra Upright 49 Curve]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>ags-spectra-upright-49-curve</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "AGS", "platform_name": "Spectra Upright 49 Curve"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[10]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129775]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[AGS - Orion Rise]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>ags-orion-rise</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "AGS", "platform_name": "Orion Rise"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[11]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129781]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[AGS - Spectra Upright 43]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>ags-spectra-upright-43</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "AGS", "platform_name": "Spectra Upright 43"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[12]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[457336]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[AGS - Spectra Slant 49+]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>ags-spectra-slant-49</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "AGS", "platform_name": "Spectra Slant 49+"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[13]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[1032667]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Bluberi - Beacon +]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>bluberi-beacon</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Bluberi", "platform_name": "Beacon +"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[14]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[1032668]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Everi - Dynasty Sol]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>everi-dynasty-sol</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Everi", "platform_name": "Dynasty Sol"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[15]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129782]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[IT - Prism Element]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>it-prism-element</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "IT", "platform_name": "Prism Element"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[16]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129778]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Konami - Dimension 49]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>konami-dimension-49</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Konami", "platform_name": "Dimension 49"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[17]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129768]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Konami - Dimension 43x3]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>konami-dimension-43x3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Konami", "platform_name": "Dimension 43x3"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[18]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129779]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Sega Sammy Creation - Genesis Atmos]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>sega-sammy-creation-genesis-atmos</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Sega Sammy Creation", "platform_name": "Genesis Atmos"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[19]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129776]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Bluberi - Novus Series b49]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>bluberi-novus-series-b49</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-small-suppliers"><![CDATA[Video Slots - Small suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Bluberi", "platform_name": "Novus Series b49"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[20]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[711995]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Konami - Dimension 49J]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2025-09-03 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2025-09-03 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>konami-dimension-49j</wp:post_name>
+    <wp:status><![CDATA[draft]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[buying_guide_item]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <category domain="buying_guide_category" nicename="video-slots-leading-suppliers"><![CDATA[Video Slots - Leading Suppliers]]></category>
+    <wp:postmeta>
+      <wp:meta_key>parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[{"supplier": "Konami", "platform_name": "Dimension 49J"}]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_parameters</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_parameters]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>order</wp:meta_key>
+      <wp:meta_value><![CDATA[21]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_order</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_order]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[129772]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_bg_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+</channel>
+</rss>
