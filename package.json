@@ -10,7 +10,8 @@
     "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
     "watch:css": "sass --watch wp-content/themes/rm-elementor-theme/assets/scss:wp-content/themes/rm-elementor-theme/assets/css",
     "watch:js": "webpack --mode development --watch",
-    "export:bg:wxr": "BUTTER_TOKEN=$BUTTER_TOKEN node migration-scripts/export-buying-guide-wxr.js"
+    "export:bg:wxr": "BUTTER_TOKEN=$BUTTER_TOKEN node migration-scripts/export-buying-guide-wxr.js",
+    "export:texts:wxr": "BUTTER_TOKEN=$BUTTER_TOKEN node migration-scripts/export-texts-wxr.js"
   },
   "keywords": [
     "wordpress",

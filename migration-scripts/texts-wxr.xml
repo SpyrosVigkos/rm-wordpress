@@ -1,0 +1,4507 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+ xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+  <title><![CDATA[Texts Import]]></title>
+  <link>https://example.com</link>
+  <description><![CDATA[Texts export from ButterCMS]]></description>
+  <language>en</language>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:base_site_url>https://example.com</wp:base_site_url>
+  <wp:base_blog_url>https://example.com</wp:base_blog_url>
+
+  <item>
+    <title><![CDATA[The big picture]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:00</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>index-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[index_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[The big picture]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Leverage Big Data technologies and the world’s largest slot repository to drive revenues, cut costs and build loyalty. ]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7701]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Make better slot decisions]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:01</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:01</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>hard-questions-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[hard_questions_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Make better slot decisions]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[As a ReelMetrics subscriber, you have direct access to the world's largest repository of slot design and performance data. We give you the statistical power to skip the trial and error and get it right the first time.  Purchase the best products, implement optimum configs and market to the most receptive player segments.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7702]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Which games work?]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:02</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:02</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>hard-questions-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[hard_questions_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Which games work?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics ranks all titles on record and constantly scans your mix for optimization opportunities.  We alert you to great games that you’re missing, poor games that can't be fixed and underperforming games requiring re-configuration.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7703]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Which configs deliver?]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:03</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:03</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>hard-questions-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[hard_questions_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Which configs deliver?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Slots can have hundreds or even thousands of configuration options per title.  Using giant slugs of data and brute force math, ReelMetrics guides you to the denom, hold, location and other settings proven to maximize revenue yield.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7704]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Which segments dig it?]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:04</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:04</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>hard-questions-4</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[hard_questions_4]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Which segments dig it?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[We segment product by consumption patterns, highlighting how specific player segments respond to individual slot titles. This enables you to market the right product to the right segments, thereby boosting player productivity, satisfaction and loyalty.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7705]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Anonymous. Secure. Standardized.]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:05</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:05</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>trust-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[trust_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Anonymous. Secure. Standardized.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[To  access ReelMetrics data, your casino must also contribute data. How do we keep your confidential data confidential? We don’t collect it.  All performance data are anonymized and encrypted in your data center, by your personnel, using technologies that you already own.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7707]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Anonymized data]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:06</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:06</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>trust-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[trust_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Anonymized data]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Using instructions provided by ReelMetrics, your IT personnel implement scripts that anonymize, encrypt and transfer data at scheduled intervals. No black box applications and nothing to certify. You’re always in complete control of your data.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7708]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Anonymous data]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:07</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:07</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>trust-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[trust_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Anonymous data]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Using instructions provided by ReelMetrics, your IT personnel implement scripts that anonymize, encrypt and transfer data at scheduled intervals. No black box applications and nothing to certify.  You’re always in complete control of your data.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7709]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Hardcore security]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:08</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:08</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>trust-4</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[trust_4]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Hardcore security]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Data are anonymized and encrypted pre-transfer and routed to our AWS staging servers via secure connection.  All data are stored in encrypted volumes and we maintain physical and logical separation between all asset & identity data.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7710]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Meticulous indexing]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:09</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:09</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>trust-5</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[trust_5]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Meticulous indexing]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[When it comes to reconciling & normalizing slot data, there’s little we can’t handle.  With stratospheric reconciliation rates & unique IDs and standardized naming for each game title on-record, you can rest assured that all analytical comparisons are apple-to-apple.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7711]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Interested in a demo?]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:10</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:10</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>cta</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[cta]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Interested in a demo?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[CONTACT US]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7712]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[About ReelMetrics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:11</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:11</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[About ReelMetrics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[We're gaming vets, quants and coders.  We're husbands, wives, moms and dads.  We believe in the stars, both Wars and Trek.  We're passionate about data, stats and slots.  We ask a lot of questions and make shocking discoveries daily.  We're mapping the slot genome and having a blast doing it.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7713]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Our deal]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:12</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:12</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Our deal]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics was founded in 2014 by Nick Hogan, John Boushy and William Schoofs.  We're a closely-held, private, independent company with no ownership interests by gaming operators or suppliers.  
+
+
+We trust in curiosity, intellectual honesty and empirical truths.  We use Big Data and scientific method to foster a deeper understanding of slot consumption and the human proclivity to gamble.  Our mission is to map the slot genome and, in the process, supercharge the returns of our Subscribers, employees, shareholders and the industry at large.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7714]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Our digs]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:13</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:13</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Our digs]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Home to Leiden University, Leiden is associated with 19 Nobel Prizes and has for centuries served as the stomping ground for some of history’s most brilliant scientific minds. Leiden also plays a prominent role in the global knowledge economy, hosting one of Europe's most successful life sciences incubators (Leiden Bioscience Park) as well as the advanced R&D facilities for many prominent multinationals.  Neighbors include the European Space Agency, Airbus, Johnson & Johnson, Astellas, Avery Dennison and Jacobs Engineering.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7715]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Company Management]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:14</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:14</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Company Management]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7716]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[ReelMetrics covers all suppliers, platforms, cabinets and form factors.  Current and legacy.]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:15</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:15</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>logos</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[logos]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics covers all suppliers, platforms, cabinets and form factors.  Current and legacy.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7718]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Work at ReelMetrics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:16</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:16</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>vacancies-splash-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[vacancies_splash_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Work at ReelMetrics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics is a data science company specialized in the aggregation, centralization, analysis and dissemination of land based casino consumption data. ReelMetrics has built the largest pan-industrial database in its sector, which is made available to customers through a custom built online analytical platform. We use state of the art analytical tools and systems to enhance data with insights and enable better decision making, enhanced productivity and dramatically superior efficiency.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7719]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[What we have to offer]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:17</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:17</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>vacancies-band-1-message-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[vacancies_band_1_message_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[What we have to offer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Competitive salary.
+Room for own initiative.
+Opportunities to develop yourself professionally.
+State of the art development environment.
+A highly skilled team with a ‘can do’ mentality and attitude.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7720]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[vacancies_band_1_message_2]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:18</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:18</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>vacancies-band-1-message-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[vacancies_band_1_message_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[vacancies_band_1_message_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<!-- <li>Pension arrangement & extra insurances.</li>
+<li>Profit sharing for all employees.</li>
+<li>Educational budget & time reserved for your personal development.</li>
+<li>Two weeks of paid paternity-leave.</li>
+<li>An overall culture of being nice, reasonable & supportive.</li> -->
+
+
+<li>Interesting workplace</li>
+<li>Complex challenges</li>
+<li>Educate yourself and learn from colleagues</li>
+<li>Excellent compensation plan</li>
+<li>Dynamic and international culture</li>]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7721]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Calculate your benefit]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:19</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:19</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>calculate-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[calculate_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Calculate your benefit]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics can make a big difference  to your bottom line.   See how much you can save and how much more you can earn.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7723]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Contact us]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:20</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:20</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>contact-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[contact_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Contact us]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[How can we help you?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7769]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Login]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:21</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:21</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>login-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[login_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Login]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7770]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[login_footer]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:22</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:22</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>login-footer</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[login_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[login_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<a href="/contact">Contact us</a> to get your organization set-up.  You will be up and running in no time.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7771]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Calculate your benefit]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:23</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:23</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Calculate your benefit]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics can make a big difference to your bottom line. Fill in the following questions to see how much you can save and how much more you can earn.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7791]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Prospective Subscriber Contact Information]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:24</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:24</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-subscriber-info</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_subscriber_info]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Prospective Subscriber Contact Information]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7792]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Operational Summary]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:25</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:25</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-operational-summary</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_operational_summary]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Operational Summary]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7793]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Projected Annual Cost Reduction - Game Conversions]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:26</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:26</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-cost-reduction-game-conversions</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_cost_reduction_game_conversions]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Cost Reduction - Game Conversions]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Cost Reduction - Game Conversions - Description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7794]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Projected Annual Cost Reduction - Machine Replacements]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:27</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:27</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-cost-reduction-machine-replacements</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_cost_reduction_machine_replacements]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Cost Reduction - Machine Replacements]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Cost Reduction - Machine Replacements - Description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7795]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Projected Annual Revenue Enhancement - Game Conversions]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:28</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:28</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-revenue-enhancement-game-conversions</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_revenue_enhancement_game_conversions]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Revenue Enhancement - Game Conversions]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Revenue Enhancement - Game Conversions - Description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7796]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Projected Annual Revenue Enhancement - Machine Replacements]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:29</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:29</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>benefit-revenue-enhancement-machine-replacements</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[benefit_revenue_enhancement_machine_replacements]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Revenue Enhancement - Machine Replacements]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Annual Revenue Enhancement - Machine Replacements - Description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7797]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Projected Year One Benefit: $]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:30</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:30</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>one-year-benefit</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[one_year_benefit]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Projected Year One Benefit: $]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Interested in a more detailed proposal?]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7798]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Calculate benefit]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:31</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:31</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>calculate-splash</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[calculate_splash]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Calculate benefit]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7799]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Board of Directors]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:32</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:32</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-board-of-directors</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_board_of_directors]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Board of Directors]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<p class="paragraph">John M Boushy, Chairman</p>
+ <p class="paragraph">Albert J Babbitt, Director</p>
+ <p class="paragraph">Nicholas K Hogan, Director</p>]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7886]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Audit & Legal]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:33</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:33</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>team-audit-legal</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[team_audit_&_legal]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Audit & Legal]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<p class="paragraph"><strong>Audit</strong> BDO Interational</p>
+<p class="paragraph"><strong>Legal</strong> Hogan Lovells</p>]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7887]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Contact Phone Numbers]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:34</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:34</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>contact-phone-numbers</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[contact_phone_numbers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Contact Phone Numbers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<a class="link--primary" href="tel:+31715605606">EU +31 71 560 5606</a> <br />
+<a class="link--primary" href="tel:‭+1 (715) 850-0556‬">USA ‭+1 (715) 850-0556‬</a> <br />
+<div><a class="link--primary" href="tel:‭+1 (855) 367-7335‬">Toll Free‭ +1 (855) FOR-REEL‬</a> <span class="paragraph">[367-7335]</span></div>
+<br />
+]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7888]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Contact Us  Footer]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:35</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:35</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>contact-us-footer</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[contact_us_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Contact Us  Footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[If you want access to ReelMetrics but don't have an account yet, please get in contact. Were more than happy to give you more information or to help you get things up and running.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7947]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Contact Us Footer]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:36</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:36</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>contact-us-popup-footer</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[contact_us_popup_footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Contact Us Footer]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Please fill in this form and we will get in touch with you shortly. 
+Thank you for your interest!]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7951]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[request_demo_btn]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:37</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:37</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>request-demo-btn</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[request_demo_btn]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[request_demo_btn]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Request a demo]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[7964]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Cookie Banner Text]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:38</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:38</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>cookie-banner-text</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[cookie_banner_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Cookie Banner Text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[By continuing to browse our site you agree to our use of cookies and Terms of Use.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[9531]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages Counter Configurations Indexed]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:39</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:39</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-configurations-indexed</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_configurations_indexed]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages Counter Configurations Indexed]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[6,729,837]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[18288]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages Counter Contributing Machines]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:40</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:40</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-contributing-machines</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_contributing_machines]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages Counter Contributing Machines]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[223,578]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[18289]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages Counter Profiled Games]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:41</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:41</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-profiled-games</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_profiled_games]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages Counter Profiled Games]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[7,549]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[18290]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages Counter Contributing Venues]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:42</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:42</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-contributing-venues</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_contributing_venues]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages Counter Contributing Venues]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[116]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[18291]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages  Counter Markets Covered]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:43</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:43</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-markets-covered</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_markets_covered]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages  Counter Markets Covered]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[92]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[18292]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Public Pages Counter Profiled Cabinets]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:44</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:44</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>counter-profiled-cabinets</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[counter_profiled_cabinets]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Public Pages Counter Profiled Cabinets]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[602]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[21402]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Text inside the button on the right badge]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:45</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:45</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>right-badge-text-button</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[right_badge_text_button]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Text inside the button on the right badge]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[CASE STUDY PARX]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[27305]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Link to where the button on the right badge should lead to]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:46</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:46</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>right-badge-link</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[right_badge_link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Link to where the button on the right badge should lead to]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[https://www.cdcgamingreports.com/reelmetrics/case-study-parx/]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[27546]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Link to where the button on the left badge should lead to]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:47</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:47</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>left-badge-link</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[left_badge_link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Link to where the button on the left badge should lead to]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[/careers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[27547]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Text inside the button on the left badge]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:48</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:48</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>left-badge-text-button</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[left_badge_text_button]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Text inside the button on the left badge]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[LEARN MORE]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[27548]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Link to download the android version of the app at the play store]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:49</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:49</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>link-andoid-download-app</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[link_andoid_download_app]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Link to download the android version of the app at the play store]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[https://play.google.com/store/apps/details?id=com.reelmetrics.reelscan.staging&ah=Jg-Bdt4VQsqszOY2EphVg4C5lnw]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[35380]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[ReelScan – Metrics on the go]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:50</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:50</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelScan – Metrics on the go]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelScan – Metrics on the go]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36171]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[reelscan_paragraph]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:51</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:51</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[You know the trade show drill—waiting for salespeople to free-up, struggling to keep-up with all the new product, reviewing cabinets and games without underlying performance data. Frustrated? Join the club.  
+<br/>
+<br/>
+With ReelScan, not only will you have a more informative show, but you'll also get a taste of what Big Data can do for your operation.
+<br/>
+<br/>
+Use ReelScan at <span class="text--emphasized">industry trade shows</span>  to:
+<br/>
+<br/>
+- Scan machine-placed <span class="text--emphasized">QR codes</span> or search by game title/cabinet
+<br/>
+- Get independent, <span class="text--emphasized">empirical reviews</span> of game/cabinet performance
+<br/>
+- Save to <span class="text--emphasized">wish / watch</span> lists for post-show analysis and updates
+<br/>
+<br/>
+<span class="text--emphasized">FREE</span> for subscribers and non-subscribers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36172]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Scan to install (direct to phone)]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:52</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:52</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-scan-text</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_scan_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Scan to install (direct to phone)]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Scan to install]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36181]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Click to install (via desktop)]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:53</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:53</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-click-text</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_click_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Click to install (via desktop)]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Click to install]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36182]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Click your store & follow link]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:54</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:54</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-click-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_click_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Click your store & follow link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Open camera, scan store QR & follow link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36183]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Choose your store, snap a photo with your phone & follow link]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:55</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:55</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-scan-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_scan_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Choose your store, snap a photo with your phone & follow link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Click your store & follow link]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[36184]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Metrics on the go]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:56</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:56</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-hero-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_hero_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Metrics on the go]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Metrics on the go]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[37072]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[<span class="text--emphasized text--red">Free</span> for subscribers and non-subscribers]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:57</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:57</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelscan-hero-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelscan_hero_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[<span class="text--emphasized text--red">Free</span> for subscribers and non-subscribers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<span class="text--emphasized text--red">Free</span> for subscribers and non-subscribers.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[37073]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[No data card title]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:58</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:58</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>no-data-available</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[no_data_available]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[No data card title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[You've discovered a title for which we currently don't have performance data.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[43162]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[new_hit_prediction_description]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:00:59</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:00:59</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>new-hit-prediction-description</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[new_hit_prediction_description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[new_hit_prediction_description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Star Scout estimates the probability (low / medium / high / very high) that newly-released titles will become Stars.  It does so by comparing each title's consumption tendencies 90 days post-release and comparing them to those of proven Stars during equivalent stages of their lifecycles.  There's a bit more to it, naturally, but that's the basic framework.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[52079]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[new_historical_star_potential]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:00</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:00</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>new-historical-star-potential</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[new_historical_star_potential]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[new_historical_star_potential]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[The table below displays historical Star assessments (located between the red lines) on a title-by-title basis as well as the months during which the title(s) achieved Star status.  Please note that performance criteria for Star status are both lofty and strict and that many titles receiving “High” or “Medium” assessments may exhibit performance that’s well in excess of floor average.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[52080]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Descriptive text on preview Teaser card]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:01</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:01</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>preview-teaser-description</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[preview_teaser_description]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Descriptive text on preview Teaser card]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[          Like what you've seen so far? Then you're going to LOVE what's waiting for you inside.
+          ReelMetrics subscriptions provide you with unfettered access to the world's largest slot repository and our full suite of groundbreaking advisory apps.  Affordably priced and packed with value, ReelMetrics subscriptions deliver robust returns on annual subscription fees, a claim that you can verify with existing ReelMetrics Subscribers. 
+        To learn more about ReelMetrics subscriptions, give us a yodel and learn how our Big Data solutions help you take the guesswork out of game work.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62017]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Text inside the highlighted part of preview teaser card]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:02</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:02</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>preview-teaser-highlight</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[preview_teaser_highlight]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Text inside the highlighted part of preview teaser card]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[You've discovered a premium feature
+Contact us to learn how ReelMetrics can help you take the guesswork out of game work.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62018]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Text inside red block for Flexible PLans]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:03</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:03</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>red-block-plans</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[red_block_plans]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Text inside red block for Flexible PLans]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Whether you’re a multi-site enterprise, a standalone operation, a route provider or a slot vendor, we have a plan that’s right for you.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62119]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Title for plans red block]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:04</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:04</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>red-block-plans-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[red_block_plans_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Title for plans red block]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Flexible Plans]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62899]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Title on top of Pick a Plan component]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:05</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:05</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>pick-plan-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[pick_plan_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Title on top of Pick a Plan component]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Fact-based, actionable <span class="text--red">insights</span>]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62901]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Paragraph on pick a plan area]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:06</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:06</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>pick-plan-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[pick_plan_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Paragraph on pick a plan area]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics leverages Big Data technologies and colossal data sets to provide insights that transcend the single enterprise. 
+
+We give you the tools to make confident, evidence-based decisions. We help you evaluate cabinet and game purchases, pre-screen configuration changes, identify your most receptive player segments, and more.
+
+<br/><br/>Whether you’re a multi-site enterprise, standalone operation, route provider or slot vendor, we have a plan that’s right for you.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62902]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Title of description of the sherpas plan]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:07</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:07</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>sherpas-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[sherpas_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Title of description of the sherpas plan]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Reel expertise. Reel results.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62915]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Paragraph for description of sherpas plan]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:08</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:08</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>sherpas-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[sherpas_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Paragraph for description of sherpas plan]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Sherpas are independent operational consultants who are responsible for guiding organizations from traditional, "'four wall" analytical paradigms to those featuring Big Data analytics. In addition to training users, Sherpas help slot departments review & understand benchmarks, identify opportunities, set goals, monitor progress and capture efficiencies. Equipped with decades of executive-level gaming experience and hardcore ReelMetrics prowess, Sherpas have but one mission--get slot teams to the top!]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[62916]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Automated transfers]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:09</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:09</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>product-info-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[product_info_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Automated transfers]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Our cost-free, fully automated anonymization & transfer scripts feature standing support for multiple EDWs, as well as the SMS offerings of Aristocrat, IGT, Konami and Scientific Games.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[64409]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Pristine data]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:10</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:10</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>product-info-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[product_info_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Pristine data]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[You know the data hygiene rule--garbage in, garbage out. Each ReelMetrics Subscription includes up-front and ongoing data cleansing / standardization, ensuring that your data remain tidy, trustworthy & transformative.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[64410]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Benchmarks]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:11</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:11</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>product-info-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[product_info_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Benchmarks]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Need help with efficiency targets? Each onboarding concludes with a series of benchmark reports covering game & cabinet selection, conversions, mix diversification, config optimization and more. ]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[64411]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[On-Demand analytics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:12</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:12</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>product-analytics-info-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[product_analytics_info_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[On-Demand analytics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[With On-Demand analytics, users control all system queries. Use some of the industry's most advanced tools to mine mine the world's most exhaustive slot data sets and know all there is about games, cabinets & segments.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65319]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Prescriptive analytics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:13</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:13</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>analytics-info-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[analytics_info_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Prescriptive analytics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Slot folks are busy people. That’s why
+we’ve built Advisor—a predictive
+analytics suite that compares your mix to
+industrial optima, isolates issues & serves
+highly targeted, game-changing recommendations.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65320]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Predictive analytics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:14</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:14</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>analytics-info-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[analytics_info_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Predictive analytics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[With our Star Scout predictive game
+modeler, we compare design stacks &
+consumption trends to assess each
+game’s or cabinet’s potential to become
+a star performer.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65321]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[recovery_hero_title]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:15</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:15</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>recovery-hero-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_hero_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_hero_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<h2 class='title--banner'>New solutions <span class="text--red">for a new reality</span></h2>
+<p class="paragraph--banner">ReelMetrics Co-Founder & CEO, Nick Hogan, announces:</p>]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65420]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[recovery_hero_paragraph]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:16</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:16</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>recovery-hero-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_hero_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_hero_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[<div class="hero-paragraph-piece">
+<span class="paragraph--emphasized">ReelMetrics Recovery</span><br/>
+New application pack for pandemic-related analytics <br/>
+</div>
+<div class="hero-paragraph-piece">
+<span class="paragraph--emphasized">ReelMetrics Basic</span><br/>
+Cost-free subscription service for gaming operators <br />
+</div>
+<div class="hero-paragraph-piece">
+<span class="paragraph--emphasized">ReelMetrics Sherpas</span><br/>
+Professional services unit for guided implementation & analytics <br />
+</div>
+]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65425]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Operations]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:17</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:17</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>recovery-info-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_info_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Operations]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Transitioning to Big Data analytics can be a tricky process. Sherpas assist your slot teams with the training, implementation, benchmarking, goal setting & monitoring they require to uncover game-changing insights & maximize benefit.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65547]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Supply]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:18</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:18</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>recovery-info-2</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_info_2]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Supply]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Do your salespeople understand your competitive position? How well? And your game developers? With Sherpa supply-side engagements, your Sales & Dev teams learn to apply Big Data insights to produce & place world-class product.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65548]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Research & Advisory]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:19</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:19</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>recovery-info-3</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[recovery_info_3]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Research & Advisory]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Conducting due diligence? Looking to enter a new market? Producing a social impact or feasibility study? With decades of operational & supply-side experience & the best data in the biz, odds are we have a Sherpa who fits the bill.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[65549]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Slots have voices. We make them heard.]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:20</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:20</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>homepage-hero</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[homepage_hero]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Slots have voices. We make them heard.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelMetrics combines the industry&apos;s deepest data pools, hardest science <br /> & hottest AI to deliver <strong class="text--red">BIG</strong> efficiencies in purchasing, configuration, conversion & marketing. <br />All you need to do is take the credit.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[86655]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Testimonials]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:21</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:21</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>platform-testimonials-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[platform_testimonials_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Testimonials]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Testimonials]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[86662]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Short on analysts?</br>Think again.]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:22</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:22</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>services-hero</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[services_hero]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Short on analysts?</br>Think again.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Our Customer Success Management (CSM) team is responsible for guiding organizations from traditional, "four wall" analytical paradigms to those featuring Big Data analytics. In addition to training users, CSM consultants help slot departments review & understand benchmarks, identify opportunities, set goals, monitor progress and capture efficiencies. Equipped with decades of executive-level gaming experience and hardcore ReelMetrics prowess, CSM consultants have but one mission--get teams to the top!]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[86684]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[On Demand Analytics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:23</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:23</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>analytics-info-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[analytics_info_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[On Demand Analytics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[With On-Demand analytics, users control all system queries. Use some of the industry's most advanced tools to mine the world's most exhaustive slot data sets & know all there is about games, cabinets & segments.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[92488]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Rankings you can trust]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:24</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:24</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelhot-hero</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelhot_hero]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Rankings you can trust]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[The ReelHot Slot Performance Index is a monthly, pan-industrial ranking of the industry's top-performing slot products. Divided into the categories of Overall, Video, Mechanical (and New and High-Limit subsets of each), ReelHot provides operators with quick, reliable listings of top-performers that shine on virtually any slot floor.
+
+The ReelHot Slot Performance Index is published monthly (mid-month) via the gaming industry's leading news service, CDC Gaming Reports.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[104287]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[ReelHot Spotlight]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:25</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:25</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelhot-spotlight</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelhot_spotlight]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelHot Spotlight]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Each month, we highlight ReelHot-listed titles that exhibit particularly noteworthy performance across one or more key metrics--revenue performance, inter-market consistency, locational adaptability, and more. Available exclusively through our Twitter, LinkedIn, Instagram and Facebook channels, Spotlight keeps operators up-to-speed with hottest of the hot.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[107619]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[ReelHot Hidden Gems]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:26</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:26</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelhot-hidden-gems</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelhot_hidden_gems]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[ReelHot Hidden Gems]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Each month, we publish Hidden Gems--less widely distributed slot product, which--similar to ReelHot Spotlight products--exhibit noteworthy performance across one or more key metrics. Hidden Gems are published on a monthly basis and are available exclusively through our Twitter, LinkedIn, Instagram and Facebook channels. ]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[107620]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[On-Demand analytics]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:27</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:27</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>analytics-info-1</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[analytics_info_1]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[On-Demand analytics]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[With On-Demand analytics, users control all system queries. Use some of the industry's most advanced tools to mine the world's most exhaustive slot data sets & know all there is about games, cabinets & segments.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[92480]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Availability]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:28</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:28</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelhot-availability</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelhot_availability]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Availability]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Available exclusively via]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[112590]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Welcome to ReelCast]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:29</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:29</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelcast-title</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelcast_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Welcome to ReelCast]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[Welcome to ReelCast]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[408507]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[The podcast where data-driven insights, tips, and tricks are shared to help professional slot teams improve their game. Produced by ReelMetrics, the world's largest independent aggregator of slot machine data, ReelCast brings you the latest industry knowledge and expertise]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:30</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:30</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelcast-paragraph</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelcast_paragraph]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[The podcast where data-driven insights, tips, and tricks are shared to help professional slot teams improve their game. Produced by ReelMetrics, the world's largest independent aggregator of slot machine data, ReelCast brings you the latest industry knowledge and expertise]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[The podcast where data-driven insights, tips, and tricks are shared to help professional slot teams improve their game. Produced by ReelMetrics, the world's largest independent aggregator of slot machine data, ReelCast brings you the latest industry knowledge and expertise.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[408522]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+  <item>
+    <title><![CDATA[Welcome to the ReelCast]]></title>
+    <dc:creator><![CDATA[admin]]></dc:creator>
+    <wp:post_date>2024-01-01 09:01:31</wp:post_date>
+    <wp:post_date_gmt>2024-01-01 09:01:31</wp:post_date_gmt>
+    <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+    <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+    <wp:post_name>reelcast-hero</wp:post_name>
+    <wp:status><![CDATA[publish]]></wp:status>
+    <wp:post_parent>0</wp:post_parent>
+    <wp:menu_order>0</wp:menu_order>
+    <wp:post_type><![CDATA[rm_text]]></wp:post_type>
+    <wp:post_password><![CDATA[]]></wp:post_password>
+    <wp:is_sticky>0</wp:is_sticky>
+    <wp:postmeta>
+      <wp:meta_key>content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[reelcast_hero]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_content_key</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_content_key]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[Welcome to the ReelCast]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_title</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_title]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>text</wp:meta_key>
+      <wp:meta_value><![CDATA[The podcast where data-driven insights, tips, and tricks are shared to help professional slot teams improve their game. Produced by ReelMetrics, the world's largest independent aggregator of slot machine data, ReelCast brings you the latest industry knowledge and expertise.]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_text</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_text]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[409277]]></wp:meta_value>
+    </wp:postmeta>
+    <wp:postmeta>
+      <wp:meta_key>_butter_id</wp:meta_key>
+      <wp:meta_value><![CDATA[field_rm_text_butter_id]]></wp:meta_value>
+    </wp:postmeta>
+  </item>
+
+</channel>
+</rss>
