@@ -1265,6 +1265,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Topics_List_Widget() );
     $widgets_manager->register( new RM_Team_Widget() );
     $widgets_manager->register( new RM_Carousel_Widget() );
+    $widgets_manager->register( new RM_Buzzsprout_Widget() );
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
 
@@ -1492,6 +1493,109 @@ class RM_Carousel_Widget extends \Elementor\Widget_Base {
         echo '</div>';
         echo '</div>';
         echo '</div>';
+    }
+}
+
+/**
+ * RM Buzzsprout Player Widget
+ * - Pulls Buzzsprout episode ID from ACF (reelcast) or manual input
+ * - Renders the Buzzsprout embed (small/large player)
+ */
+class RM_Buzzsprout_Widget extends \Elementor\Widget_Base {
+    public function get_name() { return 'rm-buzzsprout-player'; }
+    public function get_title() { return __( 'RM Buzzsprout Player', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-play'; }
+    public function get_categories() { return [ 'reelmetrics' ]; }
+
+    protected function register_controls() {
+        $this->start_controls_section('source', [ 'label' => __( 'Source', 'rm-elementor-theme' ) ]);
+
+        $this->add_control('use_acf', [
+            'label' => __( 'Load episode from ACF (reelcast)', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => __( 'Yes', 'rm-elementor-theme' ),
+            'label_off' => __( 'No', 'rm-elementor-theme' ),
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]);
+
+        $this->add_control('episode_id', [
+            'label' => __( 'Episode ID (e.g., 17757499-s04e07-... )', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'placeholder' => '17757499-s04e07-professor-anthony-lucas-part-one',
+            'condition' => [ 'use_acf!' => 'yes' ]
+        ]);
+
+        $this->add_control('podcast_id', [
+            'label' => __( 'Podcast ID', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '2057836',
+        ]);
+
+        $this->add_control('player_size', [
+            'label' => __( 'Player Size', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'small',
+            'options' => [ 'small' => 'Small', 'large' => 'Large' ],
+        ]);
+
+        $this->add_control('use_episodes_segment', [
+            'label' => __( 'Use /episodes/ path segment', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'return_value' => 'yes',
+            'default' => 'yes',
+        ]);
+
+        $this->end_controls_section();
+
+        $this->start_controls_section('advanced', [ 'label' => __( 'Advanced', 'rm-elementor-theme' ) ]);
+        $this->add_control('container_prefix', [
+            'label' => __( 'Container ID Prefix', 'rm-elementor-theme' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => 'buzzsprout-player-',
+        ]);
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $s = $this->get_settings_for_display();
+
+        // Get episode id
+        $episode_full_id = '';
+        if ( $s['use_acf'] === 'yes' && function_exists('get_field') ) {
+            $episode_full_id = (string) get_field('buzzsprout_id');
+        }
+        if ( ! $episode_full_id && ! empty( $s['episode_id'] ) ) {
+            $episode_full_id = (string) $s['episode_id'];
+        }
+        $episode_full_id = trim( $episode_full_id );
+        if ( $episode_full_id === '' ) return;
+
+        // Extract numeric id for container (first digits before hyphen)
+        $numeric_id = '';
+        if ( preg_match('/^(\d+)/', $episode_full_id, $m) ) {
+            $numeric_id = $m[1];
+        } else {
+            // Fallback: strip non-digits to build a safe id
+            $numeric_id = preg_replace('/\D+/', '', $episode_full_id);
+            if ( $numeric_id === '' ) {
+                $numeric_id = substr( md5( $episode_full_id ), 0, 8 );
+            }
+        }
+
+        $podcast_id = trim( (string) $s['podcast_id'] );
+        if ( $podcast_id === '' ) { $podcast_id = '2057836'; }
+        $player_size = in_array( $s['player_size'], [ 'small', 'large' ], true ) ? $s['player_size'] : 'small';
+        $container_prefix = $s['container_prefix'] !== '' ? $s['container_prefix'] : 'buzzsprout-player-';
+        $container_id = $container_prefix . $numeric_id;
+        $use_episodes = ($s['use_episodes_segment'] === 'yes');
+
+        $base = 'https://www.buzzsprout.com/' . rawurlencode( $podcast_id ) . '/';
+        $path = ($use_episodes ? 'episodes/' : '') . rawurlencode( $episode_full_id ) . '.js';
+        $src = $base . $path . '?container_id=' . rawurlencode( $container_id ) . '&player=' . rawurlencode( $player_size );
+
+        echo '<div id="' . esc_attr( $container_id ) . '"></div>';
+        echo '<script src="' . esc_url( $src ) . '" type="text/javascript" charset="utf-8"></script>';
     }
 }
 
