@@ -287,6 +287,10 @@ function rm_register_team_member_acf() {
 }
 add_action( 'acf/init', 'rm_register_team_member_acf' );
 
+// Register Notification CPT and Admin Migration Tool
+require_once RM_THEME_DIR . '/includes/cpt-notification.php';
+require_once RM_THEME_DIR . '/includes/admin-notification-migration.php';
+
 /**
  * Register CPT: ReelCast Episodes
  * Custom Post Type for podcast episodes
