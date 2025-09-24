@@ -14,6 +14,66 @@ if ( ! did_action( 'elementor/loaded' ) ) {
 }
 
 /**
+ * RM Comparison Table Widget
+ */
+class RM_Comparison_Table extends \Elementor\Widget_Base {
+    public function get_name() { return 'rm_comparison_table'; }
+    public function get_title() { return __( 'RM Comparison Table', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-table'; }
+    public function get_categories() { return [ 'reelmetrics' ]; }
+    public function get_style_depends() { return [ 'rm-comparison-table' ]; }
+
+    protected function register_controls() {
+        $this->start_controls_section('content',[ 'label'=>__('Content','rm-elementor-theme'), 'tab'=>\Elementor\Controls_Manager::TAB_CONTENT ]);
+        $this->add_control('comparison_id',[ 'label'=>__('Comparison Post ID','rm-elementor-theme'), 'type'=>\Elementor\Controls_Manager::NUMBER ]);
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $id = intval( $this->get_settings_for_display('comparison_id') );
+        if ( ! $id ) { echo '<div>Comparison not selected.</div>'; return; }
+        $plans = function_exists('get_field') ? ( get_field('plans',$id) ?: [] ) : [];
+        if ( ! $plans ) { echo '<div>No plans configured.</div>'; return; }
+        $groups = function_exists('get_field') ? ( get_field('feature_groups',$id) ?: [] ) : [];
+
+        $plan_keys = array_map(function($p){ return !empty($p['plan_key']) ? $p['plan_key'] : sanitize_title($p['title']??''); }, $plans);
+        echo '<div class="rm-cmptable" style="--rm-cmp-cols: '.count($plans).'; --rm-color-blurple: #5E55FC; --rm-gray-divider: #e9e9e9;" role="table" aria-label="Plan comparison">';
+
+        // Header
+        echo '<div class="rm-cmptable__row rm-cmptable__row--head" role="row">';
+        echo '<div class="rm-cmptable__cell rm-cmptable__cell--stub" role="columnheader"></div>';
+        foreach ($plans as $p){
+            $hl = !empty($p['highlight']) ? ' is-highlight' : '';
+            echo '<div class="rm-cmptable__cell rm-cmptable__cell--head'.$hl.'" role="columnheader">';
+            if (!empty($p['badge'])) echo '<div class="rm-cmptable__badge">'.esc_html($p['badge']).'</div>';
+            echo '<div class="rm-cmptable__plan-title">'.esc_html($p['title']??'').'</div>';
+            if (!empty($p['subtitle'])) echo '<div class="rm-cmptable__plan-subtitle">'.esc_html($p['subtitle']).'</div>';
+            echo '</div>';
+        }
+        echo '</div>';
+
+        foreach ( $groups as $g ) {
+            echo '<div class="rm-cmptable__group-title" role="rowgroup">'.esc_html($g['group_title']??'').'</div>';
+            foreach ( ($g['features']??[]) as $f ) {
+                $avail = array_filter( (array)($f['availability']??[]) );
+                echo '<div class="rm-cmptable__row" role="row">';
+                echo '<div class="rm-cmptable__cell rm-cmptable__cell--feature" role="rowheader">'.esc_html($f['feature_title']??'');
+                if (!empty($f['note'])) echo '<span class="rm-cmptable__note">'.esc_html($f['note']).'</span>';
+                echo '</div>';
+                foreach ($plan_keys as $k) {
+                    $yes = in_array($k,$avail,true);
+                    echo '<div class="rm-cmptable__cell rm-cmptable__cell--value'.($yes?' is-yes':' is-no').'" role="cell">';
+                    echo $yes ? '<span class="rm-cmptable__icon rm-cmptable__icon--yes" aria-hidden="true"></span><span class="sr-only">Yes</span>' : '<span class="rm-cmptable__icon rm-cmptable__icon--no" aria-hidden="true"></span><span class="sr-only">No</span>';
+                    echo '</div>';
+                }
+                echo '</div>';
+            }
+        }
+        echo '</div>';
+    }
+}
+
+/**
  * ReelMetrics Typography Widget
  */
 class RM_Typography_Widget extends \Elementor\Widget_Base {
@@ -1266,6 +1326,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Team_Widget() );
     $widgets_manager->register( new RM_Carousel_Widget() );
     $widgets_manager->register( new RM_Buzzsprout_Widget() );
+    if ( class_exists('RM_Comparison_Table') ) { $widgets_manager->register( new RM_Comparison_Table() ); }
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
 

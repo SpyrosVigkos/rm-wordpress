@@ -60,6 +60,11 @@ function rm_child_enqueue_styles() {
         if ( file_exists( RM_THEME_DIR . '/assets/js/carousel.js' ) ) {
             wp_enqueue_script( 'rm-carousel-script', RM_THEME_URI . '/assets/js/carousel.js', array(), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/carousel.js' ), true );
         }
+
+        // Comparison table widget styles
+        if ( file_exists( RM_THEME_DIR . '/assets/css/comparison-table.css' ) ) {
+            wp_enqueue_style( 'rm-comparison-table', RM_THEME_URI . '/assets/css/comparison-table.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/comparison-table.css' ) );
+        }
     }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
@@ -290,6 +295,9 @@ add_action( 'acf/init', 'rm_register_team_member_acf' );
 // Register Notification CPT and Admin Migration Tool
 require_once RM_THEME_DIR . '/includes/cpt-notification.php';
 require_once RM_THEME_DIR . '/includes/admin-notification-migration.php';
+// Comparison CPT and ACF registration
+require_once RM_THEME_DIR . '/includes/cpt-comparison.php';
+require_once RM_THEME_DIR . '/includes/acf-comparison.php';
 
 /**
  * Register CPT: ReelCast Episodes
