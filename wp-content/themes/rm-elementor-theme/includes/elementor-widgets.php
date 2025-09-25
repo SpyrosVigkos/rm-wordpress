@@ -14,6 +14,46 @@ if ( ! did_action( 'elementor/loaded' ) ) {
 }
 
 /**
+ * RM Okta Login Widget
+ */
+class RM_Okta_Login extends \Elementor\Widget_Base {
+    public function get_name() { return 'rm_okta_login'; }
+    public function get_title() { return __( 'RM Okta Login', 'rm-elementor-theme' ); }
+    public function get_icon() { return 'eicon-lock-user'; }
+    public function get_categories() { return [ 'reelmetrics' ]; }
+    public function get_style_depends() { return [ 'rm-okta-login' ]; }
+    public function get_script_depends() { return [ 'okta-auth-js', 'rm-okta-login' ]; }
+
+    protected function register_controls() {
+        $this->start_controls_section('content',[ 'label'=>__('Content','rm-elementor-theme'), 'tab'=>\Elementor\Controls_Manager::TAB_CONTENT ]);
+        $this->add_control('headline',[ 'label'=>__('Headline','rm-elementor-theme'), 'type'=>\Elementor\Controls_Manager::TEXT, 'default'=>'' ]);
+        $this->add_control('body',[ 'label'=>__('Body','rm-elementor-theme'), 'type'=>\Elementor\Controls_Manager::TEXTAREA, 'default'=>'' ]);
+        $this->add_control('form_id',[ 'label'=>__('Form ID','rm-elementor-theme'), 'type'=>\Elementor\Controls_Manager::TEXT, 'default'=>'loginFormPopup', 'description'=>__('Used with Elementor Popup "Open By Selector" (e.g. a[href="#loginFormPopup"]).','rm-elementor-theme') ]);
+        $this->end_controls_section();
+    }
+
+    protected function render(){
+        $s = $this->get_settings_for_display();
+        echo '<div class="rm-okta-login-wrap">';
+        if (!empty($s['headline'])) echo '<div class="rm-okta-headline">'.esc_html($s['headline']).'</div>';
+        if (!empty($s['body'])) echo '<div class="rm-okta-body">'.esc_html($s['body']).'</div>';
+        $form_id = !empty($s['form_id']) ? sanitize_html_class($s['form_id']) : '';
+        $id_attr = $form_id ? ' id="'.esc_attr($form_id).'"' : '';
+        echo '<form'.$id_attr.' class="rm-okta-login" onsubmit="return false;">';
+        echo '<div class="form-group"><label>E-mail<input type="email" placeholder="E-mail" required></label></div>';
+        echo '<div class="form-group"><label>Password<input type="password" placeholder="Password" required></label></div>';
+        echo '<div class="rm-okta-error" style="color:#c00;min-height:20px"></div>';
+        echo '<div class="rm-okta-actions">';
+        echo '<a class="rm-okta-forgot" href="#" target="_blank" rel="noopener">I forgot my password</a>';
+        echo '<button type="submit" class="button">LOGIN</button>';
+        echo '</div>';
+        echo '<div class="rm-okta-request-wrap"><strong><a class="rm-okta-request" href="https://operators.reelmetrics.com/member_request" target="_blank" rel="noopener">Request Access</a></strong> if your organization is already subscribed to ReelMetrics.</div>';
+        echo '</form>';
+        echo '</div>';
+    }
+}
+
+/**
  * RM Comparison Table Widget
  */
 class RM_Comparison_Table extends \Elementor\Widget_Base {
@@ -1327,6 +1367,7 @@ function rm_register_elementor_widgets( $widgets_manager ) {
     $widgets_manager->register( new RM_Carousel_Widget() );
     $widgets_manager->register( new RM_Buzzsprout_Widget() );
     if ( class_exists('RM_Comparison_Table') ) { $widgets_manager->register( new RM_Comparison_Table() ); }
+    if ( class_exists('RM_Okta_Login') ) { $widgets_manager->register( new RM_Okta_Login() ); }
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
 

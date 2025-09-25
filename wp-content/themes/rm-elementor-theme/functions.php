@@ -65,6 +65,29 @@ function rm_child_enqueue_styles() {
         if ( file_exists( RM_THEME_DIR . '/assets/css/comparison-table.css' ) ) {
             wp_enqueue_style( 'rm-comparison-table', RM_THEME_URI . '/assets/css/comparison-table.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/comparison-table.css' ) );
         }
+
+        // Okta login scripts (registered, enqueued on demand by widget)
+        wp_register_script( 'okta-auth-js', 'https://global.oktacdn.com/okta-auth-js/6.9.0/okta-auth-js.min.js', array(), '6.9.0', true );
+        if ( file_exists( RM_THEME_DIR . '/assets/js/rm-okta-login.js' ) ) {
+            wp_register_script( 'rm-okta-login', RM_THEME_URI . '/assets/js/rm-okta-login.js', array( 'okta-auth-js' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/rm-okta-login.js' ), true );
+            // Localize config for convenience
+            $opt = function_exists('rm_okta_get_option') ? rm_okta_get_option() : get_option('rm_okta_auth');
+            if ( is_array($opt) ) {
+                $payload = array(
+                    'oidc_base_url' => $opt['base_url'] ?? '',
+                    'oidc_issuer' => $opt['issuer_id'] ?? 'default',
+                    'oidc_identifier' => $opt['client_id'] ?? '',
+                    'oidc_redirect_uri' => $opt['redirect_uri'] ?? '',
+                    'oidc_forgot_password_url' => $opt['forgot_password_url'] ?? '',
+                );
+                wp_localize_script( 'rm-okta-login', 'RM_OKTA', $payload );
+            }
+        }
+
+        // Okta login styles (loaded when widget requests)
+        if ( file_exists( RM_THEME_DIR . '/assets/css/okta-login.css' ) ) {
+            wp_register_style( 'rm-okta-login', RM_THEME_URI . '/assets/css/okta-login.css', array(), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/okta-login.css' ) );
+        }
     }
 }
 add_action( 'wp_enqueue_scripts', 'rm_child_enqueue_styles' );
@@ -298,6 +321,9 @@ require_once RM_THEME_DIR . '/includes/admin-notification-migration.php';
 // Comparison CPT and ACF registration
 require_once RM_THEME_DIR . '/includes/cpt-comparison.php';
 require_once RM_THEME_DIR . '/includes/acf-comparison.php';
+// RM Auth settings page and REST
+require_once RM_THEME_DIR . '/includes/admin-rm-auth.php';
+require_once RM_THEME_DIR . '/includes/rm-auth-rest.php';
 
 /**
  * Register CPT: ReelCast Episodes
