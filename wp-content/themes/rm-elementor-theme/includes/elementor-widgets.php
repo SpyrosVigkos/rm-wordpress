@@ -39,7 +39,7 @@ class RM_Okta_Login extends \Elementor\Widget_Base {
         if (!empty($s['body'])) echo '<div class="rm-okta-body">'.esc_html($s['body']).'</div>';
         $form_id = !empty($s['form_id']) ? sanitize_html_class($s['form_id']) : '';
         $id_attr = $form_id ? ' id="'.esc_attr($form_id).'"' : '';
-        echo '<form'.$id_attr.' class="rm-okta-login" onsubmit="return false;">';
+        echo '<form'.$id_attr.' class="rm-okta-login">';
         echo '<div class="form-group"><label>E-mail<input type="email" placeholder="E-mail" required></label></div>';
         echo '<div class="form-group"><label>Password<input type="password" placeholder="Password" required></label></div>';
         echo '<div class="rm-okta-error" style="color:#c00;min-height:20px"></div>';
