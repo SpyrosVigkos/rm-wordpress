@@ -85,6 +85,14 @@
     flex: 0 0 45%;
     padding-left: 40px;
     position: relative;
+    list-style: none; /* prevent default decimal markers */
+    margin: 0; /* normalize UA margins on ol */
+}
+
+/* Ensure no marker shows even if UA forces it */
+.rm-timeline-steps > li::marker,
+.rm-timeline__list > li::marker {
+    content: '';
 }
 
 /* Vertical Line (Desktop) - Clean positioning */
@@ -145,7 +153,7 @@
 }
 
 .rm-step-number {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--rm-font-primary);
     font-weight: 600;
     font-size: 18px;
     color: #FFFFFF;
@@ -218,7 +226,7 @@
     width: 100%;
     height: auto; /* Flexible height */
     min-height: 34px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--rm-font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
@@ -241,7 +249,7 @@
     width: 100%;
     height: auto; /* Flexible height */
     min-height: 30px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--rm-font-primary);
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -285,7 +293,7 @@
 
 .rm-timeline-step-button {
     /* Figma button text specs - Normal State */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--rm-font-primary);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;

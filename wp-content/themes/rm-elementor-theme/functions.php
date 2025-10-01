@@ -25,6 +25,9 @@ function rm_child_enqueue_styles() {
     // Parent theme style
     wp_enqueue_style( 'hello-elementor', get_template_directory_uri() . '/style.css' );
     
+    // Google Fonts: Work Sans
+    wp_enqueue_style( 'rm-google-fonts', 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap', array(), null );
+
     // Child theme style
     wp_enqueue_style( 'rm-child-style', get_stylesheet_uri(), array( 'hello-elementor' ), RM_THEME_VERSION );
     

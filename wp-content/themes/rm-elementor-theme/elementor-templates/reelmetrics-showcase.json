@@ -31,7 +31,7 @@
                 "align": "center",
                 "title_color": "#FFFFFF",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 95
@@ -57,7 +57,7 @@
                 "align": "center",
                 "title_color": "#FFFFFF",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 32
@@ -81,7 +81,7 @@
                 "text": "Try ReelMetrics for Free",
                 "align": "center",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 20
@@ -137,7 +137,7 @@
                 "align": "center",
                 "title_color": "#292929",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 56
@@ -150,7 +150,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p><strong>Hero Large (95px/50px mobile):</strong></p><p style='font-size: 95px; font-weight: 400; line-height: 105%; font-family: Helvetica Neue;'>Your Headline</p>",
+                "editor": "<p><strong>Hero Large (95px/50px mobile):</strong></p><p style='font-size: 95px; font-weight: 400; line-height: 105%; font-family: Work Sans;'>Your Headline</p>",
                 "text_color": "#292929"
               }
             },
@@ -159,7 +159,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p><strong>Intro Large (56px):</strong></p><p style='font-size: 56px; font-weight: 700; line-height: 110%; font-family: Helvetica Neue;'>Introduction Text</p>",
+                "editor": "<p><strong>Intro Large (56px):</strong></p><p style='font-size: 56px; font-weight: 700; line-height: 110%; font-family: Work Sans;'>Introduction Text</p>",
                 "text_color": "#292929"
               }
             },
@@ -168,7 +168,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p><strong>Subheading (32px/18px mobile):</strong></p><p style='font-size: 32px; font-weight: 300; line-height: 130%; font-family: Helvetica Neue;'>This is a subheading with light weight</p>",
+                "editor": "<p><strong>Subheading (32px/18px mobile):</strong></p><p style='font-size: 32px; font-weight: 300; line-height: 130%; font-family: Work Sans;'>This is a subheading with light weight</p>",
                 "text_color": "#292929"
               }
             },
@@ -177,7 +177,7 @@
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p><strong>Body Text (20px/16px mobile):</strong></p><p style='font-size: 20px; font-weight: 400; line-height: 130%; font-family: Helvetica Neue;'>This is body text that's perfect for longer content. It maintains readability while following the ReelMetrics design system specifications.</p>",
+                "editor": "<p><strong>Body Text (20px/16px mobile):</strong></p><p style='font-size: 20px; font-weight: 400; line-height: 130%; font-family: Work Sans;'>This is body text that's perfect for longer content. It maintains readability while following the ReelMetrics design system specifications.</p>",
                 "text_color": "#292929"
               }
             }
@@ -213,7 +213,7 @@
                 "align": "center",
                 "title_color": "#292929",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 56
@@ -241,7 +241,7 @@
                   "bottom": "25",
                   "left": "30"
                 },
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 20
@@ -268,7 +268,7 @@
                   "bottom": "25",
                   "left": "30"
                 },
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 20
@@ -295,7 +295,7 @@
                   "bottom": "25",
                   "left": "30"
                 },
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 20
@@ -334,7 +334,7 @@
                 "align": "center",
                 "title_color": "#292929",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 56
@@ -382,7 +382,7 @@
                 "align": "center",
                 "title_color": "#FFFFFF",
                 "typography_typography": "custom",
-                "typography_font_family": "Helvetica Neue",
+                "typography_font_family": "Work Sans",
                 "typography_font_size": {
                   "unit": "px",
                   "size": 56
