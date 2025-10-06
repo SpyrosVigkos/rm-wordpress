@@ -64,6 +64,14 @@ function rm_child_enqueue_styles() {
             wp_enqueue_script( 'rm-carousel-script', RM_THEME_URI . '/assets/js/carousel.js', array(), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/carousel.js' ), true );
         }
 
+        // Logo Carousel widget
+        if ( file_exists( RM_THEME_DIR . '/assets/css/logo-carousel.css' ) ) {
+            wp_enqueue_style( 'rm-logo-carousel-style', RM_THEME_URI . '/assets/css/logo-carousel.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/logo-carousel.css' ) );
+        }
+        if ( file_exists( RM_THEME_DIR . '/assets/js/logo-carousel.js' ) ) {
+            wp_enqueue_script( 'rm-logo-carousel-script', RM_THEME_URI . '/assets/js/logo-carousel.js', array(), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/js/logo-carousel.js' ), true );
+        }
+
         // Comparison table widget styles
         if ( file_exists( RM_THEME_DIR . '/assets/css/comparison-table.css' ) ) {
             wp_enqueue_style( 'rm-comparison-table', RM_THEME_URI . '/assets/css/comparison-table.css', array( 'rm-colors', 'rm-typography' ), RM_THEME_VERSION . '-' . filemtime( RM_THEME_DIR . '/assets/css/comparison-table.css' ) );

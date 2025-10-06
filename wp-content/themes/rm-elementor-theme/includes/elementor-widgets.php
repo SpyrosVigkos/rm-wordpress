@@ -1353,21 +1353,632 @@ class RM_Reelcast_Transcript_Widget extends \Elementor\Widget_Base {
 }
 
 /**
+ * ReelMetrics Logo Carousel Widget
+ */
+class RM_Logo_Carousel_Widget extends \Elementor\Widget_Base {
+
+    public function get_name() {
+        return 'rm-logo-carousel';
+    }
+
+    public function get_title() {
+        return __( 'RM Logo Carousel', 'rm-elementor-theme' );
+    }
+
+    public function get_icon() {
+        return 'eicon-slider-push';
+    }
+
+    public function get_categories() {
+        return [ 'reelmetrics' ];
+    }
+
+    public function get_style_depends() {
+        return [ 'rm-logo-carousel-style' ];
+    }
+
+    public function get_script_depends() {
+        return [ 'rm-logo-carousel-script' ];
+    }
+
+    protected function register_controls() {
+        // Content Section
+        $this->start_controls_section(
+            'content_section',
+            [
+                'label' => __( 'Logo Carousel', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        // Logo Repeater
+        $repeater = new \Elementor\Repeater();
+
+        $repeater->add_control(
+            'logo_image',
+            [
+                'label' => __( 'Logo Image', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::MEDIA,
+                'default' => [
+                    'url' => \Elementor\Utils::get_placeholder_image_src(),
+                ],
+            ]
+        );
+
+        $repeater->add_control(
+            'logo_alt',
+            [
+                'label' => __( 'Alt Text', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __( 'Company Logo', 'rm-elementor-theme' ),
+                'placeholder' => __( 'Enter alt text for accessibility', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $repeater->add_control(
+            'logo_link',
+            [
+                'label' => __( 'Link (Optional)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::URL,
+                'placeholder' => __( 'https://company-website.com', 'rm-elementor-theme' ),
+            ]
+        );
+
+        $this->add_control(
+            'logos',
+            [
+                'label' => __( 'Logos', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'logo_alt' => __( 'Company 1', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'logo_alt' => __( 'Company 2', 'rm-elementor-theme' ),
+                    ],
+                    [
+                        'logo_alt' => __( 'Company 3', 'rm-elementor-theme' ),
+                    ],
+                ],
+                'title_field' => '{{{ logo_alt }}}',
+            ]
+        );
+
+        $this->add_control(
+            'auto_scroll',
+            [
+                'label' => __( 'Auto Scroll', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'Yes', 'rm-elementor-theme' ),
+                'label_off' => __( 'No', 'rm-elementor-theme' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'scroll_speed',
+            [
+                'label' => __( 'Scroll Speed (seconds)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 's' ],
+                'range' => [
+                    's' => [
+                        'min' => 5,
+                        'max' => 60,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 's',
+                    'size' => 30,
+                ],
+                'condition' => [
+                    'auto_scroll' => 'yes',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'pause_on_hover',
+            [
+                'label' => __( 'Pause on Hover', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'label_on' => __( 'Yes', 'rm-elementor-theme' ),
+                'label_off' => __( 'No', 'rm-elementor-theme' ),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'condition' => [
+                    'auto_scroll' => 'yes',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'visible_logos',
+            [
+                'label' => __( 'Visible Logos (Desktop)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'count' ],
+                'range' => [
+                    'count' => [
+                        'min' => 2,
+                        'max' => 8,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'count',
+                    'size' => 5,
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Style Section
+        $this->start_controls_section(
+            'style_section',
+            [
+                'label' => __( 'Style', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        // Container Dimensions
+        $this->add_responsive_control(
+            'container_height',
+            [
+                'label' => __( 'Container Height', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', 'vh' ],
+                'range' => [
+                    'px' => [
+                        'min' => 50,
+                        'max' => 300,
+                        'step' => 5,
+                    ],
+                    'vh' => [
+                        'min' => 5,
+                        'max' => 50,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 120,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Logo Size
+        $this->add_responsive_control(
+            'logo_size',
+            [
+                'label' => __( 'Logo Size', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 20,
+                        'max' => 200,
+                        'step' => 5,
+                    ],
+                    '%' => [
+                        'min' => 10,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 80,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo img' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}; max-height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Logo Spacing
+        $this->add_responsive_control(
+            'logo_spacing',
+            [
+                'label' => __( 'Logo Spacing', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', 'rem' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 5,
+                    ],
+                    'rem' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 0.1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'rem',
+                    'size' => 2,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__track' => 'gap: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Logo Padding
+        $this->add_responsive_control(
+            'logo_padding',
+            [
+                'label' => __( 'Logo Padding', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'default' => [
+                    'top' => 16,
+                    'right' => 16,
+                    'bottom' => 16,
+                    'left' => 16,
+                    'unit' => 'px',
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Border Settings
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'logo_border',
+                'label' => __( 'Logo Border', 'rm-elementor-theme' ),
+                'selector' => '{{WRAPPER}} .rm-logo-carousel__logo',
+            ]
+        );
+
+        $this->add_control(
+            'logo_border_radius',
+            [
+                'label' => __( 'Border Radius', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%' ],
+                'default' => [
+                    'top' => 8,
+                    'right' => 8,
+                    'bottom' => 8,
+                    'left' => 8,
+                    'unit' => 'px',
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Background Color
+        $this->add_control(
+            'logo_background',
+            [
+                'label' => __( 'Logo Background', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => 'transparent',
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // Hover Color
+        $this->add_control(
+            'logo_hover_color',
+            [
+                'label' => __( 'Hover Color', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#5E55FC',
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo:hover img' => 'filter: hue-rotate(180deg) brightness(1.2);',
+                ],
+            ]
+        );
+
+        // Container Background
+        $this->add_control(
+            'container_background',
+            [
+                'label' => __( 'Container Background', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => 'transparent',
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+        // Responsive Section
+        $this->start_controls_section(
+            'responsive_section',
+            [
+                'label' => __( 'Responsive Settings', 'rm-elementor-theme' ),
+                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        // Mobile Logo Count
+        $this->add_responsive_control(
+            'mobile_visible_logos',
+            [
+                'label' => __( 'Visible Logos (Mobile)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'count' ],
+                'range' => [
+                    'count' => [
+                        'min' => 1,
+                        'max' => 4,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'count',
+                    'size' => 2,
+                ],
+            ]
+        );
+
+        // Tablet Logo Count
+        $this->add_responsive_control(
+            'tablet_visible_logos',
+            [
+                'label' => __( 'Visible Logos (Tablet)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'count' ],
+                'range' => [
+                    'count' => [
+                        'min' => 2,
+                        'max' => 6,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'count',
+                    'size' => 3,
+                ],
+            ]
+        );
+
+        // Mobile Scroll Speed
+        $this->add_responsive_control(
+            'mobile_scroll_speed',
+            [
+                'label' => __( 'Mobile Scroll Speed (seconds)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 's' ],
+                'range' => [
+                    's' => [
+                        'min' => 5,
+                        'max' => 60,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 's',
+                    'size' => 20,
+                ],
+                'condition' => [
+                    'auto_scroll' => 'yes',
+                ],
+            ]
+        );
+
+        // Tablet Scroll Speed
+        $this->add_responsive_control(
+            'tablet_scroll_speed',
+            [
+                'label' => __( 'Tablet Scroll Speed (seconds)', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 's' ],
+                'range' => [
+                    's' => [
+                        'min' => 5,
+                        'max' => 60,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 's',
+                    'size' => 25,
+                ],
+                'condition' => [
+                    'auto_scroll' => 'yes',
+                ],
+            ]
+        );
+
+        // Mobile Logo Size
+        $this->add_responsive_control(
+            'mobile_logo_size',
+            [
+                'label' => __( 'Mobile Logo Size', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 20,
+                        'max' => 150,
+                        'step' => 5,
+                    ],
+                    '%' => [
+                        'min' => 10,
+                        'max' => 80,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 60,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo img' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}; max-height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Tablet Logo Size
+        $this->add_responsive_control(
+            'tablet_logo_size',
+            [
+                'label' => __( 'Tablet Logo Size', 'rm-elementor-theme' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 30,
+                        'max' => 180,
+                        'step' => 5,
+                    ],
+                    '%' => [
+                        'min' => 15,
+                        'max' => 90,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 70,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .rm-logo-carousel__logo img' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; max-width: {{SIZE}}{{UNIT}}; max-height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    protected function render() {
+        $settings = $this->get_settings_for_display();
+        
+        if ( empty( $settings['logos'] ) ) {
+            return;
+        }
+
+        // Get configuration values
+        $auto_scroll = $settings['auto_scroll'] === 'yes';
+        $scroll_speed = $settings['scroll_speed']['size'] ?? 30;
+        $pause_on_hover = $settings['pause_on_hover'] === 'yes';
+        $visible_logos = $settings['visible_logos']['size'] ?? 5;
+        
+        // Mobile and tablet settings
+        $mobile_visible_logos = $settings['mobile_visible_logos']['size'] ?? 2;
+        $tablet_visible_logos = $settings['tablet_visible_logos']['size'] ?? 3;
+        $mobile_scroll_speed = $settings['mobile_scroll_speed']['size'] ?? 20;
+        $tablet_scroll_speed = $settings['tablet_scroll_speed']['size'] ?? 25;
+
+        // Generate unique ID for this carousel instance
+        $carousel_id = 'rm-logo-carousel-' . $this->get_id();
+        
+        // Data attributes for JavaScript configuration
+        $data_attributes = [
+            'data-speed' => $scroll_speed,
+            'data-mobile-speed' => $mobile_scroll_speed,
+            'data-tablet-speed' => $tablet_scroll_speed,
+            'data-pause-on-hover' => $pause_on_hover ? 'true' : 'false',
+            'data-auto-play' => $auto_scroll ? 'true' : 'false',
+            'data-visible-logos' => $visible_logos,
+            'data-mobile-logos' => $mobile_visible_logos,
+            'data-tablet-logos' => $tablet_visible_logos,
+        ];
+
+        $data_string = '';
+        foreach ( $data_attributes as $key => $value ) {
+            $data_string .= ' ' . $key . '="' . esc_attr( $value ) . '"';
+        }
+
+        ?>
+        <div class="rm-logo-carousel" id="<?php echo esc_attr( $carousel_id ); ?>"<?php echo $data_string; ?>>
+            <div class="rm-logo-carousel__container">
+                <div class="rm-logo-carousel__track">
+                    <?php 
+                    // First set of logos
+                    foreach ( $settings['logos'] as $index => $logo ) : ?>
+                        <?php if ( ! empty( $logo['logo_image']['url'] ) ) : ?>
+                            <div class="rm-logo-carousel__logo">
+                                <?php if ( ! empty( $logo['logo_link']['url'] ) ) : ?>
+                                    <a href="<?php echo esc_url( $logo['logo_link']['url'] ); ?>" 
+                                       <?php if ( $logo['logo_link']['is_external'] ) echo 'target="_blank"'; ?>
+                                       <?php if ( $logo['logo_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                                <?php endif; ?>
+                                
+                                <img src="<?php echo esc_url( $logo['logo_image']['url'] ); ?>" 
+                                     alt="<?php echo esc_attr( $logo['logo_alt'] ); ?>"
+                                     loading="lazy"
+                                     decoding="async" />
+                                
+                                <?php if ( ! empty( $logo['logo_link']['url'] ) ) : ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    
+                    <?php 
+                    // Duplicate logos for seamless loop
+                    foreach ( $settings['logos'] as $index => $logo ) : ?>
+                        <?php if ( ! empty( $logo['logo_image']['url'] ) ) : ?>
+                            <div class="rm-logo-carousel__logo">
+                                <?php if ( ! empty( $logo['logo_link']['url'] ) ) : ?>
+                                    <a href="<?php echo esc_url( $logo['logo_link']['url'] ); ?>" 
+                                       <?php if ( $logo['logo_link']['is_external'] ) echo 'target="_blank"'; ?>
+                                       <?php if ( $logo['logo_link']['nofollow'] ) echo 'rel="nofollow"'; ?>>
+                                <?php endif; ?>
+                                
+                                <img src="<?php echo esc_url( $logo['logo_image']['url'] ); ?>" 
+                                     alt="<?php echo esc_attr( $logo['logo_alt'] ); ?>"
+                                     loading="lazy"
+                                     decoding="async" />
+                                
+                                <?php if ( ! empty( $logo['logo_link']['url'] ) ) : ?>
+                                    </a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+}
+
+/**
  * Register Custom Widgets
  */
 function rm_register_elementor_widgets( $widgets_manager ) {
-    $widgets_manager->register( new RM_Typography_Widget() );
-    $widgets_manager->register( new RM_Button_Widget() );
-    $widgets_manager->register( new RM_Navigation_Widget() );
-    $widgets_manager->register( new RM_Accordion_Widget() );
-    $widgets_manager->register( new RM_Timeline_Widget() );
-    $widgets_manager->register( new RM_Reelcast_Transcript_Widget() );
-    $widgets_manager->register( new RM_Topics_List_Widget() );
-    $widgets_manager->register( new RM_Team_Widget() );
-    $widgets_manager->register( new RM_Carousel_Widget() );
-    $widgets_manager->register( new RM_Buzzsprout_Widget() );
-    if ( class_exists('RM_Comparison_Table') ) { $widgets_manager->register( new RM_Comparison_Table() ); }
-    if ( class_exists('RM_Okta_Login') ) { $widgets_manager->register( new RM_Okta_Login() ); }
+    try {
+        $widgets_manager->register( new RM_Typography_Widget() );
+        $widgets_manager->register( new RM_Button_Widget() );
+        $widgets_manager->register( new RM_Navigation_Widget() );
+        $widgets_manager->register( new RM_Accordion_Widget() );
+        $widgets_manager->register( new RM_Timeline_Widget() );
+        $widgets_manager->register( new RM_Reelcast_Transcript_Widget() );
+        $widgets_manager->register( new RM_Topics_List_Widget() );
+        $widgets_manager->register( new RM_Team_Widget() );
+        $widgets_manager->register( new RM_Carousel_Widget() );
+        $widgets_manager->register( new RM_Buzzsprout_Widget() );
+        $widgets_manager->register( new RM_Logo_Carousel_Widget() );
+        if ( class_exists('RM_Comparison_Table') ) { $widgets_manager->register( new RM_Comparison_Table() ); }
+        if ( class_exists('RM_Okta_Login') ) { $widgets_manager->register( new RM_Okta_Login() ); }
+    } catch ( Exception $e ) {
+        error_log( 'RM Widget Registration Error: ' . $e->getMessage() );
+    }
 }
 add_action( 'elementor/widgets/register', 'rm_register_elementor_widgets' );
 

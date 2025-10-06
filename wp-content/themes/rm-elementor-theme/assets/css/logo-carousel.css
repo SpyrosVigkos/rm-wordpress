@@ -1,0 +1,148 @@
+/* RM Logo Carousel Styles */
+.rm-logo-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.rm-logo-carousel__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.rm-logo-carousel__track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+    white-space: nowrap;
+}
+
+.rm-logo-carousel__track--paused {
+    animation-play-state: paused;
+}
+
+.rm-logo-carousel__track--no-animation {
+    animation: none;
+}
+
+.rm-logo-carousel__logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.rm-logo-carousel__logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.rm-logo-carousel__logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.rm-logo-carousel__logo:hover {
+    transform: scale(1.05);
+}
+
+.rm-logo-carousel__logo:hover img {
+    filter: brightness(1.2) saturate(1.2);
+}
+
+/* SVG Logo Hover Effects */
+.rm-logo-carousel__logo:hover img[src$=".svg"] {
+    filter: hue-rotate(180deg) brightness(1.2);
+}
+
+/* PNG Logo Hover Effects */
+.rm-logo-carousel__logo:hover img[src$=".png"] {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Animation Keyframes */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .rm-logo-carousel__track {
+        gap: 1.5rem;
+    }
+    
+    .rm-logo-carousel__logo {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .rm-logo-carousel__track {
+        gap: 1rem;
+    }
+    
+    .rm-logo-carousel__logo {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .rm-logo-carousel__track {
+        gap: 0.5rem;
+    }
+    
+    .rm-logo-carousel__logo {
+        padding: 0.25rem;
+    }
+}
+
+/* Accessibility */
+.rm-logo-carousel__logo:focus {
+    outline: 2px solid #5E55FC;
+    outline-offset: 2px;
+}
+
+.rm-logo-carousel__logo:focus-visible {
+    outline: 2px solid #5E55FC;
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .rm-logo-carousel__track {
+        animation: none;
+    }
+    
+    .rm-logo-carousel__logo {
+        transition: none;
+    }
+    
+    .rm-logo-carousel__logo:hover {
+        transform: none;
+    }
+}
