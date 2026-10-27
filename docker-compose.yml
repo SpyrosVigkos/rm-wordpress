@@ -1,38 +1,55 @@
-version: '3.1'
+# Local WordPress for the headless (Astro) work, built from the same image as
+# production (Dockerfile). See local/README.md. Nothing here talks to the
+# Elementor Cloud site.
+name: rm-wordpress-local
 
 services:
+  db:
+    image: mariadb:11.4.8
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${DB_PASSWORD:?run local/setup.sh first}
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      retries: 20
+
   wordpress:
-    image: wordpress
-    restart: always
+    build: .
+    image: rm-wordpress:local
+    depends_on:
+      db:
+        condition: service_healthy
     ports:
-      - "8000:80"
+      - "${WP_PORT:-8090}:80"
     environment:
       WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_AUTH_KEY: ${WORDPRESS_AUTH_KEY:?run local/setup.sh first}
+      WORDPRESS_SECURE_AUTH_KEY: ${WORDPRESS_SECURE_AUTH_KEY}
+      WORDPRESS_LOGGED_IN_KEY: ${WORDPRESS_LOGGED_IN_KEY}
+      WORDPRESS_NONCE_KEY: ${WORDPRESS_NONCE_KEY}
+      WORDPRESS_AUTH_SALT: ${WORDPRESS_AUTH_SALT}
+      WORDPRESS_SECURE_AUTH_SALT: ${WORDPRESS_SECURE_AUTH_SALT}
+      WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
+      WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
+      WP_HOME: http://localhost:${WP_PORT:-8090}
+      WP_ENVIRONMENT_TYPE: local
+      WORDPRESS_DEBUG: "1"
+      RM_PREVIEW_URL: ${RM_PREVIEW_URL:-http://localhost:4401}
     volumes:
-      - ./wordpress:/var/www/html
+      - uploads:/var/www/html/wp-content/uploads
+      # Live editing: the image's copies are replaced by the working tree.
+      # The entrypoint never copies over folders that already exist here.
+      - ./wp-content/plugins/rm-headless:/var/www/html/wp-content/plugins/rm-headless
+      - ./wp-content/themes/rm-headless-theme:/var/www/html/wp-content/themes/rm-headless-theme
 
+volumes:
   db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    volumes:
-      - ./db:/var/lib/mysql
-
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    ports:
-      - '8080:80'
-    environment:
-      PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: examplepass  # use your actual root password here
-    depends_on:
-      - db
-
+  uploads:

@@ -1,27 +1,19 @@
-# Define variables for your ECR repository and image tag (use git commit or any other tag strategy you prefer)
-ECR_REPO=539779309746.dkr.ecr.us-west-2.amazonaws.com/wordpress
-TAG=$(shell git rev-parse --short HEAD)
+# The production WordPress image. The ECR repository and the wordpress
+# namespace come from the 2024 setup on main; check both with ops before the
+# first deploy (docker/README.md).
+REG  := 539779309746.dkr.ecr.us-west-2.amazonaws.com/wordpress
+HASH := $(shell git rev-parse --short HEAD)
+IMG  := $(REG):$(HASH)
+NAMESPACE ?= wordpress
 
-# Define your environments as needed
-.PHONY: build push deploy-all deploy-dev deploy-prod
+.PHONY: build push deploy
 
 build:
-	buildah bud -t $(ECR_REPO):$(TAG) .
+	buildah bud -t $(IMG) .
 
 push:
-	# Login to ECR using AWS CLI v2 (The 'aws ecr get-login-password' command gets the auth token)
-	aws ecr get-login-password --region us-west-2 | buildah login --username AWS --password-stdin $(ECR_REPO)
-	buildah push $(ECR_REPO):$(TAG)
+	aws ecr get-login-password --region us-west-2 | buildah login -u AWS --password-stdin $(REG)
+	buildah push $(IMG)
 
-deploy-all: deploy-dev deploy-prod
-
-deploy-dev:
-	# Command to update your Kubernetes deployment in dev
-	kubectl set image wordpress/wordpress_2nd.yaml wordpress-container=$(ECR_REPO):$(TAG) --namespace wordpress
-
-deploy-prod:
-	# Command to update your Kubernetes deployment in prod
-	# Example: kubectl set image deployment/your-deployment-name wordpress-container=$(ECR_REPO):$(TAG) --namespace your-prod-namespace
-
-# Example usage: make build push deploy-all
-
+deploy:
+	kubectl set image -n $(NAMESPACE) deployment/wordpress wordpress=$(IMG)

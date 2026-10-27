@@ -1,0 +1,17 @@
+.elementor-popup-modal .rm-okta-login-wrap{max-width:549px;margin:0 auto}
+.rm-okta-login .form-group{margin:0 0 24px}
+.rm-okta-login .form-group label{display:flex;flex-direction:column;gap:8px;margin:0;font-weight:400;font-size:20px;line-height:130%;color:#000}
+.rm-okta-login input[type=email],.rm-okta-login input[type=password]{box-sizing:border-box;width:100%;padding:16px 12px 16px 20px;background:#F8F8F8;border:1px solid #E9E9E9;border-radius:20px;font-weight:300;font-size:20px;line-height:150%;color:#000;outline:none}
+.rm-okta-login input::placeholder{color:#6A6A6A;opacity:1}
+.rm-okta-login input:focus{border-color:#5E55FC;box-shadow:0 0 0 3px rgba(94,85,252,.15)}
+.rm-okta-actions{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.rm-okta-actions{margin-bottom:24px}
+.rm-okta-request-wrap{margin-top:0}
+.rm-okta-forgot,.rm-okta-request{color:#5E55FC;text-decoration:none}
+.rm-okta-forgot:hover,.rm-okta-request:hover{text-decoration:underline}
+.rm-okta-error{min-height:20px;color:#C0342B;margin:8px 0 0}
+.rm-okta-login button[type=submit]{display:inline-flex;justify-content:center;align-items:center;padding:20px 25px;min-height:60px;background:#292929;color:#fff;border:0;border-radius:80px;font-size:20px;line-height:100%;cursor:pointer}
+.rm-okta-login button[type=submit]:hover{filter:brightness(.95)}
+@media (max-width:767px){.elementor-popup-modal .rm-okta-login-wrap{max-width:100%;padding:0 16px}.rm-okta-login .form-group label{font-size:20px}.rm-okta-login input[type=email],.rm-okta-login input[type=password]{padding:16px 12px 16px 20px;border-radius:16px}}
+
+

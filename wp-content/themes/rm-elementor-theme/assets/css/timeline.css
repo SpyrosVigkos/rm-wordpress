@@ -1,0 +1,574 @@
+/**
+ * ReelMetrics Timeline/Stepper Widget Styles
+ * Clean, engineering-focused implementation
+ */
+
+:root {
+    /* Colors */
+    --rm-color-blurple: #6366F1;
+    --rm-color-blurple-200: #A5B4FC;
+    --rm-color-gray-600: #6A6A6A;
+    --rm-color-black: #292929;
+
+    /* Radii */
+    --rm-radius-pill: 80px;
+    --rm-radius-card: 40px;
+    --rm-radius-media: 20px;
+
+    /* Easing & motion */
+    --rm-ease-standard: cubic-bezier(0.23, 1, 0.32, 1);
+    --rm-duration-fast: 180ms;
+    --rm-duration-normal: 300ms;
+}
+
+.rm-timeline {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    gap: 80px;
+}
+
+/* Sticky Image Container */
+.rm-timeline-image-container {
+    flex: 0 0 50%;
+    min-height: 100vh; /* allow column to grow with steps so sticky persists */
+    position: relative;
+}
+
+.rm-timeline-image-sticky {
+    position: sticky;
+    top: 100px; /* Default sticky offset */
+    width: 100%;
+    height: 600px;
+    border-radius: var(--rm-radius-media);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transition: transform var(--rm-duration-normal) var(--rm-ease-standard);
+}
+
+.rm-timeline-image-sticky:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.rm-timeline-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity var(--rm-duration-normal) var(--rm-ease-standard),
+                transform var(--rm-duration-normal) var(--rm-ease-standard);
+    z-index: 1;
+}
+
+.rm-timeline-image.is-active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+.rm-timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Timeline Steps */
+.rm-timeline-steps {
+    flex: 0 0 45%;
+    padding-left: 40px;
+    position: relative;
+    list-style: none; /* prevent default decimal markers */
+    margin: 0; /* normalize UA margins on ol */
+}
+
+/* Ensure no marker shows even if UA forces it */
+.rm-timeline-steps > li::marker,
+.rm-timeline__list > li::marker {
+    content: '';
+}
+
+/* Vertical Line (Desktop) - Clean positioning */
+.rm-timeline-steps::before {
+    content: '';
+    position: absolute;
+    left: 25px; /* Center of 50px numbers: 50/2 = 25px */
+    top: 25px; /* Start from center of first number */
+    bottom: 25px;
+    width: 2px;
+    background: var(--rm-color-blurple-200);
+    z-index: 0; /* Behind everything */
+}
+
+.rm-timeline-step {
+    position: relative;
+    margin-bottom: 120px;
+    padding-left: 80px; /* Space for 50px number + gap */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.rm-timeline-step:last-child {
+    margin-bottom: 0;
+}
+
+/* REMOVED: Opacity rules - user didn't want these restored */
+/* Steps should not have opacity changes - only color changes */
+
+.rm-timeline .rm-timeline-step.is-active {
+    opacity: 1;
+}
+
+/* Step Number - Clean positioning with explicit states */
+.rm-timeline-step-number {
+    position: absolute;
+    left: -8%; /* Align with timeline steps container */
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--rm-color-gray-600); /* default inactive */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Above line but reasonable */
+    transition: transform var(--rm-duration-fast) var(--rm-ease-standard),
+                background-color var(--rm-duration-fast) linear,
+                box-shadow var(--rm-duration-fast) linear;
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Active step number */
+.rm-timeline .rm-timeline-step.is-active .rm-timeline-step-number {
+    background: var(--rm-color-blurple);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.rm-step-number {
+    font-family: var(--rm-font-primary);
+    font-weight: 600;
+    font-size: 18px;
+    color: #FFFFFF;
+    transition: none; /* Keep it simple */
+}
+
+/* First step active by default - CSS only for immediate load */
+.rm-timeline .rm-timeline-step:first-child {
+    opacity: 1;
+}
+
+/* Step One class - specific control for first step */
+.rm-timeline .rm-timeline-step.step-one .rm-timeline-step-number {
+    background: var(--rm-color-blurple); /* Blurple by default */
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Step One when explicitly deactivated */
+.rm-timeline .rm-timeline-step.step-one.deactivated .rm-timeline-step-number {
+    background: var(--rm-color-gray-600); /* Gray when deactivated */
+    transform: scale(1);
+    box-shadow: none;
+}
+
+/* Force ALL steps to be SOLID GRAY - no opacity */
+/* Base number color already set above as gray */
+
+/* Then override ONLY the active one - solid blurple with direct hex */
+.rm-timeline .rm-timeline-step.is-active .rm-timeline-step-number {
+    background: var(--rm-color-blurple);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+/* Active steps (non-step-one) - blurple when active */
+.rm-timeline .rm-timeline-step.active .rm-timeline-step-number {
+    background: #6366F1 !important; /* Direct blurple hex */
+    opacity: 1 !important; /* Solid blurple */
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* Step Content - Flexible Card Design */
+.rm-timeline-step-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 16px;
+    max-width: 575px;
+    min-height: 214px;
+    height: auto; /* Flexible height based on content */
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    box-shadow: 0px 0px 50px rgba(41, 41, 41, 0.06);
+    border-radius: var(--rm-radius-card);
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    transition: box-shadow var(--rm-duration-normal) var(--rm-ease-standard),
+                transform var(--rm-duration-normal) var(--rm-ease-standard);
+}
+
+.rm-timeline-step-title {
+    /* Flexible title specs */
+    max-width: 485px;
+    width: 100%;
+    height: auto; /* Flexible height */
+    min-height: 34px;
+    font-family: var(--rm-font-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 105%;
+    color: #292929;
+    margin: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    transition: color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.rm-timeline-step.active .rm-timeline-step-title {
+    color: #292929;
+}
+
+.rm-timeline-step-description {
+    /* Flexible description specs */
+    max-width: 511px;
+    width: 100%;
+    height: auto; /* Flexible height */
+    min-height: 30px;
+    font-family: var(--rm-font-primary);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    color: #292929; /* Changed from grey to black per Figma */
+    margin: 0;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.rm-timeline-step-button {
+    /* Figma Frame 10 - Normal State */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 24px;
+    gap: 8px;
+    
+    /* NO fixed width - let content determine size */
+    min-width: 166px; /* Figma reference width */
+    height: 52px;
+    
+    /* Black background */
+    background: var(--rm-color-black);
+    border-radius: var(--rm-radius-pill);
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    
+    /* Reset default styles */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.rm-timeline-step-button {
+    /* Figma button text specs - Normal State */
+    font-family: var(--rm-font-primary);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%; /* 21px */
+    text-align: center;
+    color: #FFFFFF;
+    text-decoration: none !important;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.rm-timeline-step-button:hover {
+
+    /* Gradient overlay on black */
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), var(--rm-color-black);
+   
+}
+
+/* Step transition animations */
+@keyframes rm-fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rm-fade-down {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0.98; transform: translateY(6px); }
+}
+
+@keyframes rm-pop {
+    0% { transform: scale(0.95); }
+    70% { transform: scale(1.08); }
+    100% { transform: scale(1.05); }
+}
+
+.rm-timeline-step.is-animating-in .rm-timeline-step-title {
+    animation: rm-fade-up var(--rm-duration-normal) var(--rm-ease-standard) both;
+    animation-delay: 0ms;
+}
+
+.rm-timeline-step.is-animating-in .rm-timeline-step-description {
+    animation: rm-fade-up var(--rm-duration-normal) var(--rm-ease-standard) both;
+    animation-delay: 60ms;
+}
+
+.rm-timeline-step.is-animating-in .rm-timeline-step-button {
+    animation: rm-fade-up var(--rm-duration-normal) var(--rm-ease-standard) both;
+    animation-delay: 120ms;
+}
+
+.rm-timeline-step.is-animating-in .rm-timeline-step-number {
+    animation: rm-pop 260ms var(--rm-ease-standard);
+}
+
+.rm-timeline-step.is-animating-out .rm-timeline-step-content {
+    animation: rm-fade-down 200ms var(--rm-ease-standard);
+}
+
+/* Mobile Layout (Horizontal) */
+@media (max-width: 768px) {
+    .rm-timeline {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    /* Mobile Image Container */
+    .rm-timeline-image-container {
+        flex: none;
+        height: 300px;
+        order: 1;
+    }
+
+    .rm-timeline-image-sticky {
+        position: relative;
+        top: 0;
+        height: 100%;
+        border-radius: 16px;
+    }
+
+    .rm-timeline-image img {
+        border-radius: 16px;
+    }
+
+    /* Mobile Steps - Horizontal, scroll-snap */
+    .rm-timeline-steps,
+    .rm-timeline__list {
+        flex: none;
+        order: 2;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 40%; /* center bias without excessive side gap */
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        overscroll-behavior: contain;
+        touch-action: pan-x;
+        padding-inline: 16px;
+        padding-block-end: 12px;
+        scrollbar-width: thin;
+        /* remove side fades to avoid perceived whitespace on some backgrounds */
+        -webkit-mask-image: none;
+                mask-image: none;
+    }
+
+    /* Remove vertical line on mobile */
+    .rm-timeline-steps::before,
+    .rm-timeline__list::before {
+        display: none;
+    }
+
+    /* Horizontal dots container */
+    .rm-timeline-steps,
+    .rm-timeline__list {
+        position: relative;
+    }
+
+    /* Remove mobile rail – number badge will indicate the step */
+    .rm-timeline-steps::after,
+    .rm-timeline__list::after { display: none; }
+
+    .rm-timeline-step {
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 0;
+        position: relative;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        min-width: clamp(320px, 85vw, 640px);
+        flex: 0 0 auto;
+        outline: none;
+        display: block; /* vertical stack: number above card */
+    }
+
+    .rm-timeline-step-number {
+        position: static; /* sits above card */
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 32px;
+        height: 32px;
+        margin: 0 auto 10px; /* centered above card */
+        box-shadow: 0 2px 10px rgba(0,0,0,.1);
+    }
+
+    .rm-step-number {
+        font-size: 16px;
+    }
+
+    .rm-timeline-step-content {
+        width: 100%;
+        max-width: clamp(280px, 72vw, 520px); /* ensure full content visibility */
+        height: auto;
+        min-height: 200px;
+        padding: 20px;
+        gap: 12px;
+        border-radius: 24px;
+    }
+
+    .rm-timeline-step-title {
+        width: 100%;
+        max-width: 485px;
+        font-size: clamp(18px, 4.7vw, 24px);
+        height: auto;
+    }
+
+    .rm-timeline-step-description {
+        width: 100%;
+        max-width: 511px;
+        font-size: clamp(15px, 4vw, 18px);
+        height: auto;
+        line-height: 145%;
+    }
+
+    .rm-timeline-step-button {
+        min-width: 150px;
+        height: 48px;
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rm-timeline {
+        padding: 20px 15px;
+        gap: 30px;
+    }
+
+    .rm-timeline-image-container {
+        height: 250px;
+    }
+
+    .rm-timeline-step {
+        margin-bottom: 0;
+        padding-top: 50px;
+        min-width: 92%;
+    }
+
+    .rm-timeline-step-content {
+        padding: 20px;
+        gap: 10px;
+        min-height: 180px;
+    }
+
+    .rm-timeline-step-title {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .rm-timeline-step-description {
+        font-size: 16px;
+        line-height: 140%;
+        width: 100%;
+    }
+
+    .rm-timeline-step-button {
+        width: 120px;
+        height: 45px;
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Scroll Indicator (Optional Enhancement) */
+.rm-timeline-progress {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.rm-timeline-progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #E8E8E8;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+}
+
+.rm-timeline-progress-dot.active {
+    background: #292929;
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .rm-timeline-progress {
+        display: none;
+    }
+}
+
+/* Loading Animation */
+.rm-timeline-image.loading {
+    opacity: 0.7;
+    transform: scale(1.02);
+}
+
+/* Intersection Observer Enhancements */
+.rm-timeline-step[data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition-duration: 0.6s;
+}
+
+.rm-timeline-step[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}

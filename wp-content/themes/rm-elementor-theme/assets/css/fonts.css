@@ -1,0 +1,11 @@
+/* ReelMetrics Theme Fonts
+   Work Sans is loaded via Elementor's Google Fonts integration
+   This file sets Work Sans as the default theme font family
+*/
+
+/* Set Work Sans as default font for the entire theme */
+body {
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+

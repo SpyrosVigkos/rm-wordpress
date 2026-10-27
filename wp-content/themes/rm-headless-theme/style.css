@@ -1,0 +1,10 @@
+/*
+Theme Name: ReelMetrics Headless
+Author: ReelMetrics
+Description: Placeholder theme for the headless setup. WordPress only holds content; the public site is the Astro build. The content model lives in the RM Headless plugin.
+Version: 0.1.0
+Requires at least: 6.5
+Requires PHP: 8.1
+License: MIT
+Text Domain: rm-headless-theme
+*/
