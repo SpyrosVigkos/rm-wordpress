@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-const RM_HEADLESS_PREVIEW_TYPES = array( 'reelcast' );
+const RM_HEADLESS_PREVIEW_TYPES = array( 'reelcast', 'page' );
 const RM_HEADLESS_PREVIEW_TTL   = 600;
 
 function rm_headless_preview_base() {
@@ -32,9 +32,21 @@ function rm_headless_preview_token_valid( $post_id, $token ) {
     return hash_equals( rm_headless_preview_token( $post_id, (int) $parts[0] ), (string) $token );
 }
 
+/** Episodes, and the fixed pages the site renders (not the Site page). */
+function rm_headless_previewable( $post ) {
+    if ( ! $post instanceof WP_Post || ! in_array( $post->post_type, RM_HEADLESS_PREVIEW_TYPES, true ) ) {
+        return false;
+    }
+    if ( $post->post_type !== 'page' ) {
+        return true;
+    }
+    $key = function_exists( 'rm_page_key' ) ? rm_page_key( $post ) : null;
+    return $key !== null && $key !== 'site';
+}
+
 function rm_headless_preview_link( $link, $post ) {
     $base = rm_headless_preview_base();
-    if ( $base === '' || ! in_array( $post->post_type, RM_HEADLESS_PREVIEW_TYPES, true ) ) {
+    if ( $base === '' || ! rm_headless_previewable( $post ) ) {
         return $link;
     }
     $token = rm_headless_preview_token( $post->ID, time() + RM_HEADLESS_PREVIEW_TTL );
@@ -53,7 +65,7 @@ function rm_headless_preview_redirect() {
         return;
     }
     $post = get_queried_object();
-    if ( ! $post instanceof WP_Post || ! in_array( $post->post_type, RM_HEADLESS_PREVIEW_TYPES, true ) ) {
+    if ( ! rm_headless_previewable( $post ) ) {
         return;
     }
     if ( ! current_user_can( 'edit_post', $post->ID ) ) {
@@ -94,7 +106,7 @@ function rm_headless_preview_save_fields( $response, $handler, WP_REST_Request $
     }
     $values = $request->get_param( 'rm_acf' );
     $post   = get_post( (int) $route[2] );
-    if ( ! is_array( $values ) || ! $post || ! in_array( $post->post_type, RM_HEADLESS_PREVIEW_TYPES, true ) ) {
+    if ( ! is_array( $values ) || ! rm_headless_previewable( $post ) ) {
         return $response;
     }
     if ( ! current_user_can( 'edit_post', $post->ID ) ) {
@@ -122,8 +134,11 @@ function rm_headless_preview_source( $post ) {
 
 function rm_headless_preview_response( WP_REST_Request $request ) {
     $post = get_post( (int) $request['id'] );
-    if ( ! $post || ! in_array( $post->post_type, RM_HEADLESS_PREVIEW_TYPES, true ) ) {
+    if ( ! rm_headless_previewable( $post ) ) {
         return new WP_Error( 'rm_preview_not_found', 'No such post', array( 'status' => 404 ) );
+    }
+    if ( $post->post_type === 'page' ) {
+        return rm_headless_page_preview_response( $post );
     }
 
     $source = rm_headless_preview_source( $post );
@@ -157,3 +172,22 @@ add_action( 'rest_api_init', function () {
         },
     ) );
 } );
+
+function rm_headless_page_preview_response( WP_Post $page ) {
+    $key    = rm_page_key( $page );
+    $source = rm_headless_preview_source( $page );
+    $has    = $source->ID !== $page->ID && function_exists( 'get_fields' ) && get_fields( $source->ID );
+    try {
+        $content = rm_page_content( $key, $has ? $source->ID : $page->ID );
+    } catch ( RM_Missing_Field $e ) {
+        return new WP_Error( 'rm_missing_field', $e->getMessage(), array( 'status' => 500 ) );
+    }
+    $response = rest_ensure_response( array(
+        'type'    => 'page',
+        'key'     => $key,
+        'slug'    => $page->post_name,
+        'content' => $content,
+    ) );
+    $response->header( 'Cache-Control', 'no-store' );
+    return $response;
+}

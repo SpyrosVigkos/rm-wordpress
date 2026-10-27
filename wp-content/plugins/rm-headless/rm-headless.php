@@ -43,6 +43,10 @@ function rm_headless_load() {
         'admin-rm-auth',
         'rm-auth-rest',
         'preview',
+        'pages/fields',
+        'pages/schemas',
+        'pages/register',
+        'pages/rest',
     );
     foreach ( $parts as $part ) {
         require_once RM_HEADLESS_DIR . '/includes/' . $part . '.php';

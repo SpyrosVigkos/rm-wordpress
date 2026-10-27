@@ -47,4 +47,10 @@ docker compose down -v                        # delete everything, then local/se
 
 ## With the Astro site
 
-In `rm-public-pages/site`, `npm run dev:local` runs the site on http://localhost:4401 against this WordPress. Saved changes show there on reload, and Preview in the episode editor opens the Astro preview (`RM_PREVIEW_URL` in `docker-compose.yml`).
+After an import, fill the fixed pages' fields once from the site's snapshot (in `rm-public-pages/site`):
+
+```
+WP_URL=http://localhost:8090 WP_USER=admin WP_APP_PASSWORD=<from .env> npm run seed:wp
+```
+
+Then `npm run dev:local` there runs the site on http://localhost:4401 with every page read from this WordPress. Saved changes show on reload, and Preview on an episode or a fixed page opens the Astro preview (`RM_PREVIEW_URL` in `docker-compose.yml`).
