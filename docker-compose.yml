@@ -1,0 +1,64 @@
+# Local WordPress for the headless (Astro) work. See local/README.md.
+# Runs the headless theme and the rm-headless plugin, no Elementor. Not
+# related to the Elementor Cloud site; nothing here talks to it.
+name: rm-wordpress-local
+
+services:
+  db:
+    image: mariadb:11.4.8
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: ${DB_PASSWORD:?run local/setup.sh first}
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      retries: 20
+
+  wordpress:
+    image: wordpress:6.8.3-php8.3-apache
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${WP_PORT:-8090}:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WORDPRESS_DEBUG: "1"
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_ENVIRONMENT_TYPE', 'local');
+        define('WP_DEBUG_DISPLAY', false);
+        define('WP_DEBUG_LOG', true);
+    volumes:
+      - wp:/var/www/html
+      - ./wp-content/themes/rm-headless-theme:/var/www/html/wp-content/themes/rm-headless-theme
+      - ./wp-content/plugins/rm-headless:/var/www/html/wp-content/plugins/rm-headless
+
+  cli:
+    image: wordpress:cli-2.12.0-php8.3
+    profiles: ["cli"]
+    user: "33:33"
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
+      WP_CLI_CACHE_DIR: /tmp/wp-cli-cache
+    volumes:
+      - wp:/var/www/html
+      - ./wp-content/themes/rm-headless-theme:/var/www/html/wp-content/themes/rm-headless-theme
+      - ./wp-content/plugins/rm-headless:/var/www/html/wp-content/plugins/rm-headless
+      - ./local/import:/import:ro
+
+volumes:
+  db:
+  wp:
