@@ -1,61 +1,44 @@
 #!/usr/bin/env bash
 # Sets up the local WordPress from scratch, or finishes a half-done setup.
 # Safe to run again: every step checks before it changes anything.
-#   local/setup.sh [path to rm-public-pages]
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
-PUBLIC_PAGES="${1:-../rm-public-pages}"
 PORT="${WP_PORT:-8090}"
 URL="http://localhost:${PORT}"
 
-if [ ! -f .env ]; then
-  {
-    echo "DB_PASSWORD=$(openssl rand -hex 16)"
-    echo "WP_ADMIN_USER=admin"
-    echo "WP_ADMIN_PASSWORD=$(openssl rand -hex 12)"
-    echo "WP_PORT=${PORT}"
-  } > .env
-  echo "Created .env with local-only passwords"
-fi
+touch .env
+set_env() {
+  grep -q "^$1=" .env || { echo "$1=$2" >> .env; echo "Added $1 to .env"; }
+}
+set_env DB_PASSWORD "$(openssl rand -hex 16)"
+set_env WP_ADMIN_USER admin
+set_env WP_ADMIN_PASSWORD "$(openssl rand -hex 12)"
+set_env WP_PORT "$PORT"
+for key in AUTH_KEY SECURE_AUTH_KEY LOGGED_IN_KEY NONCE_KEY AUTH_SALT SECURE_AUTH_SALT LOGGED_IN_SALT NONCE_SALT; do
+  set_env "WORDPRESS_$key" "$(openssl rand -hex 32)"
+done
 set -a; . ./.env; set +a
 
-mkdir -p local/import
-for f in reelcast-wxr.xml reelcast-wxr-s04e08-s05e10.xml reelhot-wxr.xml; do
-  if [ -f "$PUBLIC_PAGES/$f" ]; then cp "$PUBLIC_PAGES/$f" local/import/; fi
-done
-for f in migration-scripts/*-wxr.xml; do cp "$f" local/import/; done
+# --renew-anon-volumes: WordPress core is copied into the container when it
+# starts, so a rebuilt image must not reuse the previous container's copy.
+docker compose up -d --build --wait --renew-anon-volumes db wordpress
 
-docker compose up -d --wait db wordpress
-
-wp() { docker compose run --rm -T cli wp "$@"; }
-
-until wp db check >/dev/null 2>&1; do sleep 2; done
+wp() { docker compose exec -T -u www-data wordpress wp "$@"; }
 
 if ! wp core is-installed 2>/dev/null; then
   wp core install --url="$URL" --title="ReelMetrics (local)" \
     --admin_user="$WP_ADMIN_USER" --admin_password="$WP_ADMIN_PASSWORD" \
     --admin_email="admin@example.test" --skip-email
 fi
+wp rewrite structure '/%postname%/' >/dev/null
+wp option update blog_public 0 >/dev/null
 
-# Secure Custom Fields: the wordpress.org fork of ACF with the Pro features
-# (repeaters, options pages) that staging gets from ACF Pro.
-wp plugin install secure-custom-fields wordpress-importer --activate
-wp plugin activate rm-headless
-wp theme activate rm-headless-theme
-wp rewrite structure '/%postname%/' --hard
-wp option update blog_public 0
-
-# A full backup of the Elementor Cloud site in backups/ is the complete source;
-# without one, the WXR exports give the episodes, ReelHot and texts.
 if [ "$(wp post list --post_type=reelcast,reelhot --format=count)" = "0" ]; then
   if [ -f backups/database.sql.gz ] && [ -f backups/files.tar.gz ]; then
     local/import-backup.sh
   else
-    for f in local/import/*.xml; do
-      echo "Importing $(basename "$f")"
-      wp import "/import/$(basename "$f")" --authors=create --skip=image_resize
-    done
+    echo "No content yet: put a backup of the Elementor Cloud site in backups/ and run local/import-backup.sh"
   fi
 fi
 
@@ -67,4 +50,3 @@ fi
 
 echo
 echo "WordPress: $URL  (admin: $URL/wp-admin, credentials in .env)"
-wp post list --post_type=reelcast,reelhot,rm_text,buying_guide_item --format=count | xargs echo "Imported posts:"

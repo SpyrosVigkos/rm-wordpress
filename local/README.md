@@ -2,7 +2,7 @@
 
 A WordPress on http://localhost:8090 for building the headless setup (content model, preview, publish webhook) without touching the Elementor Cloud site that Nick edits.
 
-No Elementor: it runs `rm-headless-theme` (a placeholder theme, WordPress only holds content) and the `rm-headless` plugin, which registers the post types, ACF fields and REST fields. Both folders are mounted live, so edits show on reload. Field support comes from Secure Custom Fields, the wordpress.org fork of ACF with the Pro features (repeaters, options pages) that staging has from ACF Pro.
+It runs the production image (`Dockerfile`, see `docker/README.md`): no Elementor, the `rm-headless` plugin, the `rm-headless-theme` theme and Secure Custom Fields, the wordpress.org fork of ACF with the Pro features (repeaters, options pages) that staging has from ACF Pro. The plugin and theme folders are mounted over the image's copies, so edits show on reload; anything else needs a rebuild (`local/setup.sh` rebuilds).
 
 ## Start
 
@@ -12,13 +12,13 @@ Docker Desktop must be running.
 local/setup.sh
 ```
 
-The first run creates `.env` (gitignored) with random local passwords, starts MariaDB and WordPress, installs WordPress, Secure Custom Fields and the importer, activates the theme and plugin, and imports the WXR exports: the ReelCast and ReelHot files from `../rm-public-pages` (or the path you pass) and `migration-scripts/*-wxr.xml`. Running it again only does what is missing.
+The first run adds random local passwords and keys to `.env` (gitignored), builds the image, starts MariaDB and WordPress, installs WordPress and imports the content from `backups/` (below). Running it again only does what is missing, and rebuilds the image.
 
 The admin login and an application password named `astro-local` (for the Astro site and the REST API) are in `.env`.
 
 ## Content from a full backup
 
-With a backup of the Elementor Cloud site in `backups/` (`database.sql.gz` and `files.tar.gz`, gitignored: the database has the users and their password hashes), the first `local/setup.sh` imports from it instead of the WXR files. To replace the local content with a newer backup later:
+The content comes from a backup of the Elementor Cloud site in `backups/` (`database.sql.gz` and `files.tar.gz`, gitignored: the database has the users and their password hashes). The first `local/setup.sh` imports it. To replace the local content with a newer backup later:
 
 ```
 local/import-backup.sh            # or: local/import-backup.sh path/to/backup-folder
@@ -34,17 +34,16 @@ This is the same selection the production migration will use.
 ## Daily use
 
 ```
-docker compose up -d                          # start
+docker compose up -d --renew-anon-volumes    # start
 docker compose stop                           # stop, keeps the data
-docker compose run --rm cli wp plugin list    # any WP-CLI command
+docker compose exec -u www-data wordpress wp plugin list   # any WP-CLI command
 docker compose down -v                        # delete everything, then local/setup.sh again
 ```
 
 ## Not included
 
-- Without a backup, most images: only the 13 attachments in `reelcast-wxr-s04e08-s05e10.xml` are imported.
 - Links inside the content keep pointing at wordpress.reelmetrics.com; the media library itself is served locally.
-- Pages built in Elementor on staging (home, services and the rest). They are not in the WXR files, and in the headless setup they become ACF-based pages.
+- The Elementor layouts of the pages. Pages come with their title and text only; the layouts live in the Astro site.
 
 ## With the Astro site
 

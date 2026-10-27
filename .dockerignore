@@ -1,0 +1,11 @@
+backups
+node_modules
+local
+assets
+figma-exports
+migration-scripts
+documentation
+wp-content/themes/rm-elementor-theme
+*.zip
+.env
+.git

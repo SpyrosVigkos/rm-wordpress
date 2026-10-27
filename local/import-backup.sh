@@ -25,7 +25,7 @@ SRC=$(gzip -dc "$DB_DUMP" | sed -nE 's/^CREATE TABLE `([A-Za-z0-9_]+)usermeta`.*
 echo "Backup tables use the prefix $SRC"
 
 sql() { docker compose exec -T db mariadb -u wordpress -p"$DB_PASSWORD" wordpress "$@"; }
-wp() { docker compose run --rm -T cli wp "$@"; }
+wp() { docker compose exec -T -u www-data wordpress wp "$@"; }
 
 echo "Loading the backup next to the local tables"
 # DEFINER clauses need privileges the local user does not have; they only
@@ -81,7 +81,7 @@ sql -N -e "SELECT CONCAT('DROP VIEW \`', table_name, '\`;') FROM information_sch
            SELECT CONCAT('DROP TABLE \`', table_name, '\`;') FROM information_schema.tables WHERE table_schema = DATABASE() AND table_type = 'BASE TABLE' AND table_name LIKE '${SRC//_/\\_}%';" | sql
 
 echo "Copying the uploads"
-docker compose exec -T -u 0 wordpress sh -c 'rm -rf /var/www/html/wp-content/uploads && mkdir -p /var/www/html/wp-content/uploads'
+docker compose exec -T -u 0 wordpress find /var/www/html/wp-content/uploads -mindepth 1 -delete
 gzip -dc "$FILES" | docker compose exec -T -u 0 wordpress \
   tar -x -C /var/www/html/wp-content/uploads --strip-components=3 --wildcards 'files/wp-content/uploads/*'
 docker compose exec -T -u 0 wordpress chown -R www-data:www-data /var/www/html/wp-content/uploads
