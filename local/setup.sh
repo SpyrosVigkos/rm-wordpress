@@ -46,11 +46,17 @@ wp theme activate rm-headless-theme
 wp rewrite structure '/%postname%/' --hard
 wp option update blog_public 0
 
+# A full backup of the Elementor Cloud site in backups/ is the complete source;
+# without one, the WXR exports give the episodes, ReelHot and texts.
 if [ "$(wp post list --post_type=reelcast,reelhot --format=count)" = "0" ]; then
-  for f in local/import/*.xml; do
-    echo "Importing $(basename "$f")"
-    wp import "/import/$(basename "$f")" --authors=create --skip=image_resize
-  done
+  if [ -f backups/database.sql.gz ] && [ -f backups/files.tar.gz ]; then
+    local/import-backup.sh
+  else
+    for f in local/import/*.xml; do
+      echo "Importing $(basename "$f")"
+      wp import "/import/$(basename "$f")" --authors=create --skip=image_resize
+    done
+  fi
 fi
 
 if ! wp user application-password exists "$WP_ADMIN_USER" "astro-local" 2>/dev/null; then

@@ -16,6 +16,21 @@ The first run creates `.env` (gitignored) with random local passwords, starts Ma
 
 The admin login and an application password named `astro-local` (for the Astro site and the REST API) are in `.env`.
 
+## Content from a full backup
+
+With a backup of the Elementor Cloud site in `backups/` (`database.sql.gz` and `files.tar.gz`, gitignored: the database has the users and their password hashes), the first `local/setup.sh` imports from it instead of the WXR files. To replace the local content with a newer backup later:
+
+```
+local/import-backup.sh            # or: local/import-backup.sh path/to/backup-folder
+```
+
+It loads the dump next to the local tables, copies a selection with the original IDs, drops the backup tables and copies the uploads:
+
+- Kept: users, pages, posts, the plugin's content types (ReelCast, ReelHot, texts, buying guide, team, notifications, comparison) in every status except trash, the media library and its files, their categories and tags, the ReelCast and ReelHot default images and the RM Auth (Okta) settings. The local admin from `.env` is added again with a new application password.
+- Left out: Elementor data and templates, the help pane, `cfa_*` and `console_examples` types (moving to rm-rails Content Admin), revisions, menus, comments and other plugins' tables.
+
+This is the same selection the production migration will use.
+
 ## Daily use
 
 ```
@@ -27,7 +42,8 @@ docker compose down -v                        # delete everything, then local/se
 
 ## Not included
 
-- Most images: only the 13 attachments in `reelcast-wxr-s04e08-s05e10.xml` are imported. Other media links still point to wordpress.reelmetrics.com.
+- Without a backup, most images: only the 13 attachments in `reelcast-wxr-s04e08-s05e10.xml` are imported.
+- Links inside the content keep pointing at wordpress.reelmetrics.com; the media library itself is served locally.
 - Pages built in Elementor on staging (home, services and the rest). They are not in the WXR files, and in the headless setup they become ACF-based pages.
 
 ## With the Astro site

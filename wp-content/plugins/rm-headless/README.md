@@ -21,6 +21,8 @@ The files are copies of the theme code (`rm-elementor-theme/functions.php` and i
 - The ReelCast and ReelHot image helpers return an empty string as the last fallback instead of a theme image URL. The theme has no such image, so that URL was broken anyway.
 - The ReelCast and ReelHot featured-image fallbacks read the stored `_thumbnail_id` before falling back. This is the fix that was uncommitted in `functions.php` on `init-wordpress-project` when the copy was made.
 
+Not registered here: the help pane, `cfa_*` and `console_examples` types that CPT UI defines on staging. The help content moves to rm-rails Content Admin.
+
 Left in the theme: the Elementor widgets and settings, the `[reelcast_player]` shortcode (front-end rendering), and the one-off notification migration page.
 
 ## Preview

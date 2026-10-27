@@ -33,3 +33,4 @@ build/
 *.zip
 # Local WordPress (local/README.md)
 local/import/
+backups/
