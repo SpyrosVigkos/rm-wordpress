@@ -42,6 +42,7 @@ function rm_headless_load() {
         'acf-comparison',
         'admin-rm-auth',
         'rm-auth-rest',
+        'preview',
     );
     foreach ( $parts as $part ) {
         require_once RM_HEADLESS_DIR . '/includes/' . $part . '.php';

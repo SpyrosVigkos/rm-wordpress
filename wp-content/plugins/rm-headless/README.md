@@ -14,6 +14,7 @@ The ReelMetrics content model as a plugin, so it no longer depends on the Elemen
 | `includes/cpt-notification.php` | `notification` post type |
 | `includes/cpt-comparison.php`, `acf-comparison.php` | `comparison` post type and its fields |
 | `includes/admin-rm-auth.php`, `rm-auth-rest.php` | RM Auth settings page and `GET /wp-json/rm/v1/oidc-info` |
+| `includes/preview.php`, `preview-editor.js` | Preview of ReelCast episodes on the Astro preview server (below) |
 
 The files are copies of the theme code (`rm-elementor-theme/functions.php` and its `includes/`), with two changes:
 
@@ -21,6 +22,14 @@ The files are copies of the theme code (`rm-elementor-theme/functions.php` and i
 - The ReelCast and ReelHot featured-image fallbacks read the stored `_thumbnail_id` before falling back. This is the fix that was uncommitted in `functions.php` on `init-wordpress-project` when the copy was made.
 
 Left in the theme: the Elementor widgets and settings, the `[reelcast_player]` shortcode (front-end rendering), and the one-off notification migration page.
+
+## Preview
+
+Off unless `RM_PREVIEW_URL` is defined in `wp-config.php` (the local setup sets `http://localhost:4401`). When it is, pressing Preview on a ReelCast episode opens `RM_PREVIEW_URL/preview/reelcast/<id>?token=...` instead of the theme:
+
+- The token is an HMAC of the post id and an expiry ten minutes ahead, keyed with the site's auth salt. `GET /wp-json/rm/v1/preview/<id>?token=...` checks it and answers with the latest autosave in the shape of a `wp/v2/reelcast` item, so the preview server needs no WordPress login.
+- The block editor's autosave does not include ACF fields. `preview-editor.js` adds them to the autosave request, and they are saved onto the autosave revision only. The published post does not change until Update.
+- The editor sometimes opens `?preview=true` on the post URL instead of the preview link (drafts, or a post without an autosave). WordPress checks the user may preview it and then redirects to the same preview link.
 
 ## With the Elementor theme
 
