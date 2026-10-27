@@ -32,3 +32,6 @@ build/
 # zip files
 *.zip
 backups/
+# The image ships its own; they hold no secrets.
+!docker/wp-config.php
+!docker/.htaccess
